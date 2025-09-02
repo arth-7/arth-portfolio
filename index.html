@@ -6,7 +6,7 @@
   <title>Arth Raval – IT Professional | Networking | Cloud | Cybersecurity</title>
 
   <!-- SEO -->
-  <meta name="description" content="IT Support Specialist with expertise in Networking, Cloud, and Cybersecurity. AWS/Azure, Linux/Windows Server, and enterprise systems." />
+  <meta name="description" content="IT Support Specialist with expertise in Networking, Cloud, and Cybersecurity. AWS/Azure, Linux/Windows Server, enterprise systems." />
   <meta name="keywords" content="IT Support, Networking, Cloud, Cybersecurity, AWS, Azure, Linux, Windows Server, System Administration" />
   <meta name="author" content="Arth Raval" />
   <link rel="canonical" href="https://arthraval.com/" />
@@ -14,8 +14,8 @@
   <!-- Social -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://arthraval.com/" />
-  <meta property="og:title" content="Arth Raval - IT Professional | Networking | Cloud | Cybersecurity" />
-  <meta property="og:description" content="IT Support Specialist with expertise in Networking, Cloud Computing, and Cybersecurity." />
+  <meta property="og:title" content="Arth Raval – IT Professional" />
+  <meta property="og:description" content="IT Support | Networking | Cloud | Cybersecurity" />
   <meta property="og:image" content="/assets/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="/assets/og-image.jpg" />
@@ -87,7 +87,7 @@
 </head>
 
 <body class="theme-transition smooth-scroll dark" id="body">
-  <!-- ================= NAV ================= -->
+  <!-- NAV -->
   <nav class="fixed top-0 w-full z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
@@ -124,7 +124,7 @@
     </div>
   </nav>
 
-  <!-- ================= HERO ================= -->
+  <!-- HERO -->
   <section id="home" class="min-h-screen gradient-bg relative overflow-hidden flex items-center">
     <div class="hero-pattern absolute inset-0"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -149,7 +149,7 @@
     </div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
+  <!-- ABOUT -->
   <section id="about" class="py-20 bg-white dark:bg-slate-900 theme-transition">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -162,7 +162,7 @@
             I'm a Computer Engineering Technology grad focused on systems, networking, and security. I enjoy building reliable services and documenting clean, repeatable setups.
           </p>
           <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-            Tooling: Windows Server, Linux, AD/GPO, IIS/Apache, Firewalls, AWS/Azure, VMware/containers, Python/Bash.
+            Tooling: Windows Server, Linux, AD/GPO, DNS/DHCP, Firewalls, AWS/Azure, VMware/containers, Python/Bash.
           </p>
         </div>
         <div class="space-y-8">
@@ -177,7 +177,7 @@
     </div>
   </section>
 
-  <!-- ================= SKILLS ================= -->
+  <!-- SKILLS -->
   <section id="skills" class="py-20 bg-gray-50 dark:bg-slate-800 theme-transition">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -188,7 +188,7 @@
     </div>
   </section>
 
-  <!-- ================= PROJECTS ================= -->
+  <!-- PROJECTS -->
   <section id="projects" class="py-20 bg-white dark:bg-slate-900 theme-transition">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -204,7 +204,7 @@
     </div>
   </section>
 
-  <!-- ================= CERTIFICATIONS ================= -->
+  <!-- CERTIFICATIONS -->
   <section id="certifications" class="py-20 bg-gray-50 dark:bg-slate-800 theme-transition">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -220,7 +220,7 @@
     </div>
   </section>
 
-  <!-- ================= CONTACT ================= -->
+  <!-- CONTACT -->
   <section id="contact" class="py-20 bg-white dark:bg-slate-900 theme-transition">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -235,6 +235,7 @@
         <div class="card-hover bg-gray-50 dark:bg-slate-800 p-8 rounded-xl shadow-lg">
           <!-- IMPORTANT: posts to your Vercel API route -->
           <form id="contactForm" action="/api/contact" method="POST" class="space-y-6" novalidate>
+            <!-- Honeypot -->
             <input type="text" name="_gotcha" class="absolute left-[-9999px] opacity-0 pointer-events-none" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div>
               <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name *</label>
@@ -268,7 +269,7 @@
     </div>
   </section>
 
-  <!-- ================= FOOTER ================= -->
+  <!-- FOOTER -->
   <footer class="bg-slate-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <p class="text-gray-400">© <span id="currentYear"></span> Arth Raval. All rights reserved.</p>
@@ -415,7 +416,9 @@
         a.href = LOCAL_RESUME_URL;
         a.setAttribute('download','Arth_Raval_Resume.pdf');
       }
-      a.addEventListener('click', () => gtag?.('event','file_download',{ file_name:'Arth_Raval_Resume.pdf' }));
+      if (typeof gtag === 'function') {
+        a.addEventListener('click', () => gtag('event','file_download',{ file_name:'Arth_Raval_Resume.pdf' }));
+      }
     }
     function typingEffect(){
       const el = document.getElementById('typingText');
@@ -443,7 +446,7 @@
         body.classList.toggle('light', isDark);
         localStorage.setItem('theme', isDark ? 'light' : 'dark');
         icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
-        gtag?.('event', 'theme_change', { theme: isDark ? 'light' : 'dark' });
+        if (typeof gtag === 'function') gtag('event', 'theme_change', { theme: isDark ? 'light' : 'dark' });
       });
 
       menuBtn.addEventListener('click', () => {
@@ -472,54 +475,56 @@
         btn.disabled = true; spin.classList.remove('hidden'); txt.textContent = 'Sending...';
         ok.classList.add('hidden'); err.classList.add('hidden');
 
+        // Build JSON payload
         const fd = new FormData(form);
         fd.append('_timestamp', new Date().toISOString());
         fd.append('_user_agent', navigator.userAgent);
         fd.append('_referrer', document.referrer);
-
-        // send JSON to /api/contact
         const payload = Object.fromEntries(fd.entries());
+
         try{
           const res = await fetch(form.action, {
             method:'POST',
             headers:{ 'Accept':'application/json', 'Content-Type':'application/json' },
             body: JSON.stringify(payload)
           });
-          if(res.ok){
-            ok.classList.remove('hidden'); form.reset();
-            gtag?.('event', 'contact_form_submit', { status: 'success' });
-          } else { throw new Error('Form failed'); }
+          if(!res.ok) throw new Error(await res.text());
+          ok.classList.remove('hidden'); form.reset();
+          if (typeof gtag === 'function') gtag('event', 'contact_form_submit', { status: 'success' });
         }catch(e){
           console.error(e); err.classList.remove('hidden');
-          gtag?.('event', 'contact_form_submit', { status: 'error' });
+          if (typeof gtag === 'function') gtag('event', 'contact_form_submit', { status: 'error' });
         }finally{
           btn.disabled = false; spin.classList.add('hidden'); txt.textContent = 'Send Message';
         }
       });
     }
     function trackDeviceInfo(){
-      gtag?.('event', 'device_info', {
-        screen_resolution: `${screen.width}x${screen.height}`,
-        viewport: `${window.innerWidth}x${window.innerHeight}`,
-        user_agent: navigator.userAgent,
-        platform: navigator.platform,
-        language: navigator.language,
-        connection: navigator.connection?.effectiveType || 'unknown'
-      });
+      if (typeof gtag === 'function') {
+        gtag('event', 'device_info', {
+          screen_resolution: `${screen.width}x${screen.height}`,
+          viewport: `${window.innerWidth}x${window.innerHeight}`,
+          user_agent: navigator.userAgent,
+          platform: navigator.platform,
+          language: navigator.language,
+          connection: navigator.connection?.effectiveType || 'unknown'
+        });
+      }
     }
 
-    // Init
-    document.getElementById('currentYear')?.appendChild(document.createTextNode(new Date().getFullYear()));
+    // Init (after DOM)
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
     renderEducation(); renderSkills(); renderProjects(); renderBadges(); renderContactItems();
     bindResumeButton(); typingEffect(); initMenuAndTheme(); handleForm(); trackDeviceInfo();
 
+    // Perf + errors
     window.addEventListener('load', () => {
       setTimeout(() => {
         const nav = performance.getEntriesByType('navigation')[0];
-        if(nav){ gtag?.('event', 'page_load_ms', { value: Math.round(nav.loadEventEnd - nav.loadEventStart) }); }
+        if(nav && typeof gtag === 'function'){ gtag('event', 'page_load_ms', { value: Math.round(nav.loadEventEnd - nav.loadEventStart) }); }
       }, 0);
     });
-    window.addEventListener('error', (e) => { gtag?.('event', 'js_error', { message: e.message || 'unknown' }); });
+    window.addEventListener('error', (e) => { if (typeof gtag === 'function') gtag('event', 'js_error', { message: e.message || 'unknown' }); });
   </script>
 </body>
 </html>
