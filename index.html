@@ -6,13 +6,13 @@
 
   <title>Arth Raval - IT Professional | Networking | Cloud | Cybersecurity</title>
 
-  <!-- SEO -->
+  <!-- ========== SEO ========== -->
   <meta name="description" content="Professional IT Support Specialist with expertise in Networking, Cloud Computing, and Cybersecurity. AWS certified with strong background in system administration and enterprise solutions.">
   <meta name="keywords" content="IT Support, Network Administrator, Cloud Computing, Cybersecurity, AWS, Azure, Linux, Windows Server, System Administration">
   <meta name="author" content="Arth Raval">
   <link rel="canonical" href="https://arthraval.com/"><!-- TODO: change to your canonical domain if different -->
 
-  <!-- Open Graph / Social -->
+  <!-- ========== Open Graph / Social ========== -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://arthraval.com/"><!-- TODO: change if different -->
   <meta property="og:title" content="Arth Raval - IT Professional | Networking | Cloud | Cybersecurity">
@@ -25,27 +25,28 @@
   <meta name="twitter:description" content="Professional IT Support Specialist with expertise in Networking, Cloud Computing, and Cybersecurity.">
   <meta name="twitter:image" content="https://arthraval.com/og-image.jpg"><!-- TODO: update -->
 
-  <!-- Favicons (PNG for best iOS support) -->
-  <!-- TODO: place these files and update paths if needed -->
+  <!-- ========== Favicons ========== -->
+  <!-- TODO: drop PNGs into /public/icons (or /icons on Vercel) and keep these paths OR update them -->
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/icons/favicon-192.png">
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
   <meta name="theme-color" content="#0f172a">
 
-  <!-- Fonts & performance -->
+  <!-- ========== Fonts & performance ========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
 
-  <!-- Tailwind (CDN) -->
+  <!-- ========== Tailwind + Icons ========== -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-  <!-- GA4 (replace the ID below) -->
+  <!-- ========== Google Analytics 4 ========== -->
+  <!-- TODO: replace GA_MEASUREMENT_ID with your GA4 ID (e.g., G-XXXXXXXXXX) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
   <script>
-    // TODO: replace GA_MEASUREMENT_ID with your GA4 ID (e.g., G-XXXXXXXXXX)
+    // GA4 boot
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
@@ -55,9 +56,9 @@
     });
   </script>
 
-  <!-- Microsoft Clarity (replace the project ID) -->
+  <!-- ========== Microsoft Clarity ========== -->
+  <!-- TODO: replace CLARITY_PROJECT_ID with your Clarity project ID -->
   <script type="text/javascript">
-    // TODO: replace CLARITY_PROJECT_ID with your Clarity project ID
     (function(c,l,a,r,i,t,y){
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -65,7 +66,7 @@
     })(window, document, "clarity", "script", "CLARITY_PROJECT_ID");
   </script>
 
-  <!-- Structured Data -->
+  <!-- ========== Structured Data ========== -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -112,16 +113,15 @@
       background: linear-gradient(90deg,#3b82f6,#06b6d4); transition:left .3s ease;
     }
     .nav-link:hover::after { left:0; }
-    /* Accessibility helper */
     .sr-skip:focus { position: fixed; top: .5rem; left: .5rem; z-index: 50; }
   </style>
 </head>
 
 <body class="theme-transition smooth-scroll dark" id="body">
-  <!-- Skip link for accessibility -->
+  <!-- Skip link -->
   <a href="#home" class="sr-only sr-skip bg-white text-black px-3 py-2 rounded">Skip to content</a>
 
-  <!-- NAV -->
+  <!-- ================= NAV ================= -->
   <nav class="fixed top-0 w-full z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
@@ -158,7 +158,7 @@
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- ================= HERO ================= -->
   <section id="home" class="min-h-screen gradient-bg relative overflow-hidden flex items-center">
     <div class="hero-pattern absolute inset-0"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -188,7 +188,9 @@
              class="border-2 border-gray-400 text-gray-200 hover:bg-gray-200 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition">
             <i class="fas fa-envelope mr-2"></i> Email Me
           </a>
-          <a id="resumeLink" class="border-2 border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition cursor-pointer">
+          <!-- This button uses the CONFIG block below to choose local PDF or Google Drive -->
+          <a id="resumeLink"
+             class="border-2 border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition cursor-pointer">
             <i class="fas fa-download mr-2"></i> Download Resume (PDF)
           </a>
         </div>
@@ -196,7 +198,7 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ================= ABOUT ================= -->
   <section id="about" class="py-20 bg-white dark:bg-slate-900 theme-transition">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -226,7 +228,7 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- ================= SKILLS ================= -->
   <section id="skills" class="py-20 bg-gray-50 dark:bg-slate-800 theme-transition">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -237,7 +239,7 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- ================= PROJECTS ================= -->
   <section id="projects" class="py-20 bg-white dark:bg-slate-900 theme-transition">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -255,7 +257,7 @@
     </div>
   </section>
 
-  <!-- CERTIFICATIONS (Credly embed images) -->
+  <!-- ================= CERTIFICATIONS ================= -->
   <section id="certifications" class="py-20 bg-gray-50 dark:bg-slate-800 theme-transition">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -264,7 +266,6 @@
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <!-- TODO: These embed IDs are fixed – no change needed unless you add/remove badges -->
         <div class="bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
           <div data-iframe-width="270" data-iframe-height="270"
                data-share-badge-id="cf182339-43e3-4c0c-97c8-cb1ee7ecdade"
@@ -289,7 +290,7 @@
         <div class="bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
           <div data-iframe-width="270" data-iframe-height="270"
                data-share-badge-id="219cf011-b967-4994-9238-7292788f658b"
-               data-share-badge-host="https://www.credly.com"></div><!-- FIXED: full, correct ID -->
+               data-share-badge-host="https://www.credly.com"></div>
           <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">Network Addressing & Basic Troubleshooting</h3>
         </div>
 
@@ -319,7 +320,7 @@
     <script async type="text/javascript" src="//cdn.credly.com/assets/utilities/embed.js"></script>
   </section>
 
-  <!-- CONTACT -->
+  <!-- ================= CONTACT ================= -->
   <section id="contact" class="py-20 bg-white dark:bg-slate-900 theme-transition">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
@@ -339,10 +340,10 @@
         </div>
 
         <div class="card-hover bg-gray-50 dark:bg-slate-800 p-8 rounded-xl shadow-lg">
-          <!-- Formspree integration -->
-          <!-- TODO: replace YOUR_FORM_ID with your Formspree form ID (from dashboard) -->
+          <!-- ========== Formspree ========== -->
+          <!-- TODO: replace YOUR_FORM_ID with your Formspree form ID -->
           <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
-            <!-- Honeypot field to block bots -->
+            <!-- Honeypot -->
             <input type="text" name="_gotcha" class="absolute left-[-9999px] opacity-0 pointer-events-none" tabindex="-1" autocomplete="off">
 
             <div>
@@ -362,10 +363,10 @@
               <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white"></textarea>
             </div>
 
-            <!-- optional extras -->
+            <!-- Optional -->
             <input type="hidden" name="_subject" value="New Portfolio Contact">
             <input type="hidden" name="_cc" value="rarth73@gmail.com"><!-- TODO: change/add any CC emails -->
-            <input type="hidden" name="_next" value="https://arthraval.com/thank-you"><!-- TODO: update thank-you page URL or remove -->
+            <input type="hidden" name="_next" value="https://arthraval.com/thank-you"><!-- TODO: update or remove -->
 
             <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
               <span id="submitText">Send Message</span>
@@ -384,7 +385,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
   <footer class="bg-slate-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <p class="text-gray-400">© <span id="currentYear"></span> Arth Raval. All rights reserved.</p>
@@ -411,20 +412,18 @@
     // CONFIG (EDIT THESE VALUES)
     // ---------------------------
 
-    // OPTION A (Recommended): host your PDF on your own domain (most reliable)
-    // TODO: upload /assets/Arth_Raval_Resume.pdf and keep this path OR change it to your real path
+    // OPTION A (Recommended): host your PDF on your own domain (fastest & most reliable)
+    // TODO: upload /assets/Arth_Raval_Resume.pdf or change the path below if you host it elsewhere
     const LOCAL_RESUME_URL = "/assets/Arth_Raval_Resume.pdf";
 
-    // OPTION B: Use Google Drive direct download (can show interstitial on large files)
-    // TODO: if you prefer Drive, paste the FILE ID here and set USE_GOOGLE_DRIVE = true
-    const GOOGLE_DRIVE_FILE_ID = "YOUR_GOOGLE_DRIVE_FILE_ID"; // e.g. from https://drive.google.com/file/d/FILE_ID/view
-    const USE_GOOGLE_DRIVE = false; // TODO: set to true if you want to use Google Drive link
-
-    // Formspree
-    // (You already replaced action URL in the HTML; no change needed here unless you want to reference it in JS)
+    // OPTION B: Google Drive (keeps the SAME link if you upload new versions in Drive)
+    // ✅ You gave: https://drive.google.com/file/d/15xywE2IM7-GrSORGssMmWhGIfB2gQBjP/view?usp=sharing
+    // We just use the file ID to build a direct download URL.
+    const GOOGLE_DRIVE_FILE_ID = "15xywE2IM7-GrSORGssMmWhGIfB2gQBjP"; // <-- change only if your file ID changes
+    const USE_GOOGLE_DRIVE = true; // <-- set to false if you switch to LOCAL_RESUME_URL
 
     // ---------------------------
-    // CONTENT (EDIT AS NEEDED)
+    // CONTENT
     // ---------------------------
     const portfolioData = {
       education: [
@@ -455,7 +454,6 @@
           title: "GestroDrive",
           icon: "fas fa-car",
           colorKey: "blue",
-          // TODO: if you want the accurate hardware version, replace this text with your ESP32/MPU6050 + ESP-NOW description
           description: "Gesture-controlled vehicle navigation using ESP32, MPU6050, ESP-NOW P2P control, ESP32-CAM live stream, and ultrasonic crash-stop.",
           technologies: ["ESP32 / ESP-NOW","MPU6050 (I²C)","ESP32-CAM (MJPEG)","Ultrasonic"],
           link: "https://github.com/arth-7/GestroDrive"
@@ -549,19 +547,15 @@
     // ---------------------------
     function bindResumeButton(){
       const a = document.getElementById('resumeLink');
-      if(USE_GOOGLE_DRIVE && GOOGLE_DRIVE_FILE_ID && GOOGLE_DRIVE_FILE_ID !== "YOUR_GOOGLE_DRIVE_FILE_ID"){
-        // Drive direct link
-        a.href = `https://drive.google.com/uc?export=download&id=${GOOGLE_DRIVE_FILE_ID}`;
+      if (USE_GOOGLE_DRIVE && GOOGLE_DRIVE_FILE_ID){
+        a.href = `https://drive.google.com/file/d/15xywE2IM7-GrSORGssMmWhGIfB2gQBjP/view?usp=sharing`;
         a.setAttribute('download','Arth_Raval_Resume.pdf');
       } else {
-        // Local asset (recommended)
-        a.href = LOCAL_RESUME_URL; // TODO: ensure the file exists or change the path
+        // Local asset fallback (upload /assets/Arth_Raval_Resume.pdf)
+        a.href = LOCAL_RESUME_URL;
         a.setAttribute('download','Arth_Raval_Resume.pdf');
       }
-      a.addEventListener('click', () => {
-        // GA4: file_download
-        gtag('event', 'file_download', { file_name: 'Arth_Raval_Resume.pdf' });
-      });
+      a.addEventListener('click', () => gtag('event','file_download',{ file_name:'Arth_Raval_Resume.pdf' }));
     }
 
     function typingEffect(){
