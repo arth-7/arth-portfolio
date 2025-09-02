@@ -3,36 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Arth Raval - IT Professional | Networking | Cloud | Cybersecurity</title>
+  <title>Arth Raval – IT Professional | Networking | Cloud | Cybersecurity</title>
 
   <!-- ========== SEO ========== -->
   <meta name="description" content="Professional IT Support Specialist with expertise in Networking, Cloud Computing, and Cybersecurity. AWS certified with strong background in system administration and enterprise solutions.">
   <meta name="keywords" content="IT Support, Network Administrator, Cloud Computing, Cybersecurity, AWS, Azure, Linux, Windows Server, System Administration">
   <meta name="author" content="Arth Raval">
-  <link rel="canonical" href="https://arthraval.com/"><!-- TODO: change to your canonical domain if different -->
+  <link rel="canonical" href="https://arthraval.com/">
 
   <!-- ========== Open Graph / Social ========== -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://arthraval.com/"><!-- TODO: change if different -->
+  <meta property="og:url" content="https://arthraval.com/">
   <meta property="og:title" content="Arth Raval - IT Professional | Networking | Cloud | Cybersecurity">
   <meta property="og:description" content="Professional IT Support Specialist with expertise in Networking, Cloud Computing, and Cybersecurity.">
-  <meta property="og:image" content="https://arthraval.com/og-image.jpg"><!-- TODO: upload 1200x630 image and update URL -->
+  <meta property="og:image" content="/assets/og-image.jpg"> <!-- 1200x630 image -->
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://arthraval.com/"><!-- TODO: change if different -->
+  <meta name="twitter:url" content="https://arthraval.com/">
   <meta name="twitter:title" content="Arth Raval - IT Professional | Networking | Cloud | Cybersecurity">
   <meta name="twitter:description" content="Professional IT Support Specialist with expertise in Networking, Cloud Computing, and Cybersecurity.">
-  <meta name="twitter:image" content="https://arthraval.com/og-image.jpg"><!-- TODO: update -->
+  <meta name="twitter:image" content="/assets/og-image.jpg">
 
-  <!-- ========== Favicons ========== -->
-  <!-- TODO: drop PNGs into /public/icons (or /icons on Vercel) and keep these paths OR update them -->
+  <!-- ========== Favicons (drop your PNGs to /icons) ========== -->
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/icons/favicon-192.png">
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
   <meta name="theme-color" content="#0f172a">
 
-  <!-- ========== Fonts & performance ========== -->
+  <!-- ========== Fonts ========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
@@ -40,13 +38,12 @@
 
   <!-- ========== Tailwind + Icons ========== -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-  <!-- ========== Google Analytics 4 ========== -->
-  <!-- TODO: replace GA_MEASUREMENT_ID with your GA4 ID (e.g., G-XXXXXXXXXX) -->
+  <!-- ========== Analytics (replace IDs) ========== -->
+  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
   <script>
-    // GA4 boot
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
@@ -55,9 +52,7 @@
       page_location: window.location.href
     });
   </script>
-
-  <!-- ========== Microsoft Clarity ========== -->
-  <!-- TODO: replace CLARITY_PROJECT_ID with your Clarity project ID -->
+  <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -108,10 +103,7 @@
     @keyframes blink { 0%,50%{border-color:#3b82f6;} 51%,100%{border-color:transparent;} }
     .smooth-scroll { scroll-behavior: smooth; }
     .nav-link { position: relative; overflow: hidden; }
-    .nav-link::after {
-      content:''; position:absolute; bottom:0; left:-100%; width:100%; height:2px;
-      background: linear-gradient(90deg,#3b82f6,#06b6d4); transition:left .3s ease;
-    }
+    .nav-link::after { content:''; position:absolute; bottom:0; left:-100%; width:100%; height:2px; background: linear-gradient(90deg,#3b82f6,#06b6d4); transition:left .3s ease; }
     .nav-link:hover::after { left:0; }
     .sr-skip:focus { position: fixed; top: .5rem; left: .5rem; z-index: 50; }
   </style>
@@ -137,11 +129,11 @@
           </div>
         </div>
         <div class="flex items-center space-x-4">
-          <button id="themeToggle" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors">
-            <i class="fas fa-sun" id="themeIcon"></i>
+          <button id="themeToggle" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors" aria-label="Toggle theme">
+            <i class="fas fa-sun" id="themeIcon" aria-hidden="true"></i>
           </button>
-          <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-300">
-            <i class="fas fa-bars"></i>
+          <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-300" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+            <i class="fas fa-bars" aria-hidden="true"></i>
           </button>
         </div>
       </div>
@@ -188,7 +180,6 @@
              class="border-2 border-gray-400 text-gray-200 hover:bg-gray-200 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition">
             <i class="fas fa-envelope mr-2"></i> Email Me
           </a>
-          <!-- This button uses the CONFIG block below to choose local PDF or Google Drive -->
           <a id="resumeLink"
              class="border-2 border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition cursor-pointer">
             <i class="fas fa-download mr-2"></i> Download Resume (PDF)
@@ -219,9 +210,9 @@
         <div class="space-y-8">
           <div class="card-hover bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-700 p-6 rounded-xl">
             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-              <i class="fas fa-graduation-cap text-blue-600 mr-3"></i> Education
+              <i class="fas fa-graduation-cap text-blue-600 mr-3" aria-hidden="true"></i> Education
             </h3>
-            <div class="space-y-4" id="educationContent"><!-- filled by JS --></div>
+            <div class="space-y-4" id="educationContent"></div>
           </div>
         </div>
       </div>
@@ -235,7 +226,7 @@
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Technical Skills</h2>
         <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" id="skillsContent"><!-- filled by JS --></div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" id="skillsContent"></div>
     </div>
   </section>
 
@@ -246,7 +237,7 @@
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
         <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
       </div>
-      <div class="grid lg:grid-cols-2 gap-8 mb-12" id="projectsContent"><!-- filled by JS --></div>
+      <div class="grid lg:grid-cols-2 gap-8 mb-12" id="projectsContent"></div>
 
       <div class="text-center">
         <a href="https://github.com/arth-7" target="_blank" rel="noopener noreferrer"
@@ -265,50 +256,7 @@
         <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div class="bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
-          <div data-iframe-width="270" data-iframe-height="270"
-               data-share-badge-id="cf182339-43e3-4c0c-97c8-cb1ee7ecdade"
-               data-share-badge-host="https://www.credly.com"></div>
-          <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">AWS Educate – Getting Started with Compute</h3>
-        </div>
-
-        <div class="bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
-          <div data-iframe-width="270" data-iframe-height="270"
-               data-share-badge-id="4809e129-4e8b-4f52-8006-3a3f2cdcaf71"
-               data-share-badge-host="https://www.credly.com"></div>
-          <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">Big Data Foundations – Level 1</h3>
-        </div>
-
-        <div class="bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
-          <div data-iframe-width="270" data-iframe-height="270"
-               data-share-badge-id="49e1db37-b679-4b66-9256-8abb07da2c6a"
-               data-share-badge-host="https://www.credly.com"></div>
-          <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">Networking Basics</h3>
-        </div>
-
-        <div class="bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
-          <div data-iframe-width="270" data-iframe-height="270"
-               data-share-badge-id="219cf011-b967-4994-9238-7292788f658b"
-               data-share-badge-host="https://www.credly.com"></div>
-          <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">Network Addressing & Basic Troubleshooting</h3>
-        </div>
-
-        <div class="bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
-          <div data-iframe-width="270" data-iframe-height="270"
-               data-share-badge-id="49a4554a-0968-4fa7-92dd-174e78f48ee0"
-               data-share-badge-host="https://www.credly.com"></div>
-          <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">Machine Learning with Python – Level 1</h3>
-        </div>
-
-        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-700 dark:to-slate-600 p-6 rounded-xl text-center shadow-lg border-2 border-dashed border-blue-300 dark:border-blue-600">
-          <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-gray-400 to-gray-500 rounded-full flex items-center justify-center">
-            <i class="fas fa-plus text-white text-2xl"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">More Coming Soon</h3>
-          <p class="text-gray-600 dark:text-gray-300 text-sm">Continuously learning</p>
-        </div>
-      </div>
+      <div id="badgesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"><!-- filled by JS --></div>
 
       <div class="text-center mt-12">
         <a href="https://www.credly.com/users/arth-raval" target="_blank" rel="noopener noreferrer"
@@ -317,7 +265,6 @@
         </a>
       </div>
     </div>
-    <script async type="text/javascript" src="//cdn.credly.com/assets/utilities/embed.js"></script>
   </section>
 
   <!-- ================= CONTACT ================= -->
@@ -332,27 +279,21 @@
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12">
-        <div class="space-y-8">
-          <ContactItem icon="fas fa-envelope" label="Email" href="mailto:rarth73@gmail.com" text="rarth73@gmail.com"></ContactItem>
-          <ContactItem icon="fab fa-linkedin" label="LinkedIn" href="https://www.linkedin.com/in/arthraval" text="linkedin.com/in/arthraval"></ContactItem>
-          <ContactItem icon="fab fa-github" label="GitHub" href="https://github.com/arth-7" text="github.com/arth-7"></ContactItem>
-          <ContactItem icon="fas fa-award" label="Credly" href="https://www.credly.com/users/arth-raval" text="credly.com/users/arth-raval"></ContactItem>
-        </div>
+        <div class="space-y-8" id="contactItems"><!-- rendered by JS --></div>
 
         <div class="card-hover bg-gray-50 dark:bg-slate-800 p-8 rounded-xl shadow-lg">
-          <!-- ========== Formspree ========== -->
-          <!-- TODO: replace YOUR_FORM_ID with your Formspree form ID -->
-          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+          <!-- Formspree: replace YOUR_FORM_ID -->
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6" novalidate>
             <!-- Honeypot -->
-            <input type="text" name="_gotcha" class="absolute left-[-9999px] opacity-0 pointer-events-none" tabindex="-1" autocomplete="off">
+            <input type="text" name="_gotcha" class="absolute left-[-9999px] opacity-0 pointer-events-none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
             <div>
               <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name *</label>
-              <input id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white">
+              <input id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white" autocomplete="name">
             </div>
             <div>
               <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
-              <input id="email" name="email" type="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white">
+              <input id="email" name="email" type="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white" autocomplete="email">
             </div>
             <div>
               <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
@@ -365,12 +306,12 @@
 
             <!-- Optional -->
             <input type="hidden" name="_subject" value="New Portfolio Contact">
-            <input type="hidden" name="_cc" value="rarth73@gmail.com"><!-- TODO: change/add any CC emails -->
-            <input type="hidden" name="_next" value="https://arthraval.com/thank-you"><!-- TODO: update or remove -->
+            <input type="hidden" name="_cc" value="rarth73@gmail.com">
+            <input type="hidden" name="_next" value="https://arthraval.com/thank-you">
 
             <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
               <span id="submitText">Send Message</span>
-              <i id="submitSpinner" class="fas fa-spinner fa-spin ml-2 hidden"></i>
+              <i id="submitSpinner" class="fas fa-spinner fa-spin ml-2 hidden" aria-hidden="true"></i>
             </button>
 
             <div id="successMessage" class="hidden mt-4 rounded-lg p-4 text-white" style="background:linear-gradient(135deg,#10b981,#059669);">
@@ -390,17 +331,17 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <p class="text-gray-400">© <span id="currentYear"></span> Arth Raval. All rights reserved.</p>
       <div class="flex justify-center space-x-6 mt-6">
-        <a href="https://www.linkedin.com/in/arthraval" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
-          <i class="fab fa-linkedin text-xl"></i>
+        <a href="https://www.linkedin.com/in/arthraval" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+          <i class="fab fa-linkedin text-xl" aria-hidden="true"></i>
         </a>
-        <a href="https://github.com/arth-7" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
-          <i class="fab fa-github text-xl"></i>
+        <a href="https://github.com/arth-7" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="GitHub">
+          <i class="fab fa-github text-xl" aria-hidden="true"></i>
         </a>
-        <a href="https://www.credly.com/users/arth-raval" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
-          <i class="fas fa-award text-xl"></i>
+        <a href="https://www.credly.com/users/arth-raval" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Credly">
+          <i class="fas fa-award text-xl" aria-hidden="true"></i>
         </a>
-        <a href="mailto:rarth73@gmail.com" class="text-gray-400 hover:text-white transition-colors">
-          <i class="fas fa-envelope text-xl"></i>
+        <a href="mailto:rarth73@gmail.com" class="text-gray-400 hover:text-white transition-colors" aria-label="Email">
+          <i class="fas fa-envelope text-xl" aria-hidden="true"></i>
         </a>
       </div>
     </div>
@@ -412,15 +353,12 @@
     // CONFIG (EDIT THESE VALUES)
     // ---------------------------
 
-    // OPTION A (Recommended): host your PDF on your own domain (fastest & most reliable)
-    // TODO: upload /assets/Arth_Raval_Resume.pdf or change the path below if you host it elsewhere
+    // Option A: host your PDF (recommended)
     const LOCAL_RESUME_URL = "/assets/Arth_Raval_Resume.pdf";
 
-    // OPTION B: Google Drive (keeps the SAME link if you upload new versions in Drive)
-    // ✅ You gave: https://drive.google.com/file/d/15xywE2IM7-GrSORGssMmWhGIfB2gQBjP/view?usp=sharing
-    // We just use the file ID to build a direct download URL.
-    const GOOGLE_DRIVE_FILE_ID = "15xywE2IM7-GrSORGssMmWhGIfB2gQBjP"; // <-- change only if your file ID changes
-    const USE_GOOGLE_DRIVE = true; // <-- set to false if you switch to LOCAL_RESUME_URL
+    // Option B: Google Drive direct link
+    const GOOGLE_DRIVE_FILE_ID = "15xywE2IM7-GrSORGssMmWhGIfB2gQBjP"; // replace if file changes
+    const USE_GOOGLE_DRIVE = true; // set false to use LOCAL_RESUME_URL
 
     // ---------------------------
     // CONTENT
@@ -482,7 +420,6 @@
       ]
     };
 
-    // Fixed Tailwind class map (avoids dynamic class purge issues)
     const colorMap = {
       blue:   { from:'from-blue-50',   text:'text-blue-600'   },
       green:  { from:'from-green-50',  text:'text-green-600'  },
@@ -490,6 +427,35 @@
       yellow: { from:'from-yellow-50', text:'text-yellow-600' },
       red:    { from:'from-red-50',    text:'text-red-600'    }
     };
+
+    // Badges (local images with links to Credly public URLs)
+    const badges = [
+      {
+        title: "AWS Educate – Getting Started with Compute",
+        img: "/assets/badges/aws-educate.png",
+        href: "https://www.credly.com/badges/cf182339-43e3-4c0c-97c8-cb1ee7ecdade/public_url"
+      },
+      {
+        title: "Big Data Foundations – Level 1",
+        img: "/assets/badges/big-data-foundations.png",
+        href: "https://www.credly.com/badges/4809e129-4e8b-4f52-8006-3a3f2cdcaf71/public_url"
+      },
+      {
+        title: "Networking Basics",
+        img: "/assets/badges/networking-basics.png",
+        href: "https://www.credly.com/badges/49e1db37-b679-4b66-9256-8abb07da2c6a/public_url"
+      },
+      {
+        title: "Network Addressing & Basic Troubleshooting",
+        img: "/assets/badges/network-addressing.png",
+        href: "https://www.credly.com/badges/219cf011-b967-4994-9238-7292788f658b/public_url"
+      },
+      {
+        title: "Machine Learning with Python – Level 1",
+        img: "/assets/badges/ml-python.png",
+        href: "https://www.credly.com/badges/49a4554a-0968-4fa7-92dd-174e78f48ee0/public_url"
+      }
+    ];
 
     // ---------------------------
     // RENDER HELPERS
@@ -527,7 +493,7 @@
         <div class="card-hover bg-gradient-to-br ${colorMap[p.colorKey].from} to-cyan-50 dark:from-slate-800 dark:to-slate-700 rounded-xl overflow-hidden shadow-lg">
           <div class="p-8">
             <div class="flex items-center mb-4">
-              <i class="${p.icon} text-3xl ${colorMap[p.colorKey].text} mr-4"></i>
+              <i class="${p.icon} text-3xl ${colorMap[p.colorKey].text} mr-4" aria-hidden="true"></i>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">${p.title}</h3>
             </div>
             <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">${p.description}</p>
@@ -542,16 +508,37 @@
       `).join('');
     }
 
+    function renderBadges(){
+      const grid = document.getElementById('badgesGrid');
+      grid.innerHTML = badges.map(b => `
+        <a href="${b.href}" target="_blank" rel="noopener noreferrer"
+           class="group block bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
+          <div class="w-full aspect-square overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-600">
+            <img src="${b.img}" alt="${b.title}" loading="lazy"
+                 class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
+          </div>
+          <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">${b.title}</h3>
+        </a>
+      `).join('') + `
+        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-700 dark:to-slate-600 p-6 rounded-xl text-center shadow-lg border-2 border-dashed border-blue-300 dark:border-blue-600">
+          <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-gray-400 to-gray-500 rounded-full flex items-center justify-center">
+            <i class="fas fa-plus text-white text-2xl"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">More Coming Soon</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">Continuously learning</p>
+        </div>
+      `;
+    }
+
     // ---------------------------
     // UTILITIES
     // ---------------------------
     function bindResumeButton(){
       const a = document.getElementById('resumeLink');
       if (USE_GOOGLE_DRIVE && GOOGLE_DRIVE_FILE_ID){
-        a.href = `https://drive.google.com/file/d/15xywE2IM7-GrSORGssMmWhGIfB2gQBjP/view?usp=sharing`;
+        a.href = `https://drive.google.com/uc?export=download&id=${GOOGLE_DRIVE_FILE_ID}`; // direct download
         a.setAttribute('download','Arth_Raval_Resume.pdf');
       } else {
-        // Local asset fallback (upload /assets/Arth_Raval_Resume.pdf)
         a.href = LOCAL_RESUME_URL;
         a.setAttribute('download','Arth_Raval_Resume.pdf');
       }
@@ -579,7 +566,6 @@
       const themeToggle = document.getElementById('themeToggle');
       const icon = document.getElementById('themeIcon');
 
-      // theme init
       const saved = localStorage.getItem('theme') || 'dark';
       body.classList.add(saved);
       icon.className = saved === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
@@ -593,12 +579,13 @@
         gtag('event', 'theme_change', { theme: isDark ? 'light' : 'dark' });
       });
 
-      // mobile menu
       menuBtn.addEventListener('click', () => {
+        const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', String(!expanded));
         menu.classList.toggle('hidden');
       });
 
-      // smooth scroll + close menu
+      // Smooth scroll + close menu
       document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
           const target = document.querySelector(a.getAttribute('href'));
@@ -609,14 +596,16 @@
 
     function trackDeviceInfo(){
       // GA4 custom event with standardized param names
-      gtag('event', 'device_info', {
-        screen_resolution: `${screen.width}x${screen.height}`,
-        viewport: `${window.innerWidth}x${window.innerHeight}`,
-        user_agent: navigator.userAgent,
-        platform: navigator.platform,
-        language: navigator.language,
-        connection: navigator.connection?.effectiveType || 'unknown'
-      });
+      if (typeof gtag === 'function') {
+        gtag('event', 'device_info', {
+          screen_resolution: `${screen.width}x${screen.height}`,
+          viewport: `${window.innerWidth}x${window.innerHeight}`,
+          user_agent: navigator.userAgent,
+          platform: navigator.platform,
+          language: navigator.language,
+          connection: navigator.connection?.effectiveType || 'unknown'
+        });
+      }
     }
 
     function handleForm(){
@@ -652,43 +641,26 @@
       });
     }
 
-    // Simple contact item component helper
-    function ContactItem({icon,label,href,text}){
-      return;
-    }
-  </script>
-
-  <!-- Small component templating without frameworks -->
-  <script>
-    // Renders the contact items using a tiny template function
-    function ContactItem(props){
-      const wrapper = document.currentScript.closest('section').querySelector('.space-y-8');
-      const div = document.createElement('div');
-      div.className = "flex items-center space-x-4";
-      div.innerHTML = `
-        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
-          <i class="${props.icon} text-blue-600 text-xl"></i>
+    function renderContactItems(){
+      const wrapper = document.getElementById('contactItems');
+      const items = [
+        { icon:'fas fa-envelope', label:'Email', href:'mailto:rarth73@gmail.com', text:'rarth73@gmail.com' },
+        { icon:'fab fa-linkedin', label:'LinkedIn', href:'https://www.linkedin.com/in/arthraval', text:'linkedin.com/in/arthraval' },
+        { icon:'fab fa-github', label:'GitHub', href:'https://github.com/arth-7', text:'github.com/arth-7' },
+        { icon:'fas fa-award', label:'Credly', href:'https://www.credly.com/users/arth-raval', text:'credly.com/users/arth-raval' }
+      ];
+      wrapper.innerHTML = items.map(p => `
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+            <i class="${p.icon} text-blue-600 text-xl" aria-hidden="true"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">${p.label}</h3>
+            <a href="${p.href}" target="${p.href.startsWith('http') ? '_blank' : ''}" ${p.href.startsWith('http') ? 'rel="noopener noreferrer"' : ''} class="text-blue-600 hover:text-blue-700">${p.text}</a>
+          </div>
         </div>
-        <div>
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">${props.label}</h3>
-          <a href="${props.href}" target="${props.href.startsWith('http') ? '_blank' : ''}" ${props.href.startsWith('http') ? 'rel="noopener noreferrer"' : ''} class="text-blue-600 hover:text-blue-700">${props.text}</a>
-        </div>
-      `;
-      wrapper.appendChild(div);
+      `).join('');
     }
-    // hydrate 4 contact items defined inline above
-    (function hydrateContacts(){
-      const nodes = document.querySelectorAll('ContactItem');
-      nodes.forEach(n => {
-        ContactItem({
-          icon: n.getAttribute('icon'),
-          label: n.getAttribute('label'),
-          href: n.getAttribute('href'),
-          text: n.getAttribute('text')
-        });
-        n.remove();
-      });
-    })();
   </script>
 
   <!-- Page init -->
@@ -699,6 +671,8 @@
     renderEducation();
     renderSkills();
     renderProjects();
+    renderBadges();
+    renderContactItems();
 
     // Init behaviors
     bindResumeButton();
@@ -711,7 +685,7 @@
     window.addEventListener('load', () => {
       setTimeout(() => {
         const nav = performance.getEntriesByType('navigation')[0];
-        if(nav){
+        if(nav && typeof gtag === 'function'){
           gtag('event', 'page_load_ms', { value: Math.round(nav.loadEventEnd - nav.loadEventStart) });
         }
       }, 0);
@@ -719,7 +693,9 @@
 
     // Error tracking
     window.addEventListener('error', (e) => {
-      gtag('event', 'js_error', { message: e.message || 'unknown' });
+      if (typeof gtag === 'function') {
+        gtag('event', 'js_error', { message: e.message || 'unknown' });
+      }
     });
 
     // OPTIONAL: PWA service worker (only if you add /sw.js)
@@ -729,7 +705,5 @@
     //   });
     // }
   </script>
-
-  <!-- IMPORTANT: Removed the Cloudflare hidden-iframe script on purpose -->
 </body>
 </html>
