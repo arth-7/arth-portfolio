@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Arth Raval - IT Professional | Networking | Cloud | Cybersecurity</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Professional IT Support Specialist with expertise in Networking, Cloud Computing, and Cybersecurity. AWS certified with strong background in system administration and enterprise solutions.">
+  <meta name="keywords" content="IT Support, Network Administrator, Cloud Computing, Cybersecurity, AWS, Azure, Linux, Windows Server, System Administration">
+  <meta name="author" content="Arth Raval">
+  <link rel="canonical" href="https://arthraval.com/"><!-- TODO: change to your canonical domain if different -->
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arthraval.com/"><!-- TODO: change if different -->
+  <meta property="og:title" content="Arth Raval - IT Professional | Networking | Cloud | Cybersecurity">
+  <meta property="og:description" content="Professional IT Support Specialist with expertise in Networking, Cloud Computing, and Cybersecurity.">
+  <meta property="og:image" content="https://arthraval.com/og-image.jpg"><!-- TODO: upload 1200x630 image and update URL -->
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://arthraval.com/"><!-- TODO: change if different -->
+  <meta name="twitter:title" content="Arth Raval - IT Professional | Networking | Cloud | Cybersecurity">
+  <meta name="twitter:description" content="Professional IT Support Specialist with expertise in Networking, Cloud Computing, and Cybersecurity.">
+  <meta name="twitter:image" content="https://arthraval.com/og-image.jpg"><!-- TODO: update -->
+
+  <!-- Favicons (PNG for best iOS support) -->
+  <!-- TODO: place these files and update paths if needed -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/favicon-192.png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Fonts & performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <!-- GA4 (replace the ID below) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    // TODO: replace GA_MEASUREMENT_ID with your GA4 ID (e.g., G-XXXXXXXXXX)
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID', {
+      page_title: 'Arth Raval Portfolio',
+      page_location: window.location.href
+    });
+  </script>
+
+  <!-- Microsoft Clarity (replace the project ID) -->
+  <script type="text/javascript">
+    // TODO: replace CLARITY_PROJECT_ID with your Clarity project ID
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "CLARITY_PROJECT_ID");
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Arth Raval",
+    "jobTitle":"IT Support Specialist",
+    "description":"Professional IT Support Specialist with expertise in Networking, Cloud Computing, and Cybersecurity",
+    "url":"https://arthraval.com",
+    "email":"rarth73@gmail.com",
+    "sameAs":[
+      "https://www.linkedin.com/in/arthraval",
+      "https://github.com/arth-7",
+      "https://www.credly.com/users/arth-raval"
+    ],
+    "knowsAbout":[
+      "IT Support","Network Administration","Cloud Computing",
+      "Cybersecurity","AWS","Azure","Linux","Windows Server"
+    ],
+    "alumniOf":[
+      {"@type":"EducationalOrganization","name":"Seneca Polytechnic"},
+      {"@type":"EducationalOrganization","name":"Gujarat Technological University"}
+    ]
+  }
+  </script>
+
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#334155 100%); }
+    .hero-pattern {
+      background-image:
+        radial-gradient(circle at 25% 25%, #3b82f6 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, #06b6d4 0%, transparent 50%);
+      background-size: 100px 100px; opacity: .1;
+    }
+    .card-hover { transition: all .3s ease; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / .25); }
+    .theme-transition { transition: background-color .3s ease, color .3s ease; }
+    .typing-animation { border-right: 2px solid #3b82f6; animation: blink 1s infinite; }
+    @keyframes blink { 0%,50%{border-color:#3b82f6;} 51%,100%{border-color:transparent;} }
+    .smooth-scroll { scroll-behavior: smooth; }
+    .nav-link { position: relative; overflow: hidden; }
+    .nav-link::after {
+      content:''; position:absolute; bottom:0; left:-100%; width:100%; height:2px;
+      background: linear-gradient(90deg,#3b82f6,#06b6d4); transition:left .3s ease;
+    }
+    .nav-link:hover::after { left:0; }
+    /* Accessibility helper */
+    .sr-skip:focus { position: fixed; top: .5rem; left: .5rem; z-index: 50; }
+  </style>
+</head>
+
+<body class="theme-transition smooth-scroll dark" id="body">
+  <!-- Skip link for accessibility -->
+  <a href="#home" class="sr-only sr-skip bg-white text-black px-3 py-2 rounded">Skip to content</a>
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <span class="text-xl font-bold text-white">Arth Raval</span>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            <a href="#home" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Home</a>
+            <a href="#about" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">About</a>
+            <a href="#skills" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Skills</a>
+            <a href="#projects" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Projects</a>
+            <a href="#certifications" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Certifications</a>
+            <a href="#contact" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Contact</a>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button id="themeToggle" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors">
+            <i class="fas fa-sun" id="themeIcon"></i>
+          </button>
+          <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-300">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-slate-900/95 backdrop-blur-sm border-t border-slate-700/50">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-white">Home</a>
+        <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-white">About</a>
+        <a href="#skills" class="block px-3 py-2 text-gray-300 hover:text-white">Skills</a>
+        <a href="#projects" class="block px-3 py-2 text-gray-300 hover:text-white">Projects</a>
+        <a href="#certifications" class="block px-3 py-2 text-gray-300 hover:text-white">Certifications</a>
+        <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-white">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="min-h-screen gradient-bg relative overflow-hidden flex items-center">
+    <div class="hero-pattern absolute inset-0"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Arth Raval</h1>
+        <div class="text-xl md:text-2xl text-blue-400 mb-8 typing-animation inline-block" id="typingText">
+          IT Support | Networking | Cloud | Cybersecurity
+        </div>
+        <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+          Passionate IT professional with expertise in system administration, cloud computing, and cybersecurity. Dedicated to delivering
+          innovative solutions and maintaining robust, secure infrastructure.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg">
+            View My Work
+          </a>
+          <a href="#contact" class="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+            Get In Touch
+          </a>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-3">
+          <a href="https://www.linkedin.com/in/arthraval" target="_blank" rel="noopener noreferrer"
+             class="border-2 border-gray-400 text-gray-200 hover:bg-gray-200 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition">
+            <i class="fab fa-linkedin mr-2"></i> View LinkedIn
+          </a>
+          <a href="mailto:rarth73@gmail.com"
+             class="border-2 border-gray-400 text-gray-200 hover:bg-gray-200 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition">
+            <i class="fas fa-envelope mr-2"></i> Email Me
+          </a>
+          <a id="resumeLink" class="border-2 border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition cursor-pointer">
+            <i class="fas fa-download mr-2"></i> Download Resume (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 bg-white dark:bg-slate-900 theme-transition">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            I'm a dedicated IT professional with a strong foundation in computer engineering and a passion for cutting-edge technology.
+            My expertise spans system administration, network security, cloud computing, and cybersecurity.
+          </p>
+          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            With hands-on experience in enterprise environments and a commitment to continuous learning, I bring technical depth and
+            practical problem-solving to every project.
+          </p>
+        </div>
+        <div class="space-y-8">
+          <div class="card-hover bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-700 p-6 rounded-xl">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+              <i class="fas fa-graduation-cap text-blue-600 mr-3"></i> Education
+            </h3>
+            <div class="space-y-4" id="educationContent"><!-- filled by JS --></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-20 bg-gray-50 dark:bg-slate-800 theme-transition">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Technical Skills</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" id="skillsContent"><!-- filled by JS --></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-20 bg-white dark:bg-slate-900 theme-transition">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-8 mb-12" id="projectsContent"><!-- filled by JS --></div>
+
+      <div class="text-center">
+        <a href="https://github.com/arth-7" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition hover:scale-105 hover:shadow-lg">
+          <i class="fab fa-github mr-3 text-xl"></i> View All Projects on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS (Credly embed images) -->
+  <section id="certifications" class="py-20 bg-gray-50 dark:bg-slate-800 theme-transition">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Certifications & Badges</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- TODO: These embed IDs are fixed – no change needed unless you add/remove badges -->
+        <div class="bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
+          <div data-iframe-width="270" data-iframe-height="270"
+               data-share-badge-id="cf182339-43e3-4c0c-97c8-cb1ee7ecdade"
+               data-share-badge-host="https://www.credly.com"></div>
+          <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">AWS Educate – Getting Started with Compute</h3>
+        </div>
+
+        <div class="bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
+          <div data-iframe-width="270" data-iframe-height="270"
+               data-share-badge-id="4809e129-4e8b-4f52-8006-3a3f2cdcaf71"
+               data-share-badge-host="https://www.credly.com"></div>
+          <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">Big Data Foundations – Level 1</h3>
+        </div>
+
+        <div class="bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
+          <div data-iframe-width="270" data-iframe-height="270"
+               data-share-badge-id="49e1db37-b679-4b66-9256-8abb07da2c6a"
+               data-share-badge-host="https://www.credly.com"></div>
+          <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">Networking Basics</h3>
+        </div>
+
+        <div class="bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
+          <div data-iframe-width="270" data-iframe-height="270"
+               data-share-badge-id="219cf011-b967-4994-9238-7292788f658b"
+               data-share-badge-host="https://www.credly.com"></div><!-- FIXED: full, correct ID -->
+          <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">Network Addressing & Basic Troubleshooting</h3>
+        </div>
+
+        <div class="bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
+          <div data-iframe-width="270" data-iframe-height="270"
+               data-share-badge-id="49a4554a-0968-4fa7-92dd-174e78f48ee0"
+               data-share-badge-host="https://www.credly.com"></div>
+          <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">Machine Learning with Python – Level 1</h3>
+        </div>
+
+        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-700 dark:to-slate-600 p-6 rounded-xl text-center shadow-lg border-2 border-dashed border-blue-300 dark:border-blue-600">
+          <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-gray-400 to-gray-500 rounded-full flex items-center justify-center">
+            <i class="fas fa-plus text-white text-2xl"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">More Coming Soon</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">Continuously learning</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://www.credly.com/users/arth-raval" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
+          <i class="fas fa-award mr-3"></i> View All Badges on Credly
+        </a>
+      </div>
+    </div>
+    <script async type="text/javascript" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 bg-white dark:bg-slate-900 theme-transition">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+        <p class="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
+          Ready to collaborate or discuss opportunities? I'd love to hear from you!
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div class="space-y-8">
+          <ContactItem icon="fas fa-envelope" label="Email" href="mailto:rarth73@gmail.com" text="rarth73@gmail.com"></ContactItem>
+          <ContactItem icon="fab fa-linkedin" label="LinkedIn" href="https://www.linkedin.com/in/arthraval" text="linkedin.com/in/arthraval"></ContactItem>
+          <ContactItem icon="fab fa-github" label="GitHub" href="https://github.com/arth-7" text="github.com/arth-7"></ContactItem>
+          <ContactItem icon="fas fa-award" label="Credly" href="https://www.credly.com/users/arth-raval" text="credly.com/users/arth-raval"></ContactItem>
+        </div>
+
+        <div class="card-hover bg-gray-50 dark:bg-slate-800 p-8 rounded-xl shadow-lg">
+          <!-- Formspree integration -->
+          <!-- TODO: replace YOUR_FORM_ID with your Formspree form ID (from dashboard) -->
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+            <!-- Honeypot field to block bots -->
+            <input type="text" name="_gotcha" class="absolute left-[-9999px] opacity-0 pointer-events-none" tabindex="-1" autocomplete="off">
+
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name *</label>
+              <input id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
+              <input id="email" name="email" type="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white">
+            </div>
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+              <input id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white">
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message *</label>
+              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white"></textarea>
+            </div>
+
+            <!-- optional extras -->
+            <input type="hidden" name="_subject" value="New Portfolio Contact">
+            <input type="hidden" name="_cc" value="rarth73@gmail.com"><!-- TODO: change/add any CC emails -->
+            <input type="hidden" name="_next" value="https://arthraval.com/thank-you"><!-- TODO: update thank-you page URL or remove -->
+
+            <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
+              <span id="submitText">Send Message</span>
+              <i id="submitSpinner" class="fas fa-spinner fa-spin ml-2 hidden"></i>
+            </button>
+
+            <div id="successMessage" class="hidden mt-4 rounded-lg p-4 text-white" style="background:linear-gradient(135deg,#10b981,#059669);">
+              <i class="fas fa-check-circle mr-2"></i> Thank you! Your message has been sent successfully.
+            </div>
+            <div id="errorMessage" class="hidden mt-4 rounded-lg p-4 text-white" style="background:linear-gradient(135deg,#ef4444,#dc2626);">
+              <i class="fas fa-exclamation-triangle mr-2"></i> Sorry, there was an error. Please try again.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-400">© <span id="currentYear"></span> Arth Raval. All rights reserved.</p>
+      <div class="flex justify-center space-x-6 mt-6">
+        <a href="https://www.linkedin.com/in/arthraval" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+          <i class="fab fa-linkedin text-xl"></i>
+        </a>
+        <a href="https://github.com/arth-7" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+          <i class="fab fa-github text-xl"></i>
+        </a>
+        <a href="https://www.credly.com/users/arth-raval" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+          <i class="fas fa-award text-xl"></i>
+        </a>
+        <a href="mailto:rarth73@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+          <i class="fas fa-envelope text-xl"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== DATA & SCRIPTS ========== -->
+  <script>
+    // ---------------------------
+    // CONFIG (EDIT THESE VALUES)
+    // ---------------------------
+
+    // OPTION A (Recommended): host your PDF on your own domain (most reliable)
+    // TODO: upload /assets/Arth_Raval_Resume.pdf and keep this path OR change it to your real path
+    const LOCAL_RESUME_URL = "/assets/Arth_Raval_Resume.pdf";
+
+    // OPTION B: Use Google Drive direct download (can show interstitial on large files)
+    // TODO: if you prefer Drive, paste the FILE ID here and set USE_GOOGLE_DRIVE = true
+    const GOOGLE_DRIVE_FILE_ID = "YOUR_GOOGLE_DRIVE_FILE_ID"; // e.g. from https://drive.google.com/file/d/FILE_ID/view
+    const USE_GOOGLE_DRIVE = false; // TODO: set to true if you want to use Google Drive link
+
+    // Formspree
+    // (You already replaced action URL in the HTML; no change needed here unless you want to reference it in JS)
+
+    // ---------------------------
+    // CONTENT (EDIT AS NEEDED)
+    // ---------------------------
+    const portfolioData = {
+      education: [
+        {
+          degree: "Advanced Diploma in Computer Engineering Technology",
+          institution: "Seneca Polytechnic",
+          achievement: "President's Honour List • GPA: 3.8/4.0"
+        },
+        {
+          degree: "Diploma in Computer Engineering",
+          institution: "Gujarat Technological University",
+          achievement: "CGPA: 9.7/10.0",
+          coursework: "Programming, Web Development, Database Management"
+        }
+      ],
+      skills: [
+        { category:"Systems & Networking", icon:"fas fa-server", colorKey:"blue",
+          items:["Windows Server","Linux Administration","DHCP & DNS","Active Directory","Network Configuration"] },
+        { category:"Security", icon:"fas fa-shield-alt", colorKey:"red",
+          items:["Firewalls","SIEM","SSH Keys","Penetration Testing","Security Auditing"] },
+        { category:"Cloud & Virtualization", icon:"fas fa-cloud", colorKey:"green",
+          items:["AWS","Microsoft Azure","VMware","Kubernetes","Docker"] },
+        { category:"Programming", icon:"fas fa-code", colorKey:"purple",
+          items:["Python","Bash Scripting","C Programming","MySQL","Oracle Database"] }
+      ],
+      projects: [
+        {
+          title: "GestroDrive",
+          icon: "fas fa-car",
+          colorKey: "blue",
+          // TODO: if you want the accurate hardware version, replace this text with your ESP32/MPU6050 + ESP-NOW description
+          description: "Gesture-controlled vehicle navigation using ESP32, MPU6050, ESP-NOW P2P control, ESP32-CAM live stream, and ultrasonic crash-stop.",
+          technologies: ["ESP32 / ESP-NOW","MPU6050 (I²C)","ESP32-CAM (MJPEG)","Ultrasonic"],
+          link: "https://github.com/arth-7/GestroDrive"
+        },
+        {
+          title: "Enterprise Network Design",
+          icon: "fas fa-network-wired",
+          colorKey: "green",
+          description: "Cisco Packet Tracer design with VLANs, ACLs, routing, and security policies for enterprise-grade architecture.",
+          technologies: ["Cisco","VLANs","Security"]
+        },
+        {
+          title: "Linux Server Configuration",
+          icon: "fab fa-linux",
+          colorKey: "purple",
+          description: "Complete Linux server setup: DNS, DHCP, Samba, Firewalld. Secure client-server architecture with automated backups.",
+          technologies: ["Linux","DNS/DHCP","Samba"]
+        },
+        {
+          title: "IoT Monitoring Systems",
+          icon: "fas fa-microchip",
+          colorKey: "yellow",
+          description: "Distance sensor and temperature monitoring with embedded programming; real-time data collection and analysis.",
+          technologies: ["IoT","Sensors","Embedded"]
+        }
+      ]
+    };
+
+    // Fixed Tailwind class map (avoids dynamic class purge issues)
+    const colorMap = {
+      blue:   { from:'from-blue-50',   text:'text-blue-600'   },
+      green:  { from:'from-green-50',  text:'text-green-600'  },
+      purple: { from:'from-purple-50', text:'text-purple-600' },
+      yellow: { from:'from-yellow-50', text:'text-yellow-600' },
+      red:    { from:'from-red-50',    text:'text-red-600'    }
+    };
+
+    // ---------------------------
+    // RENDER HELPERS
+    // ---------------------------
+    function renderEducation(){
+      const el = document.getElementById('educationContent');
+      el.innerHTML = portfolioData.education.map(edu => `
+        <div>
+          <h4 class="font-semibold text-gray-800 dark:text-gray-200">${edu.degree}</h4>
+          <p class="text-gray-600 dark:text-gray-400">${edu.institution}</p>
+          <p class="text-sm text-blue-600 dark:text-blue-400">${edu.achievement}</p>
+          ${edu.coursework ? `<p class="text-sm text-gray-500 dark:text-gray-400">${edu.coursework}</p>` : ''}
+        </div>
+      `).join('');
+    }
+
+    function renderSkills(){
+      const el = document.getElementById('skillsContent');
+      el.innerHTML = portfolioData.skills.map(s => `
+        <div class="card-hover bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg">
+          <div class="text-center">
+            <div class="text-4xl ${colorMap[s.colorKey].text} mb-4"><i class="${s.icon}"></i></div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">${s.category}</h3>
+            <ul class="text-gray-600 dark:text-gray-300 space-y-2 text-sm">
+              ${s.items.map(i => `<li>${i}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderProjects(){
+      const el = document.getElementById('projectsContent');
+      el.innerHTML = portfolioData.projects.map(p => `
+        <div class="card-hover bg-gradient-to-br ${colorMap[p.colorKey].from} to-cyan-50 dark:from-slate-800 dark:to-slate-700 rounded-xl overflow-hidden shadow-lg">
+          <div class="p-8">
+            <div class="flex items-center mb-4">
+              <i class="${p.icon} text-3xl ${colorMap[p.colorKey].text} mr-4"></i>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">${p.title}</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">${p.description}</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              ${p.technologies.map(t => `<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">${t}</span>`).join('')}
+            </div>
+            ${p.link ? `<a href="${p.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
+              <i class="fab fa-github mr-2"></i> View on GitHub
+            </a>` : ''}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // ---------------------------
+    // UTILITIES
+    // ---------------------------
+    function bindResumeButton(){
+      const a = document.getElementById('resumeLink');
+      if(USE_GOOGLE_DRIVE && GOOGLE_DRIVE_FILE_ID && GOOGLE_DRIVE_FILE_ID !== "YOUR_GOOGLE_DRIVE_FILE_ID"){
+        // Drive direct link
+        a.href = `https://drive.google.com/uc?export=download&id=${GOOGLE_DRIVE_FILE_ID}`;
+        a.setAttribute('download','Arth_Raval_Resume.pdf');
+      } else {
+        // Local asset (recommended)
+        a.href = LOCAL_RESUME_URL; // TODO: ensure the file exists or change the path
+        a.setAttribute('download','Arth_Raval_Resume.pdf');
+      }
+      a.addEventListener('click', () => {
+        // GA4: file_download
+        gtag('event', 'file_download', { file_name: 'Arth_Raval_Resume.pdf' });
+      });
+    }
+
+    function typingEffect(){
+      const typingText = document.getElementById('typingText');
+      const text = 'IT Support | Networking | Cloud | Cybersecurity';
+      let i = 0;
+      (function type(){
+        if(i < text.length){
+          typingText.textContent = text.slice(0, ++i);
+          setTimeout(type, 100);
+        } else {
+          setTimeout(() => { i = 0; typingText.textContent = ''; type(); }, 2500);
+        }
+      })();
+    }
+
+    function initMenuAndTheme(){
+      const body = document.getElementById('body');
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const menu = document.getElementById('mobileMenu');
+      const themeToggle = document.getElementById('themeToggle');
+      const icon = document.getElementById('themeIcon');
+
+      // theme init
+      const saved = localStorage.getItem('theme') || 'dark';
+      body.classList.add(saved);
+      icon.className = saved === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+      themeToggle.addEventListener('click', () => {
+        const isDark = body.classList.contains('dark');
+        body.classList.toggle('dark', !isDark);
+        body.classList.toggle('light', isDark);
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+        gtag('event', 'theme_change', { theme: isDark ? 'light' : 'dark' });
+      });
+
+      // mobile menu
+      menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+
+      // smooth scroll + close menu
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const target = document.querySelector(a.getAttribute('href'));
+          if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth',block:'start'}); menu.classList.add('hidden'); }
+        });
+      });
+    }
+
+    function trackDeviceInfo(){
+      // GA4 custom event with standardized param names
+      gtag('event', 'device_info', {
+        screen_resolution: `${screen.width}x${screen.height}`,
+        viewport: `${window.innerWidth}x${window.innerHeight}`,
+        user_agent: navigator.userAgent,
+        platform: navigator.platform,
+        language: navigator.language,
+        connection: navigator.connection?.effectiveType || 'unknown'
+      });
+    }
+
+    function handleForm(){
+      const form = document.getElementById('contactForm');
+      const btn = document.getElementById('submitBtn');
+      const txt = document.getElementById('submitText');
+      const spin = document.getElementById('submitSpinner');
+      const ok = document.getElementById('successMessage');
+      const err = document.getElementById('errorMessage');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        btn.disabled = true; spin.classList.remove('hidden'); txt.textContent = 'Sending...';
+        ok.classList.add('hidden'); err.classList.add('hidden');
+
+        const fd = new FormData(form);
+        fd.append('_timestamp', new Date().toISOString());
+        fd.append('_user_agent', navigator.userAgent);
+        fd.append('_referrer', document.referrer);
+
+        try{
+          const res = await fetch(form.action, { method:'POST', body:fd, headers:{'Accept':'application/json'}});
+          if(res.ok){
+            ok.classList.remove('hidden'); form.reset();
+            gtag('event', 'contact_form_submit', { status: 'success' });
+          } else { throw new Error('Form failed'); }
+        }catch(e){
+          console.error(e); err.classList.remove('hidden');
+          gtag('event', 'contact_form_submit', { status: 'error' });
+        }finally{
+          btn.disabled = false; spin.classList.add('hidden'); txt.textContent = 'Send Message';
+        }
+      });
+    }
+
+    // Simple contact item component helper
+    function ContactItem({icon,label,href,text}){
+      return;
+    }
+  </script>
+
+  <!-- Small component templating without frameworks -->
+  <script>
+    // Renders the contact items using a tiny template function
+    function ContactItem(props){
+      const wrapper = document.currentScript.closest('section').querySelector('.space-y-8');
+      const div = document.createElement('div');
+      div.className = "flex items-center space-x-4";
+      div.innerHTML = `
+        <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+          <i class="${props.icon} text-blue-600 text-xl"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">${props.label}</h3>
+          <a href="${props.href}" target="${props.href.startsWith('http') ? '_blank' : ''}" ${props.href.startsWith('http') ? 'rel="noopener noreferrer"' : ''} class="text-blue-600 hover:text-blue-700">${props.text}</a>
+        </div>
+      `;
+      wrapper.appendChild(div);
+    }
+    // hydrate 4 contact items defined inline above
+    (function hydrateContacts(){
+      const nodes = document.querySelectorAll('ContactItem');
+      nodes.forEach(n => {
+        ContactItem({
+          icon: n.getAttribute('icon'),
+          label: n.getAttribute('label'),
+          href: n.getAttribute('href'),
+          text: n.getAttribute('text')
+        });
+        n.remove();
+      });
+    })();
+  </script>
+
+  <!-- Page init -->
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Render sections
+    renderEducation();
+    renderSkills();
+    renderProjects();
+
+    // Init behaviors
+    bindResumeButton();
+    typingEffect();
+    initMenuAndTheme();
+    handleForm();
+    trackDeviceInfo();
+
+    // Performance timing to GA4 (optional)
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const nav = performance.getEntriesByType('navigation')[0];
+        if(nav){
+          gtag('event', 'page_load_ms', { value: Math.round(nav.loadEventEnd - nav.loadEventStart) });
+        }
+      }, 0);
+    });
+
+    // Error tracking
+    window.addEventListener('error', (e) => {
+      gtag('event', 'js_error', { message: e.message || 'unknown' });
+    });
+
+    // OPTIONAL: PWA service worker (only if you add /sw.js)
+    // if('serviceWorker' in navigator){
+    //   window.addEventListener('load', () => {
+    //     navigator.serviceWorker.register('/sw.js');
+    //   });
+    // }
+  </script>
+
+  <!-- IMPORTANT: Removed the Cloudflare hidden-iframe script on purpose -->
+</body>
+</html>
