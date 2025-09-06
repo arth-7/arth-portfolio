@@ -33,20 +33,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-  <!-- Analytics (optional) – TODO: put your real IDs or remove these two blocks -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date()); gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
-  <script>
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "CLARITY_PROJECT_ID"); /* TODO */
-  </script>
+  <!-- (Optional analytics blocks removed for brevity; add back if you use them) -->
 
   <!-- Schema -->
   <script type="application/ld+json">
@@ -66,8 +53,7 @@
     .gradient-bg{background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#334155 100%)}
     .hero-pattern{background-image:
       radial-gradient(circle at 25% 25%, #3b82f6 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, #06b6d4 0%, transparent 50%);
-      background-size:100px 100px;opacity:.1}
+      radial-gradient(circle at 75% 75%, #06b6d4 0%, transparent 50%); background-size:100px 100px;opacity:.1}
     .card-hover{transition:transform .25s ease, box-shadow .25s ease}
     .card-hover:hover{transform:translateY(-6px);box-shadow:0 25px 50px -12px rgb(0 0 0/.25)}
     .typing-animation{border-right:2px solid #3b82f6;animation:blink 1s infinite}
@@ -75,6 +61,14 @@
     .nav-link{position:relative;overflow:hidden}
     .nav-link::after{content:'';position:absolute;bottom:0;left:-100%;width:100%;height:2px;background:linear-gradient(90deg,#3b82f6,#06b6d4);transition:left .25s ease}
     .nav-link:hover::after{left:0}
+    /* CCNA shine */
+    .shine{position:relative;overflow:hidden}
+    .shine::after{
+      content:""; position:absolute; top:-120%; left:-120%; width:240%; height:240%;
+      background: conic-gradient(from 180deg at 50% 50%, rgba(59,130,246,.12), rgba(6,182,212,.12), transparent 40%);
+      animation: spin 8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
   </style>
 </head>
 
@@ -203,6 +197,42 @@
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Certifications & Badges</h2>
         <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
       </div>
+
+      <!-- 🌟 Featured CCNA hero -->
+      <div class="shine relative overflow-hidden rounded-2xl border border-blue-400/40 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-700 p-6 md:p-8 mb-12 shadow-xl">
+        <div class="grid gap-8 md:grid-cols-[220px,1fr] items-center relative z-10">
+          <div class="bg-white/70 dark:bg-slate-900/40 rounded-xl p-4 flex items-center justify-center shadow">
+            <img src="assets/badges/CCNA.png" alt="Cisco CCNA badge" class="max-h-44 w-auto object-contain" loading="eager" />
+          </div>
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200 text-xs font-semibold mb-3">
+              <i class="fa-solid fa-certificate"></i> Featured Certification
+            </div>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Cisco Certified Network Associate (CCNA)</h3>
+            <p class="mt-3 text-gray-700 dark:text-gray-300 leading-relaxed">
+              Validates core networking skills: routing & switching, IP services, network access, security fundamentals, and automation/programmability.
+              Highlights: VLANs/STP/EtherChannel, IPv4/IPv6 addressing, DHCP/DNS, ACLs/NAT, wireless basics, and network automation concepts.
+            </p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200 text-sm">Routing & Switching</span>
+              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200 text-sm">IP Services</span>
+              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200 text-sm">Security</span>
+              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200 text-sm">Automation</span>
+            </div>
+            <div class="mt-6 flex gap-3">
+              <a href="https://www.credly.com/badges/cfa79679-fb9c-46cf-a580-fae56eed975a/public_url" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
+                <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> View on Credly
+              </a>
+              <a href="#badgesGrid" class="inline-flex items-center border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-5 py-3 rounded-lg font-semibold transition">
+                See all badges
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regular badges grid (unchanged) -->
       <div id="badgesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"></div>
       <div class="text-center mt-12">
         <a href="https://www.credly.com/users/arth-raval" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
@@ -218,48 +248,30 @@
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
         <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
-        <p class="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">Ready to collaborate or discuss an opportunity? Send me a message.</p>
+        <p class="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
+          Reach me directly via email — I respond fast.
+        </p>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12">
         <div id="contactItems" class="space-y-8"></div>
 
-        <div class="card-hover bg-gray-50 dark:bg-slate-800 p-8 rounded-xl shadow-lg">
-          <!-- Formspree (no backend needed) -->
-          <form id="contactForm" action="https://formspree.io/f/mvgbvwej" method="POST" class="space-y-6" novalidate>
-            <input type="hidden" name="_subject" value="New message from Portfolio Website" />
-            <!-- Honeypot -->
-            <input type="text" name="_gotcha" class="absolute left-[-9999px] opacity-0 pointer-events-none" tabindex="-1" autocomplete="off" aria-hidden="true">
-
+        <!-- No form: simple email call-to-action -->
+        <div class="card-hover bg-gray-50 dark:bg-slate-800 p-8 rounded-xl shadow-lg flex flex-col items-start justify-center">
+          <div class="flex items-center gap-3 text-gray-700 dark:text-gray-200">
+            <i class="fas fa-envelope text-2xl text-blue-600"></i>
             <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name *</label>
-              <input id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white" autocomplete="name">
+              <p class="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">Email</p>
+              <a href="mailto:rarth73@gmail.com" class="text-xl font-semibold text-blue-600 hover:text-blue-700">rarth73@gmail.com</a>
             </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
-              <input id="email" name="email" type="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white" autocomplete="email">
-            </div>
-            <div>
-              <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
-              <input id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white">
-            </div>
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message *</label>
-              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white"></textarea>
-            </div>
-
-            <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
-              <span id="submitText">Send Message</span>
-              <i id="submitSpinner" class="fas fa-spinner fa-spin ml-2 hidden"></i>
-            </button>
-
-            <div id="successMessage" class="hidden mt-4 rounded-lg p-4 text-white" style="background:linear-gradient(135deg,#10b981,#059669);">
-              <i class="fas fa-check-circle mr-2"></i> Thank you! Your message has been sent.
-            </div>
-            <div id="errorMessage" class="hidden mt-4 rounded-lg p-4 text-white" style="background:linear-gradient(135deg,#ef4444,#dc2626);">
-              <i class="fas fa-exclamation-triangle mr-2"></i> Sorry, there was an error. Please try again.
-            </div>
-          </form>
+          </div>
+          <a href="mailto:rarth73@gmail.com"
+             class="mt-6 inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
+            <i class="fas fa-paper-plane mr-2"></i> Email Me
+          </a>
+          <p class="mt-4 text-sm text-gray-600 dark:text-gray-400">
+            Prefer LinkedIn? <a href="https://www.linkedin.com/in/arthraval" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-semibold">DM me here</a>.
+          </p>
         </div>
       </div>
     </div>
@@ -283,7 +295,7 @@
     // ---- Config ----
     const USE_GOOGLE_DRIVE = true;                                  // toggle if hosting resume locally
     const GOOGLE_DRIVE_FILE_ID = "15xywE2IM7-GrSORGssMmWhGIfB2gQBjP";
-    const LOCAL_RESUME_URL = "/assets/Arth_Raval_Resume.pdf";        // TODO upload if using local
+    const LOCAL_RESUME_URL = "/assets/Arth_Raval_Resume.pdf";
 
     const portfolioData = {
       education: [
@@ -411,26 +423,11 @@
       menuBtn.addEventListener('click',()=>{ const ex=menuBtn.getAttribute('aria-expanded')==='true'; menuBtn.setAttribute('aria-expanded',String(!ex)); menu.classList.toggle('hidden');});
       document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{ const t=document.querySelector(a.getAttribute('href')); if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); menu.classList.add('hidden'); }}));
     }
-    function wireContactForm(){
-      const form=document.getElementById('contactForm'); if(!form) return;
-      const btn=document.getElementById('submitBtn'), txt=document.getElementById('submitText'), spin=document.getElementById('submitSpinner'), ok=document.getElementById('successMessage'), err=document.getElementById('errorMessage');
-      form.addEventListener('submit', async (e)=>{
-        e.preventDefault(); btn.disabled=true; spin.classList.remove('hidden'); txt.textContent='Sending...'; ok.classList.add('hidden'); err.classList.add('hidden');
-        try{
-          const fd=new FormData(form);
-          const res=await fetch(form.action,{method:'POST', body:fd, headers:{'Accept':'application/json'}});
-          const data=await res.json().catch(()=>({}));
-          if(!res.ok) throw new Error(data?.errors?.[0]?.message||'Send failed');
-          ok.classList.remove('hidden'); form.reset();
-        }catch(ex){ console.error(ex); err.classList.remove('hidden'); }
-        finally{ btn.disabled=false; spin.classList.add('hidden'); txt.textContent='Send Message'; }
-      });
-    }
 
     // ---- Init ----
     document.getElementById('currentYear').textContent=new Date().getFullYear();
     renderEducation(); renderSkills(); renderProjects(); renderBadges(); renderContactItems();
-    bindResumeButton(); typingEffect(); initMenuAndTheme(); wireContactForm();
+    bindResumeButton(); typingEffect(); initMenuAndTheme();
   </script>
 </body>
 </html>
