@@ -1,436 +1,244 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arth Raval – IT Professional | Networking | Cloud | Cybersecurity</title>
-
-  <!-- SEO -->
-  <meta name="description" content="IT Support Specialist with strengths in Networking, Cloud, and Cybersecurity. AWS/Azure, Windows/Linux, AD/GPO, DNS/DHCP." />
-  <meta name="keywords" content="IT Support, Networking, Cloud, Cybersecurity, AWS, Azure, Linux, Windows Server, System Administration" />
-  <meta name="author" content="Arth Raval" />
-  <link rel="canonical" href="https://arthraval.com/" />
-
-  <!-- Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://arthraval.com/" />
-  <meta property="og:title" content="Arth Raval – IT Professional" />
-  <meta property="og:description" content="IT Support | Networking | Cloud | Cybersecurity" />
-  <meta property="og:image" content="/assets/og-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="/assets/og-image.jpg" />
-
-  <!-- Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/icons/favicon-192.png" />
-  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-  <meta name="theme-color" content="#0f172a" />
-
-  <!-- Fonts + UI -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-  <!-- Analytics (optional) – TODO: put your real IDs or remove these two blocks -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date()); gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
-  <script>
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "CLARITY_PROJECT_ID"); /* TODO */
-  </script>
-
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Arth Raval",
-    "jobTitle":"IT Support Specialist",
-    "url":"https://arthraval.com",
-    "email":"rarth73@gmail.com",
-    "sameAs":["https://www.linkedin.com/in/arthraval","https://github.com/arth-7","https://www.credly.com/users/arth-raval"]
-  }
-  </script>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact • Arth Raval</title>
+  <meta name="description" content="Contact Arth Raval for opportunities and collaboration." />
   <style>
-    *{font-family:'Inter',sans-serif}
-    .gradient-bg{background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#334155 100%)}
-    .hero-pattern{background-image:
-      radial-gradient(circle at 25% 25%, #3b82f6 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, #06b6d4 0%, transparent 50%);
-      background-size:100px 100px;opacity:.1}
-    .card-hover{transition:transform .25s ease, box-shadow .25s ease}
-    .card-hover:hover{transform:translateY(-6px);box-shadow:0 25px 50px -12px rgb(0 0 0/.25)}
-    .typing-animation{border-right:2px solid #3b82f6;animation:blink 1s infinite}
-    @keyframes blink{0%,50%{border-color:#3b82f6}51%,100%{border-color:transparent}}
-    .nav-link{position:relative;overflow:hidden}
-    .nav-link::after{content:'';position:absolute;bottom:0;left:-100%;width:100%;height:2px;background:linear-gradient(90deg,#3b82f6,#06b6d4);transition:left .25s ease}
-    .nav-link:hover::after{left:0}
+    :root {
+      --bg: #0b0c10;
+      --card: #121318;
+      --text: #e8e8ea;
+      --muted: #b9bcc4;
+      --accent: #5c6ac4;  /* subtle indigo */
+      --accent-2: #3f475e;
+      --error: #d93a3a;
+      --ok: #24a148;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 600px at 80% -10%, #121424 0%, #0b0c10 60%);
+      color: var(--text);
+      font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .wrap {
+      width: 100%;
+      max-width: 720px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 1rem + 2vw, 2.2rem);
+      margin: 0 0 4px 0;
+      letter-spacing: .2px;
+    }
+    p.sub {
+      margin: 0;
+      color: var(--muted);
+    }
+    form {
+      background: linear-gradient(180deg, var(--card), #0f1015);
+      border: 1px solid #1b1f2b;
+      border-radius: var(--radius);
+      padding: 20px;
+      display: grid;
+      gap: 14px;
+      box-shadow:
+        0 30px 60px -30px rgba(0,0,0,.4),
+        inset 0 1px 0 0 rgba(255,255,255,.02);
+    }
+    label span {
+      display: inline-block;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px 12px;
+      border-radius: 10px;
+      border: 1px solid #242838;
+      background: #0c0d12;
+      color: var(--text);
+      outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(92,106,196,.2);
+    }
+    textarea { resize: vertical; min-height: 140px; }
+    .row { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
+    @media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
+
+    .status {
+      min-height: 1.2rem;
+      font-size: .95rem;
+    }
+    .status.ok { color: var(--ok); }
+    .status.err { color: var(--error); }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 4px;
+    }
+    button {
+      appearance: none;
+      border: 0;
+      border-radius: 10px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      color: white;
+      padding: 12px 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .06s ease, filter .2s ease, opacity .2s ease;
+    }
+    button:hover { filter: brightness(1.08); }
+    button:active { transform: translateY(1px); }
+    button[disabled] { opacity: .6; cursor: not-allowed; }
+
+    footer {
+      text-align: center;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    a { color: #9aa6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* hide honeypot for assistive tech and layout */
+    .hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
   </style>
 </head>
+<body>
+  <main class="wrap" id="contact">
+    <header>
+      <h1>Contact me</h1>
+      <p class="sub">Questions, opportunities, or feedback — I’ll get back to you quickly.</p>
+    </header>
 
-<body class="dark bg-slate-950 text-white">
-  <!-- NAV -->
-  <nav class="fixed top-0 w-full z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <a href="#" class="text-xl font-bold text-white">Arth Raval</a>
-        <div class="hidden md:block">
-          <div class="ml-10 flex items-baseline space-x-8">
-            <a href="#home" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Home</a>
-            <a href="#about" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">About</a>
-            <a href="#skills" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Skills</a>
-            <a href="#projects" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Projects</a>
-            <a href="#certifications" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Certifications</a>
-            <a href="#contact" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Contact</a>
-          </div>
-        </div>
-        <div class="flex items-center space-x-3">
-          <button id="themeToggle" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-300" aria-label="Toggle theme">
-            <i id="themeIcon" class="fas fa-sun"></i>
-          </button>
-          <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-300" aria-expanded="false" aria-controls="mobileMenu">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden bg-slate-900/95 backdrop-blur-sm border-t border-slate-700/50">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-white">Home</a>
-        <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-white">About</a>
-        <a href="#skills" class="block px-3 py-2 text-gray-300 hover:text-white">Skills</a>
-        <a href="#projects" class="block px-3 py-2 text-gray-300 hover:text-white">Projects</a>
-        <a href="#certifications" class="block px-3 py-2 text-gray-300 hover:text-white">Certifications</a>
-        <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-white">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section id="home" class="min-h-screen gradient-bg relative overflow-hidden flex items-center">
-    <div class="hero-pattern absolute inset-0"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-      <div class="text-center pt-24">
-        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Arth Raval</h1>
-        <p id="typingText" class="text-xl md:text-2xl text-blue-400 mb-8 typing-animation inline-block">
-          IT Support | Networking | Cloud | Cybersecurity
-        </p>
-        <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-          IT professional focused on system administration, cloud, and cybersecurity. I design, harden, and automate reliable infrastructure.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">View My Work</a>
-          <a href="#contact" class="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition hover:scale-105">Get In Touch</a>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-4">
-          <a href="https://www.linkedin.com/in/arthraval" target="_blank" rel="noopener noreferrer" class="border-2 border-gray-400 text-gray-200 hover:bg-gray-200 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
-          <a href="mailto:rarth73@gmail.com" class="border-2 border-gray-400 text-gray-200 hover:bg-gray-200 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition"><i class="fas fa-envelope mr-2"></i>Email</a>
-          <a id="resumeLink" class="border-2 border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition cursor-pointer"><i class="fas fa-download mr-2"></i>Resume</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="py-20 bg-white dark:bg-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
-      </div>
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-          <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            Computer Engineering Technology grad with hands-on experience in Windows Server, Linux, AD/GPO, DNS/DHCP, firewalls, AWS/Azure, virtualization, and scripting.
-          </p>
-          <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            I like building clear runbooks, monitoring, and secure-by-default environments.
-          </p>
-        </div>
-        <div class="space-y-8">
-          <div class="card-hover bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-700 p-6 rounded-xl">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-              <i class="fas fa-graduation-cap text-blue-600 mr-3"></i> Education
-            </h3>
-            <div id="educationContent" class="space-y-4"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="py-20 bg-gray-50 dark:bg-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Technical Skills</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
-      </div>
-      <div id="skillsContent" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="py-20 bg-white dark:bg-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
-      </div>
-      <div id="projectsContent" class="grid lg:grid-cols-2 gap-8 mb-12"></div>
-      <div class="text-center">
-        <a href="https://github.com/arth-7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition hover:scale-105 hover:shadow-lg">
-          <i class="fab fa-github mr-3 text-xl"></i> View All Projects on GitHub
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="py-20 bg-gray-50 dark:bg-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Certifications & Badges</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
-      </div>
-      <div id="badgesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"></div>
-      <div class="text-center mt-12">
-        <a href="https://www.credly.com/users/arth-raval" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
-          <i class="fas fa-award mr-3"></i> View All Badges on Credly
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-20 bg-white dark:bg-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
-        <p class="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">Ready to collaborate or discuss an opportunity? Send me a message.</p>
+    <form id="contact-form" action="https://formspree.io/f/mvgbvwej" method="POST" accept-charset="UTF-8" novalidate>
+      <div class="row">
+        <label>
+          <span>Your name</span>
+          <input type="text" name="name" placeholder="Jane Doe" autocomplete="name" required />
+        </label>
+        <label>
+          <span>Your email</span>
+          <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+        </label>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-12">
-        <div id="contactItems" class="space-y-8"></div>
+      <label>
+        <span>Subject</span>
+        <input type="text" name="subject" placeholder="Let’s talk about…" />
+      </label>
 
-        <div class="card-hover bg-gray-50 dark:bg-slate-800 p-8 rounded-xl shadow-lg">
-          <!-- Formspree (no backend needed) -->
-          <form id="contactForm" action="https://formspree.io/f/mvgbvwej" method="POST" class="space-y-6" novalidate>
-            <input type="hidden" name="_subject" value="New message from Portfolio Website" />
-            <!-- Honeypot -->
-            <input type="text" name="_gotcha" class="absolute left-[-9999px] opacity-0 pointer-events-none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label>
+        <span>Your message</span>
+        <textarea name="message" placeholder="What's on your mind?" required></textarea>
+      </label>
 
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name *</label>
-              <input id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white" autocomplete="name">
-            </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email *</label>
-              <input id="email" name="email" type="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white" autocomplete="email">
-            </div>
-            <div>
-              <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
-              <input id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white">
-            </div>
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message *</label>
-              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-700 text-gray-900 dark:text-white"></textarea>
-            </div>
+      <!-- Formspree: customize subject in notification -->
+      <input type="hidden" name="_subject" value="Portfolio Contact" />
 
-            <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
-              <span id="submitText">Send Message</span>
-              <i id="submitSpinner" class="fas fa-spinner fa-spin ml-2 hidden"></i>
-            </button>
-
-            <div id="successMessage" class="hidden mt-4 rounded-lg p-4 text-white" style="background:linear-gradient(135deg,#10b981,#059669);">
-              <i class="fas fa-check-circle mr-2"></i> Thank you! Your message has been sent.
-            </div>
-            <div id="errorMessage" class="hidden mt-4 rounded-lg p-4 text-white" style="background:linear-gradient(135deg,#ef4444,#dc2626);">
-              <i class="fas fa-exclamation-triangle mr-2"></i> Sorry, there was an error. Please try again.
-            </div>
-          </form>
-        </div>
+      <!-- Honeypot spam trap -->
+      <div class="hp" aria-hidden="true">
+        <label>Company <input type="text" name="company" tabindex="-1" autocomplete="off" /></label>
       </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-slate-900 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-gray-400">© <span id="currentYear"></span> Arth Raval. All rights reserved.</p>
-      <div class="flex justify-center space-x-6 mt-6">
-        <a href="https://www.linkedin.com/in/arthraval" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
-        <a href="https://github.com/arth-7" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white"><i class="fab fa-github text-xl"></i></a>
-        <a href="https://www.credly.com/users/arth-raval" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white"><i class="fas fa-award text-xl"></i></a>
-        <a href="mailto:rarth73@gmail.com" class="text-gray-400 hover:text-white"><i class="fas fa-envelope text-xl"></i></a>
+      <div class="status" id="form-status" role="status" aria-live="polite"></div>
+
+      <div class="actions">
+        <button id="contact-submit" type="submit">Send</button>
+        <span class="sub" style="font-size:.9rem;">Powered by Formspree</span>
       </div>
-    </div>
-  </footer>
+    </form>
 
-  <!-- DATA + SCRIPTS -->
+    <footer>
+      <p>Back to <a href="/">home</a></p>
+    </footer>
+  </main>
+
   <script>
-    // ---- Config ----
-    const USE_GOOGLE_DRIVE = true;                                  // toggle if hosting resume locally
-    const GOOGLE_DRIVE_FILE_ID = "15xywE2IM7-GrSORGssMmWhGIfB2gQBjP";
-    const LOCAL_RESUME_URL = "/assets/Arth_Raval_Resume.pdf";        // TODO upload if using local
+    (function () {
+      const form = document.getElementById('contact-form');
+      const statusEl = document.getElementById('form-status');
+      const submitBtn = document.getElementById('contact-submit');
 
-    const portfolioData = {
-      education: [
-        { degree:"Advanced Diploma in Computer Engineering Technology", institution:"Seneca Polytechnic", achievement:"President's Honour List • GPA: 3.8/4.0" },
-        { degree:"Diploma in Computer Engineering", institution:"Gujarat Technological University", achievement:"CGPA: 9.7/10.0", coursework:"Programming, Web Development, Database Management" }
-      ],
-      skills: [
-        { category:"Systems & Networking", icon:"fas fa-server", color:"text-blue-600", items:["Windows Server","Linux Administration","DHCP & DNS","Active Directory","Network Configuration"] },
-        { category:"Security", icon:"fas fa-shield-alt", color:"text-red-600", items:["Firewalls","SIEM","SSH Keys","Penetration Testing","Security Auditing"] },
-        { category:"Cloud & Virtualization", icon:"fas fa-cloud", color:"text-green-600", items:["AWS","Microsoft Azure","VMware","Kubernetes","Docker"] },
-        { category:"Programming", icon:"fas fa-code", color:"text-purple-600", items:["Python","Bash Scripting","C Programming","MySQL","Oracle Database"] }
-      ],
-      projects: [
-        { title:"GestroDrive", icon:"fas fa-car", color:"text-blue-600", desc:"Gesture-controlled vehicle using ESP32/ESP-NOW, ESP32-CAM stream, and ultrasonic crash-stop.", tech:["ESP32 / ESP-NOW","MPU6050 (I²C)","ESP32-CAM (MJPEG)","Ultrasonic"], link:"https://github.com/arth-7/GestroDrive" },
-        { title:"Enterprise Network Design", icon:"fas fa-network-wired", color:"text-green-600", desc:"Cisco Packet Tracer design with VLANs, ACLs, inter-VLAN routing, and security policies.", tech:["Cisco","VLANs","Security"] },
-        { title:"Linux Server Configuration", icon:"fab fa-linux", color:"text-purple-600", desc:"Linux server: DNS, DHCP, Samba, Firewalld with backups and secure client/server setup.", tech:["Linux","DNS/DHCP","Samba"] },
-        { title:"IoT Monitoring Systems", icon:"fas fa-microchip", color:"text-yellow-600", desc:"Distance and temperature monitoring with embedded code and real-time data.", tech:["IoT","Sensors","Embedded"] }
-      ],
-      badges: [
-        { title:"AWS Educate – Getting Started with Compute", img:"/assets/badges/aws-educate.png", href:"https://www.credly.com/badges/cf182339-43e3-4c0c-97c8-cb1ee7ecdade/public_url" },
-        { title:"Big Data Foundations – Level 1", img:"/assets/badges/big-data-foundations.png", href:"https://www.credly.com/badges/4809e129-4e8b-4f52-8006-3a3f2cdcaf71/public_url" },
-        { title:"Networking Basics", img:"/assets/badges/networking-basics.png", href:"https://www.credly.com/badges/49e1db37-b679-4b66-9256-8abb07da2c6a/public_url" },
-        { title:"Network Addressing & Basic Troubleshooting", img:"/assets/badges/network-addressing.png", href:"https://www.credly.com/badges/219cf011-b967-4994-9238-7292788f658b/public_url" },
-        { title:"Machine Learning with Python – Level 1", img:"/assets/badges/ml-python.png", href:"https://www.credly.com/badges/49a4554a-0968-4fa7-92dd-174e78f48ee0/public_url" }
-      ]
-    };
+      function setStatus(msg, ok = true) {
+        statusEl.textContent = msg || '';
+        statusEl.classList.toggle('ok', !!ok);
+        statusEl.classList.toggle('err', !ok);
+      }
 
-    // ---- Renderers ----
-    function renderEducation(){
-      document.getElementById('educationContent').innerHTML =
-        portfolioData.education.map(e=>`
-          <div>
-            <h4 class="font-semibold text-gray-800 dark:text-gray-200">${e.degree}</h4>
-            <p class="text-gray-600 dark:text-gray-400">${e.institution}</p>
-            <p class="text-sm text-blue-600 dark:text-blue-400">${e.achievement}</p>
-            ${e.coursework?`<p class="text-sm text-gray-500 dark:text-gray-400">${e.coursework}</p>`:''}
-          </div>`).join('');
-    }
-    function renderSkills(){
-      document.getElementById('skillsContent').innerHTML =
-        portfolioData.skills.map(s=>`
-          <div class="card-hover bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg">
-            <div class="text-center">
-              <div class="text-4xl ${s.color} mb-4"><i class="${s.icon}"></i></div>
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">${s.category}</h3>
-              <ul class="text-gray-600 dark:text-gray-300 space-y-2 text-sm">
-                ${s.items.map(i=>`<li>${i}</li>`).join('')}
-              </ul>
-            </div>
-          </div>`).join('');
-    }
-    function renderProjects(){
-      document.getElementById('projectsContent').innerHTML =
-        portfolioData.projects.map(p=>`
-          <div class="card-hover bg-white/60 dark:bg-slate-800/80 rounded-xl overflow-hidden shadow-lg">
-            <div class="p-8">
-              <div class="flex items-center mb-4">
-                <i class="${p.icon} text-3xl ${p.color} mr-4"></i>
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">${p.title}</h3>
-              </div>
-              <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">${p.desc}</p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                ${p.tech.map(t=>`<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">${t}</span>`).join('')}
-              </div>
-              ${p.link?`<a href="${p.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"><i class="fab fa-github mr-2"></i>View on GitHub</a>`:''}
-            </div>
-          </div>`).join('');
-    }
-    function renderBadges(){
-      const g = document.getElementById('badgesGrid');
-      g.innerHTML =
-        portfolioData.badges.map(b=>`
-          <a href="${b.href}" target="_blank" rel="noopener noreferrer" class="group block bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
-            <div class="w-full aspect-square overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-600">
-              <img src="${b.img}" alt="${b.title}" loading="lazy" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
-            </div>
-            <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">${b.title}</h3>
-          </a>`).join('') +
-        `<div class="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-700 dark:to-slate-600 p-6 rounded-xl text-center shadow-lg border-2 border-dashed border-blue-300 dark:border-blue-600">
-           <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-gray-400 to-gray-500 rounded-full flex items-center justify-center">
-             <i class="fas fa-plus text-white text-2xl"></i>
-           </div>
-           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">More Coming Soon</h3>
-           <p class="text-gray-600 dark:text-gray-300 text-sm">Continuously learning</p>
-         </div>`;
-    }
-    function renderContactItems(){
-      const wrapper = document.getElementById('contactItems');
-      const items = [
-        { icon:'fas fa-envelope', label:'Email', href:'mailto:rarth73@gmail.com', text:'rarth73@gmail.com' },
-        { icon:'fab fa-linkedin', label:'LinkedIn', href:'https://www.linkedin.com/in/arthraval', text:'linkedin.com/in/arthraval' },
-        { icon:'fab fa-github', label:'GitHub', href:'https://github.com/arth-7', text:'github.com/arth-7' },
-        { icon:'fas fa-award', label:'Credly', href:'https://www.credly.com/users/arth-raval', text:'credly.com/users/arth-raval' }
-      ];
-      wrapper.innerHTML = items.map(p=>`
-        <div class="flex items-center space-x-4">
-          <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
-            <i class="${p.icon} text-blue-600 text-xl"></i>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">${p.label}</h3>
-            <a href="${p.href}" target="${p.href.startsWith('http') ? '_blank' : ''}" ${p.href.startsWith('http') ? 'rel="noopener noreferrer"' : ''} class="text-blue-600 hover:text-blue-700">${p.text}</a>
-          </div>
-        </div>`).join('');
-    }
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-    // ---- Utilities ----
-    function bindResumeButton(){
-      const a=document.getElementById('resumeLink');
-      if (USE_GOOGLE_DRIVE && GOOGLE_DRIVE_FILE_ID){
-        a.href=`https://drive.google.com/uc?export=download&id=${GOOGLE_DRIVE_FILE_ID}`;
-      } else { a.href=LOCAL_RESUME_URL; }
-      a.setAttribute('download','Arth_Raval_Resume.pdf');
-    }
-    function typingEffect(){
-      const el=document.getElementById('typingText');
-      const text='IT Support | Networking | Cloud | Cybersecurity';
-      let i=0;(function type(){ if(i<text.length){ el.textContent=text.slice(0,++i); setTimeout(type,100);}
-        else{ setTimeout(()=>{i=0; el.textContent=''; type();},2000);} })();
-    }
-    function initMenuAndTheme(){
-      const body=document.body, menuBtn=document.getElementById('mobileMenuBtn'), menu=document.getElementById('mobileMenu'), icon=document.getElementById('themeIcon');
-      const saved=localStorage.getItem('theme')||'dark'; body.classList.toggle('dark', saved==='dark'); icon.className=saved==='dark'?'fas fa-sun':'fas fa-moon';
-      document.getElementById('themeToggle').addEventListener('click',()=>{ const isDark=body.classList.contains('dark'); body.classList.toggle('dark',!isDark); localStorage.setItem('theme',!isDark?'dark':'light'); icon.className=!isDark?'fas fa-sun':'fas fa-moon';});
-      menuBtn.addEventListener('click',()=>{ const ex=menuBtn.getAttribute('aria-expanded')==='true'; menuBtn.setAttribute('aria-expanded',String(!ex)); menu.classList.toggle('hidden');});
-      document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{ const t=document.querySelector(a.getAttribute('href')); if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); menu.classList.add('hidden'); }}));
-    }
-    function wireContactForm(){
-      const form=document.getElementById('contactForm'); if(!form) return;
-      const btn=document.getElementById('submitBtn'), txt=document.getElementById('submitText'), spin=document.getElementById('submitSpinner'), ok=document.getElementById('successMessage'), err=document.getElementById('errorMessage');
-      form.addEventListener('submit', async (e)=>{
-        e.preventDefault(); btn.disabled=true; spin.classList.remove('hidden'); txt.textContent='Sending...'; ok.classList.add('hidden'); err.classList.add('hidden');
-        try{
-          const fd=new FormData(form);
-          const res=await fetch(form.action,{method:'POST', body:fd, headers:{'Accept':'application/json'}});
-          const data=await res.json().catch(()=>({}));
-          if(!res.ok) throw new Error(data?.errors?.[0]?.message||'Send failed');
-          ok.classList.remove('hidden'); form.reset();
-        }catch(ex){ console.error(ex); err.classList.remove('hidden'); }
-        finally{ btn.disabled=false; spin.classList.add('hidden'); txt.textContent='Send Message'; }
+        // Front-end validation first
+        if (!form.checkValidity()) {
+          setStatus('Please fill in all required fields correctly.', false);
+          return;
+        }
+
+        // Honeypot: if filled, likely a bot
+        const hp = form.querySelector('input[name="company"]');
+        if (hp && hp.value) {
+          // Silently fail to bots
+          setStatus('Sending…');
+          return;
+        }
+
+        // Disable button while sending
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+        setStatus('Sending…');
+
+        try {
+          const data = Object.fromEntries(new FormData(form).entries());
+          const resp = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+
+          if (resp.ok) {
+            form.reset();
+            setStatus('Thanks! Your message was sent.', true);
+          } else {
+            let msg = 'Something went wrong. Please try again.';
+            try {
+              const json = await resp.json();
+              if (json?.errors?.length) {
+                msg = json.errors.map(e => e.message).join(' ');
+              }
+            } catch (_) {}
+            setStatus(msg, false);
+          }
+        } catch (err) {
+          setStatus('Network error. Check your connection and try again.', false);
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send';
+        }
       });
-    }
-
-    // ---- Init ----
-    document.getElementById('currentYear').textContent=new Date().getFullYear();
-    renderEducation(); renderSkills(); renderProjects(); renderBadges(); renderContactItems();
-    bindResumeButton(); typingEffect(); initMenuAndTheme(); wireContactForm();
+    })();
   </script>
 </body>
 </html>
