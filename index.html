@@ -16,14 +16,14 @@
   <meta property="og:url" content="https://arthraval.com/" />
   <meta property="og:title" content="Arth Raval – IT Professional" />
   <meta property="og:description" content="IT Support | Networking | Cloud | Cybersecurity" />
-  <meta property="og:image" content="/assets/og-image.jpg" />
+  <meta property="og:image" content="assets/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="/assets/og-image.jpg" />
+  <meta name="twitter:image" content="assets/og-image.jpg" />
 
   <!-- Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/icons/favicon-192.png" />
-  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/favicon-192.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
   <meta name="theme-color" content="#0f172a" />
 
   <!-- Fonts + UI -->
@@ -32,8 +32,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-  <!-- (Optional analytics blocks removed for brevity; add back if you use them) -->
 
   <!-- Schema -->
   <script type="application/ld+json">
@@ -61,14 +59,15 @@
     .nav-link{position:relative;overflow:hidden}
     .nav-link::after{content:'';position:absolute;bottom:0;left:-100%;width:100%;height:2px;background:linear-gradient(90deg,#3b82f6,#06b6d4);transition:left .25s ease}
     .nav-link:hover::after{left:0}
-    /* CCNA shine */
+    /* CCNA feature */
     .shine{position:relative;overflow:hidden}
     .shine::after{
-      content:""; position:absolute; top:-120%; left:-120%; width:240%; height:240%;
-      background: conic-gradient(from 180deg at 50% 50%, rgba(59,130,246,.12), rgba(6,182,212,.12), transparent 40%);
-      animation: spin 8s linear infinite;
+      content:""; position:absolute; top:-100%; left:-100%; width:200%; height:200%;
+      background:conic-gradient(from 0deg, transparent, rgba(255,255,255,.15), transparent 30%);
+      animation:spin 6s linear infinite; pointer-events:none
     }
     @keyframes spin { to { transform: rotate(360deg); } }
+    .glow-border{ box-shadow: 0 0 0 1px #2563eb, 0 0 40px rgba(37,99,235,.3), inset 0 0 40px rgba(37,99,235,.15); }
   </style>
 </head>
 
@@ -82,6 +81,7 @@
           <div class="ml-10 flex items-baseline space-x-8">
             <a href="#home" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Home</a>
             <a href="#about" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">About</a>
+            <a href="#education" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Education</a>
             <a href="#skills" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Skills</a>
             <a href="#projects" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Projects</a>
             <a href="#certifications" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Certifications</a>
@@ -102,6 +102,7 @@
       <div class="px-2 pt-2 pb-3 space-y-1">
         <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-white">Home</a>
         <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-white">About</a>
+        <a href="#education" class="block px-3 py-2 text-gray-300 hover:text-white">Education</a>
         <a href="#skills" class="block px-3 py-2 text-gray-300 hover:text-white">Skills</a>
         <a href="#projects" class="block px-3 py-2 text-gray-300 hover:text-white">Projects</a>
         <a href="#certifications" class="block px-3 py-2 text-gray-300 hover:text-white">Certifications</a>
@@ -154,17 +155,68 @@
         <div class="space-y-8">
           <div class="card-hover bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-700 p-6 rounded-xl">
             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-              <i class="fas fa-graduation-cap text-blue-600 mr-3"></i> Education
+              <i class="fas fa-graduation-cap text-blue-600 mr-3"></i> Education Snapshot
             </h3>
-            <div id="educationContent" class="space-y-4"></div>
+            <p class="text-gray-700 dark:text-gray-300">
+              Ontario College Advanced Diploma (Honours) – Seneca Polytechnic; Diploma in Computer Engineering – Gujarat Technological University.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- EDUCATION -->
+  <section id="education" class="py-20 bg-gray-50 dark:bg-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Education</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Seneca -->
+        <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="https://www.senecapolytechnic.ca/content/dam/projects/seneca/seneca-logo.svg"
+                 alt="Seneca Polytechnic logo" class="h-10 w-auto" />
+            <span class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-200 text-xs font-semibold">
+              <i class="fa-solid fa-award"></i> Graduated with Honours
+            </span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Ontario College Advanced Diploma</h3>
+          <p class="text-gray-700 dark:text-gray-300">Computer Engineering Technology • Seneca Polytechnic</p>
+          <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Systems & Networking</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Cloud & Security</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://drive.google.com/file/d/1hBOrEkdPLFP2JvmKe6nsSqfcogP_1urX/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold">
+              <i class="fa-solid fa-file-pdf"></i> Graduation Certificate (PDF)
+            </a>
+            <a href="https://drive.google.com/file/d/1U-MI_ISBFKyj3rTwbNuXyljg-jB3ES5V/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-4 py-2 rounded-lg font-semibold">
+              <i class="fa-regular fa-image"></i> Certificate Image
+            </a>
+          </div>
+        </div>
+
+        <!-- GTU -->
+        <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="https://www.gtu.ac.in/assets/img/logo.png" alt="Gujarat Technological University logo" class="h-12 w-auto" />
+            <span class="text-sm text-gray-600 dark:text-gray-300">Diploma in Computer Engineering</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Gujarat Technological University (GTU)</h3>
+          <p class="text-gray-700 dark:text-gray-300">Strong CS fundamentals; programming, web, and databases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SKILLS -->
-  <section id="skills" class="py-20 bg-gray-50 dark:bg-slate-800">
+  <section id="skills" class="py-20 bg-white dark:bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Technical Skills</h2>
@@ -175,7 +227,7 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="py-20 bg-white dark:bg-slate-900">
+  <section id="projects" class="py-20 bg-gray-50 dark:bg-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
@@ -191,48 +243,48 @@
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section id="certifications" class="py-20 bg-gray-50 dark:bg-slate-800">
+  <section id="certifications" class="py-20 bg-white dark:bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Certifications & Badges</h2>
         <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
       </div>
 
-      <!-- 🌟 Featured CCNA hero -->
-      <div class="shine relative overflow-hidden rounded-2xl border border-blue-400/40 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-700 p-6 md:p-8 mb-12 shadow-xl">
-        <div class="grid gap-8 md:grid-cols-[220px,1fr] items-center relative z-10">
-          <div class="bg-white/70 dark:bg-slate-900/40 rounded-xl p-4 flex items-center justify-center shadow">
-            <img src="https://raw.githubusercontent.com/arth-7/arth-portfolio/refs/heads/main/assets/badges/CCNA.png" alt="Cisco CCNA badge" class="max-h-44 w-auto object-contain" loading="eager" />
+      <!-- CCNA FEATURE HERO -->
+      <div class="shine glow-border rounded-2xl bg-white/70 dark:bg-slate-900/60 p-6 md:p-10 mb-14 border border-blue-500/40">
+        <div class="grid md:grid-cols-[240px,1fr] gap-8 items-center">
+          <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-4">
+            <img src="https://raw.githubusercontent.com/arth-7/arth-portfolio/refs/heads/main/assets/badges/CCNA.png"
+                 alt="Cisco CCNA badge" class="w-full h-full object-contain" />
           </div>
           <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200 text-xs font-semibold mb-3">
-              <i class="fa-solid fa-certificate"></i> Featured Certification
+            <div class="inline-flex items-center gap-2 text-blue-400 uppercase tracking-wide text-xs font-semibold mb-2">
+              <i class="fas fa-star"></i> Featured Certification
             </div>
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Cisco Certified Network Associate (CCNA)</h3>
-            <p class="mt-3 text-gray-700 dark:text-gray-300 leading-relaxed">
-              Validates core networking skills: routing & switching, IP services, network access, security fundamentals, and automation/programmability.
-              Highlights: VLANs/STP/EtherChannel, IPv4/IPv6 addressing, DHCP/DNS, ACLs/NAT, wireless basics, and network automation concepts.
+            <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-3">Cisco Certified Network Associate (CCNA)</h3>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-5">
+              Validated skills across networking fundamentals, routing & switching, IP services, security, wireless, and basic automation.
             </p>
-            <div class="mt-5 flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200 text-sm">Routing & Switching</span>
-              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200 text-sm">IP Services</span>
-              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200 text-sm">Security</span>
-              <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200 text-sm">Automation</span>
-            </div>
-            <div class="mt-6 flex gap-3">
+            <ul class="grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300 mb-6">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Network Access, VLANs & STP</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> IP Connectivity & Services (DHCP, NAT)</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Security Fundamentals (ACLs, hardening)</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Automation & Programmability basics</li>
+            </ul>
+            <div class="flex flex-wrap gap-3">
               <a href="https://www.credly.com/badges/cfa79679-fb9c-46cf-a580-fae56eed975a/public_url" target="_blank" rel="noopener noreferrer"
-                 class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
-                <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> View on Credly
+                 class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-3 rounded-lg transition">
+                <i class="fas fa-external-link-alt"></i> View on Credly
               </a>
-              <a href="#badgesGrid" class="inline-flex items-center border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-5 py-3 rounded-lg font-semibold transition">
-                See all badges
+              <a href="#badgesGrid" class="inline-flex items-center gap-2 border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold px-5 py-3 rounded-lg transition">
+                <i class="fas fa-grid-2"></i> See all badges
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Regular badges grid (unchanged) -->
+      <!-- Badges grid -->
       <div id="badgesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"></div>
       <div class="text-center mt-12">
         <a href="https://www.credly.com/users/arth-raval" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
@@ -242,37 +294,37 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-20 bg-white dark:bg-slate-900">
+  <!-- CONTACT (Email CTA only) -->
+  <section id="contact" class="py-20 bg-gray-50 dark:bg-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
         <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
         <p class="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
-          Reach me directly via email — I respond fast.
+          No forms — just reach me directly by email or socials below.
         </p>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12">
-        <div id="contactItems" class="space-y-8"></div>
-
-        <!-- No form: simple email call-to-action -->
-        <div class="card-hover bg-gray-50 dark:bg-slate-800 p-8 rounded-xl shadow-lg flex flex-col items-start justify-center">
-          <div class="flex items-center gap-3 text-gray-700 dark:text-gray-200">
-            <i class="fas fa-envelope text-2xl text-blue-600"></i>
-            <div>
-              <p class="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">Email</p>
-              <a href="mailto:rarth73@gmail.com" class="text-xl font-semibold text-blue-600 hover:text-blue-700">rarth73@gmail.com</a>
-            </div>
+        <!-- Left: quick email card -->
+        <div class="card-hover bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-700">
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Email me</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-6">I usually respond quickly.</p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="mailto:rarth73@gmail.com"
+               class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+              <i class="fas fa-envelope"></i> rarth73@gmail.com
+            </a>
+            <button id="copyEmailBtn"
+               class="inline-flex items-center justify-center gap-2 border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition">
+              <i class="fas fa-copy"></i> Copy email
+            </button>
           </div>
-          <a href="mailto:rarth73@gmail.com"
-             class="mt-6 inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
-            <i class="fas fa-paper-plane mr-2"></i> Email Me
-          </a>
-          <p class="mt-4 text-sm text-gray-600 dark:text-gray-400">
-            Prefer LinkedIn? <a href="https://www.linkedin.com/in/arthraval" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-semibold">DM me here</a>.
-          </p>
+          <p id="copyToast" class="hidden mt-4 text-green-500"><i class="fas fa-check-circle mr-1"></i> Email copied!</p>
         </div>
+
+        <!-- Right: social links -->
+        <div id="contactItems" class="space-y-8"></div>
       </div>
     </div>
   </section>
@@ -293,15 +345,11 @@
   <!-- DATA + SCRIPTS -->
   <script>
     // ---- Config ----
-    const USE_GOOGLE_DRIVE = true;                                  // toggle if hosting resume locally
+    const USE_GOOGLE_DRIVE = true;
     const GOOGLE_DRIVE_FILE_ID = "15xywE2IM7-GrSORGssMmWhGIfB2gQBjP";
-    const LOCAL_RESUME_URL = "/assets/Arth_Raval_Resume.pdf";
+    const LOCAL_RESUME_URL = "assets/Arth_Raval_Resume.pdf";
 
     const portfolioData = {
-      education: [
-        { degree:"Advanced Diploma in Computer Engineering Technology", institution:"Seneca Polytechnic", achievement:"President's Honour List • GPA: 3.8/4.0" },
-        { degree:"Diploma in Computer Engineering", institution:"Gujarat Technological University", achievement:"CGPA: 9.7/10.0", coursework:"Programming, Web Development, Database Management" }
-      ],
       skills: [
         { category:"Systems & Networking", icon:"fas fa-server", color:"text-blue-600", items:["Windows Server","Linux Administration","DHCP & DNS","Active Directory","Network Configuration"] },
         { category:"Security", icon:"fas fa-shield-alt", color:"text-red-600", items:["Firewalls","SIEM","SSH Keys","Penetration Testing","Security Auditing"] },
@@ -315,25 +363,16 @@
         { title:"IoT Monitoring Systems", icon:"fas fa-microchip", color:"text-yellow-600", desc:"Distance and temperature monitoring with embedded code and real-time data.", tech:["IoT","Sensors","Embedded"] }
       ],
       badges: [
-        { title:"AWS Educate – Getting Started with Compute", img:"/assets/badges/aws-educate.png", href:"https://www.credly.com/badges/cf182339-43e3-4c0c-97c8-cb1ee7ecdade/public_url" },
-        { title:"Big Data Foundations – Level 1", img:"/assets/badges/big-data-foundations.png", href:"https://www.credly.com/badges/4809e129-4e8b-4f52-8006-3a3f2cdcaf71/public_url" },
-        { title:"Networking Basics", img:"/assets/badges/networking-basics.png", href:"https://www.credly.com/badges/49e1db37-b679-4b66-9256-8abb07da2c6a/public_url" },
-        { title:"Network Addressing & Basic Troubleshooting", img:"/assets/badges/network-addressing.png", href:"https://www.credly.com/badges/219cf011-b967-4994-9238-7292788f658b/public_url" },
-        { title:"Machine Learning with Python – Level 1", img:"/assets/badges/ml-python.png", href:"https://www.credly.com/badges/49a4554a-0968-4fa7-92dd-174e78f48ee0/public_url" }
+        { title:"Cisco CCNA", img:"https://raw.githubusercontent.com/arth-7/arth-portfolio/refs/heads/main/assets/badges/CCNA.png", href:"https://www.credly.com/badges/cfa79679-fb9c-46cf-a580-fae56eed975a/public_url" },
+        { title:"AWS Educate – Getting Started with Compute", img:"assets/badges/aws-educate.png", href:"https://www.credly.com/badges/cf182339-43e3-4c0c-97c8-cb1ee7ecdade/public_url" },
+        { title:"Big Data Foundations – Level 1", img:"assets/badges/big-data-foundations.png", href:"https://www.credly.com/badges/4809e129-4e8b-4f52-8006-3a3f2cdcaf71/public_url" },
+        { title:"Networking Basics", img:"assets/badges/networking-basics.png", href:"https://www.credly.com/badges/49e1db37-b679-4b66-9256-8abb07da2c6a/public_url" },
+        { title:"Network Addressing & Basic Troubleshooting", img:"assets/badges/network-addressing.png", href:"https://www.credly.com/badges/219cf011-b967-4994-9238-7292788f658b/public_url" },
+        { title:"Machine Learning with Python – Level 1", img:"assets/badges/ml-python.png", href:"https://www.credly.com/badges/49a4554a-0968-4fa7-92dd-174e78f48ee0/public_url" }
       ]
     };
 
     // ---- Renderers ----
-    function renderEducation(){
-      document.getElementById('educationContent').innerHTML =
-        portfolioData.education.map(e=>`
-          <div>
-            <h4 class="font-semibold text-gray-800 dark:text-gray-200">${e.degree}</h4>
-            <p class="text-gray-600 dark:text-gray-400">${e.institution}</p>
-            <p class="text-sm text-blue-600 dark:text-blue-400">${e.achievement}</p>
-            ${e.coursework?`<p class="text-sm text-gray-500 dark:text-gray-400">${e.coursework}</p>`:''}
-          </div>`).join('');
-    }
     function renderSkills(){
       document.getElementById('skillsContent').innerHTML =
         portfolioData.skills.map(s=>`
@@ -373,14 +412,7 @@
               <img src="${b.img}" alt="${b.title}" loading="lazy" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
             </div>
             <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">${b.title}</h3>
-          </a>`).join('') +
-        `<div class="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-700 dark:to-slate-600 p-6 rounded-xl text-center shadow-lg border-2 border-dashed border-blue-300 dark:border-blue-600">
-           <div class="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-gray-400 to-gray-500 rounded-full flex items-center justify-center">
-             <i class="fas fa-plus text-white text-2xl"></i>
-           </div>
-           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">More Coming Soon</h3>
-           <p class="text-gray-600 dark:text-gray-300 text-sm">Continuously learning</p>
-         </div>`;
+          </a>`).join('');
     }
     function renderContactItems(){
       const wrapper = document.getElementById('contactItems');
@@ -423,11 +455,19 @@
       menuBtn.addEventListener('click',()=>{ const ex=menuBtn.getAttribute('aria-expanded')==='true'; menuBtn.setAttribute('aria-expanded',String(!ex)); menu.classList.toggle('hidden');});
       document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{ const t=document.querySelector(a.getAttribute('href')); if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); menu.classList.add('hidden'); }}));
     }
+    function wireCopyEmail(){
+      const btn=document.getElementById('copyEmailBtn'); if(!btn) return;
+      const toast=document.getElementById('copyToast');
+      btn.addEventListener('click', async ()=>{
+        try{ await navigator.clipboard.writeText('rarth73@gmail.com'); toast.classList.remove('hidden'); setTimeout(()=>toast.classList.add('hidden'), 1600); }
+        catch{ /* ignore */ }
+      });
+    }
 
     // ---- Init ----
     document.getElementById('currentYear').textContent=new Date().getFullYear();
-    renderEducation(); renderSkills(); renderProjects(); renderBadges(); renderContactItems();
-    bindResumeButton(); typingEffect(); initMenuAndTheme();
+    renderSkills(); renderProjects(); renderBadges(); renderContactItems();
+    bindResumeButton(); typingEffect(); initMenuAndTheme(); wireCopyEmail();
   </script>
 </body>
 </html>
