@@ -59,7 +59,6 @@
     .nav-link{position:relative;overflow:hidden}
     .nav-link::after{content:'';position:absolute;bottom:0;left:-100%;width:100%;height:2px;background:linear-gradient(90deg,#3b82f6,#06b6d4);transition:left .25s ease}
     .nav-link:hover::after{left:0}
-    /* CCNA feature */
     .shine{position:relative;overflow:hidden}
     .shine::after{
       content:""; position:absolute; top:-100%; left:-100%; width:200%; height:200%;
@@ -122,10 +121,19 @@
           <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">View My Work</a>
           <a href="#contact" class="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition hover:scale-105">Get In Touch</a>
         </div>
+
+        <!-- Social + Resume -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center mt-4">
           <a href="https://www.linkedin.com/in/arthraval" target="_blank" rel="noopener noreferrer" class="border-2 border-gray-400 text-gray-200 hover:bg-gray-200 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
           <a href="mailto:rarth73@gmail.com" class="border-2 border-gray-400 text-gray-200 hover:bg-gray-200 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition"><i class="fas fa-envelope mr-2"></i>Email</a>
-          <a id="resumeLink" class="border-2 border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition cursor-pointer"><i class="fas fa-download mr-2"></i>Resume</a>
+
+          <!-- NEW: Preview + Download -->
+          <button id="resumePreviewBtn" class="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition">
+            <i class="fa-regular fa-eye mr-2"></i>Preview Resume
+          </button>
+          <a id="resumeDownloadBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition cursor-pointer">
+            <i class="fas fa-download mr-2"></i>Download Resume
+          </a>
         </div>
       </div>
     </div>
@@ -141,10 +149,10 @@
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6">
           <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            Computer Engineering Technology grad with hands-on experience in Windows Server, Linux, AD/GPO, DNS/DHCP, firewalls, AWS/Azure, virtualization, and scripting.
+            Computer Engineering Technology grad with hands-on experience in Windows Server, Linux, AD/GPO, DNS/DHCP, VLANs, firewalls, AWS/Azure, virtualization, and scripting.
           </p>
           <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            I like building clear runbooks, monitoring, and secure-by-default environments.
+            I like building clear runbooks, monitoring, and secure-by-default environments—and I actually enjoy documenting what I build, so others can run it confidently.
           </p>
         </div>
         <div class="space-y-8">
@@ -188,8 +196,10 @@
           <p class="mt-3 text-blue-600 dark:text-blue-400 font-semibold">GPA 3.8 / 4.0</p>
 
           <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Systems & Networking</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Cloud & Security</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Windows/Linux admin, AD/GPO, DHCP/DNS</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> VLANs, trunking, inter-VLAN routing, ACLs</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Cloud (AWS/Azure), virtualization, containers</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Security hardening, logs/SIEM, scripting</li>
           </ul>
 
           <!-- Certificate controls -->
@@ -208,7 +218,7 @@
         <!-- GTU -->
         <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
           <div class="flex items-center gap-4 mb-4">
-            <img src="https://www.gtu.ac.in/assets/img/logo.png" alt="Gujarat Technological University logo" class="h-12 w-auto" />
+            <img src="assets/img/gtu.png" alt="Gujarat Technological University logo" class="h-12 w-auto" />
           </div>
           <h3 class="text-xl font-bold text-gray-900 dark:text-white">Diploma in Computer Engineering</h3>
           <p class="text-gray-700 dark:text-gray-300">Gujarat Technological University (GTU)</p>
@@ -217,8 +227,10 @@
           </p>
           <p class="mt-3 text-blue-600 dark:text-blue-400 font-semibold">CGPA 9.7 / 10.0</p>
           <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Programming & Web</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Database Fundamentals</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Built full-stack basics: HTML/CSS/JS + PHP/MySQL</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Data structures, OOP, database design</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Networking fundamentals, subnets & routing</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Hands-on labs and mini-projects each semester</li>
           </ul>
         </div>
       </div>
@@ -352,7 +364,7 @@
     </div>
   </footer>
 
-  <!-- PDF PREVIEW MODAL -->
+  <!-- CERTIFICATE PREVIEW MODAL -->
   <div id="pdfModal" class="fixed inset-0 z-50 hidden">
     <div id="pdfBackdrop" class="absolute inset-0 bg-black/70"></div>
     <div class="relative max-w-6xl mx-auto my-8 bg-slate-900 rounded-xl shadow-2xl overflow-hidden">
@@ -366,21 +378,81 @@
     </div>
   </div>
 
+  <!-- RESUME PREVIEW MODAL -->
+  <div id="resumeModal" class="fixed inset-0 z-50 hidden">
+    <div id="resumeBackdrop" class="absolute inset-0 bg-black/70"></div>
+    <div class="relative max-w-6xl mx-auto my-8 bg-slate-900 rounded-xl shadow-2xl overflow-hidden">
+      <div class="flex items-center justify-between p-4 border-b border-slate-700">
+        <h4 class="text-white font-semibold">Resume — Preview</h4>
+        <button id="resumeCloseBtn" class="text-slate-300 hover:text-white text-xl px-2" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="w-[90vw] max-w-6xl h-[75vh]">
+        <iframe id="resumeFrame" class="w-full h-full" allow="autoplay"></iframe>
+      </div>
+    </div>
+  </div>
+
   <!-- DATA + SCRIPTS -->
   <script>
     // ---- Config ----
     const USE_GOOGLE_DRIVE = true;
     const GOOGLE_DRIVE_FILE_ID = "15xywE2IM7-GrSORGssMmWhGIfB2gQBjP"; // resume
     const LOCAL_RESUME_URL = "assets/Arth_Raval_Resume.pdf";
-
     const CERT_PDF_ID = "1hBOrEkdPLFP2JvmKe6nsSqfcogP_1urX"; // Seneca certificate
+
+    const drivePreview = id => `https://drive.google.com/file/d/${id}/preview`;
+    const driveDownload = id => `https://drive.google.com/uc?export=download&id=${id}`;
 
     const portfolioData = {
       skills: [
-        { category:"Systems & Networking", icon:"fas fa-server", color:"text-blue-600", items:["Windows Server","Linux Administration","DHCP & DNS","Active Directory","Network Configuration"] },
-        { category:"Security", icon:"fas fa-shield-alt", color:"text-red-600", items:["Firewalls","SIEM","SSH Keys","Penetration Testing","Security Auditing"] },
-        { category:"Cloud & Virtualization", icon:"fas fa-cloud", color:"text-green-600", items:["AWS","Microsoft Azure","VMware","Kubernetes","Docker"] },
-        { category:"Programming", icon:"fas fa-code", color:"text-purple-600", items:["Python","Bash Scripting","C Programming","MySQL","Oracle Database"] }
+        {
+          category: "Systems & Networking",
+          icon: "fas fa-server",
+          color: "text-blue-600",
+          items: [
+            "Windows Server, Linux (Ubuntu/CentOS)",
+            "Active Directory, GPO, DHCP/DNS",
+            "VLANs, trunking, inter-VLAN routing",
+            "Basic firewalling & NAT",
+            "Backups, monitoring, runbooks"
+          ]
+        },
+        {
+          category: "Security",
+          icon: "fas fa-shield-alt",
+          color: "text-red-600",
+          items: [
+            "Hardening & patching",
+            "ACLs, least-privilege, SSH keys",
+            "Log analysis & basic SIEM",
+            "Baseline scanning & auditing",
+            "Incident triage & docs"
+          ]
+        },
+        {
+          category: "Cloud & Virtualization",
+          icon: "fas fa-cloud",
+          color: "text-green-600",
+          items: [
+            "AWS & Azure fundamentals",
+            "VMware & VirtualBox",
+            "Docker containers",
+            "CI/CD basics & Git",
+            "Infrastructure as Code (intro)"
+          ]
+        },
+        {
+          category: "Programming & Scripting",
+          icon: "fas fa-code",
+          color: "text-purple-600",
+          items: [
+            "Python & Bash",
+            "PowerShell for admin tasks",
+            "C programming (embedded basics)",
+            "SQL & MySQL",
+            "Automation & APIs (intro)"
+          ]
+        }
       ],
       projects: [
         { title:"GestroDrive", icon:"fas fa-car", color:"text-blue-600", desc:"Gesture-controlled vehicle using ESP32/ESP-NOW, ESP32-CAM stream, and ultrasonic crash-stop.", tech:["ESP32 / ESP-NOW","MPU6050 (I²C)","ESP32-CAM (MJPEG)","Ultrasonic"], link:"https://github.com/arth-7/GestroDrive" },
@@ -461,12 +533,24 @@
     }
 
     // ---- Utilities ----
-    function bindResumeButton(){
-      const a=document.getElementById('resumeLink');
-      if (USE_GOOGLE_DRIVE && GOOGLE_DRIVE_FILE_ID){
-        a.href=`https://drive.google.com/uc?export=download&id=${GOOGLE_DRIVE_FILE_ID}`;
-      } else { a.href=LOCAL_RESUME_URL; }
-      a.setAttribute('download','Arth_Raval_Resume.pdf');
+    function bindResumeButtons(){
+      const dl = document.getElementById('resumeDownloadBtn');
+      const pv = document.getElementById('resumePreviewBtn');
+
+      if (USE_GOOGLE_DRIVE && GOOGLE_DRIVE_FILE_ID) {
+        dl.href = driveDownload(GOOGLE_DRIVE_FILE_ID);
+      } else {
+        dl.href = LOCAL_RESUME_URL;
+      }
+      dl.setAttribute('download','Arth_Raval_Resume.pdf');
+
+      pv.addEventListener('click', () => {
+        const modal = document.getElementById('resumeModal');
+        const frame = document.getElementById('resumeFrame');
+        frame.src = (USE_GOOGLE_DRIVE && GOOGLE_DRIVE_FILE_ID) ? drivePreview(GOOGLE_DRIVE_FILE_ID) : LOCAL_RESUME_URL;
+        modal.classList.remove('hidden');
+        document.body.style.overflow='hidden';
+      });
     }
     function typingEffect(){
       const el=document.getElementById('typingText');
@@ -502,11 +586,20 @@
       back.addEventListener('click',hide);
       document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!modal.classList.contains('hidden')) hide(); });
     }
+    function wireResumeModal(){
+      const modal=document.getElementById('resumeModal');
+      const close=document.getElementById('resumeCloseBtn');
+      const back=document.getElementById('resumeBackdrop');
+      const hide=()=>{ modal.classList.add('hidden'); document.getElementById('resumeFrame').src=''; document.body.style.overflow=''; };
+      close.addEventListener('click',hide);
+      back.addEventListener('click',hide);
+      document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!modal.classList.contains('hidden')) hide(); });
+    }
 
     // ---- Init ----
     document.getElementById('currentYear').textContent=new Date().getFullYear();
     renderSkills(); renderProjects(); renderBadges(); renderContactItems();
-    bindResumeButton(); typingEffect(); initMenu(); wireCopyEmail(); wirePdfModal();
+    bindResumeButtons(); typingEffect(); initMenu(); wireCopyEmail(); wirePdfModal(); wireResumeModal();
   </script>
 </body>
 </html>
