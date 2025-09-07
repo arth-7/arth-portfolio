@@ -24,12 +24,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="icons/favicon-192.png" />
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="theme-color" content="#0b1220" />
 
   <!-- Fonts + UI -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
@@ -46,40 +46,53 @@
   }
   </script>
 
+  <!-- Subtle custom styling to elevate the visuals -->
   <style>
     *{font-family:'Inter',sans-serif}
-    .gradient-bg{background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#334155 100%)}
+    .gradient-bg{
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(59,130,246,.25), transparent 60%),
+                  radial-gradient(1200px 600px at 110% 10%, rgba(34,197,94,.18), transparent 60%),
+                  linear-gradient(135deg,#0b1220 0%,#0f172a 40%,#111827 100%);
+    }
     .hero-pattern{background-image:
-      radial-gradient(circle at 25% 25%, #3b82f6 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, #06b6d4 0%, transparent 50%); background-size:100px 100px;opacity:.1}
+      radial-gradient(circle at 25% 25%, #60a5fa 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, #22d3ee 0%, transparent 50%);
+      background-size:110px 110px;opacity:.08}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid rgba(148,163,184,.15); backdrop-filter:blur(8px)}
     .card-hover{transition:transform .25s ease, box-shadow .25s ease}
-    .card-hover:hover{transform:translateY(-6px);box-shadow:0 25px 50px -12px rgb(0 0 0/.25)}
-    .typing-animation{border-right:2px solid #3b82f6;animation:blink 1s infinite}
-    @keyframes blink{0%,50%{border-color:#3b82f6}51%,100%{border-color:transparent}}
+    .card-hover:hover{transform:translateY(-6px);box-shadow:0 25px 50px -12px rgb(0 0 0/.35)}
     .nav-link{position:relative;overflow:hidden}
     .nav-link::after{content:'';position:absolute;bottom:0;left:-100%;width:100%;height:2px;background:linear-gradient(90deg,#3b82f6,#06b6d4);transition:left .25s ease}
     .nav-link:hover::after{left:0}
+    .btn{border-radius:.75rem;padding:.85rem 1.35rem;font-weight:600}
+    .btn-primary{background:#2563eb;color:#fff}
+    .btn-primary:hover{background:#1d4ed8}
+    .btn-ghost{border:2px solid #60a5fa;color:#93c5fd}
+    .btn-ghost:hover{background:#60a5fa;color:#0b1220}
+    .typing-animation{border-right:2px solid #60a5fa;animation:blink 1s infinite}
+    @keyframes blink{0%,50%{border-color:#60a5fa}51%,100%{border-color:transparent}}
     .shine{position:relative;overflow:hidden}
-    .shine::after{
-      content:""; position:absolute; top:-100%; left:-100%; width:200%; height:200%;
-      background:conic-gradient(from 0deg, transparent, rgba(255,255,255,.15), transparent 30%);
-      animation:spin 6s linear infinite; pointer-events:none
-    }
+    .shine::after{content:""; position:absolute; inset:-150% -150% auto auto;
+      width:200%; height:200%; background:conic-gradient(from 0deg, transparent, rgba(255,255,255,.18), transparent 30%);
+      animation:spin 7s linear infinite; pointer-events:none}
     @keyframes spin { to { transform: rotate(360deg); } }
-    .glow-border{ box-shadow: 0 0 0 1px #2563eb, 0 0 40px rgba(37,99,235,.3), inset 0 0 40px rgba(37,99,235,.15); }
+    .badge{display:inline-flex; align-items:center; gap:.5rem; font-size:.75rem;
+      padding:.35rem .6rem; border-radius:999px}
   </style>
 </head>
 
 <body class="dark bg-slate-950 text-white">
   <!-- NAV -->
-  <nav class="fixed top-0 w-full z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50">
+  <nav class="fixed top-0 w-full z-50 bg-slate-900/90 backdrop-blur-sm border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
-        <a href="#" class="text-xl font-bold text-white">Arth Raval</a>
+        <a href="#" class="text-xl font-bold text-white tracking-tight">Arth Raval</a>
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-8">
             <a href="#home" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Home</a>
             <a href="#about" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">About</a>
+            <a href="#experience" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Experience</a>
             <a href="#education" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Education</a>
             <a href="#skills" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Skills</a>
             <a href="#projects" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Projects</a>
@@ -92,10 +105,11 @@
         </button>
       </div>
     </div>
-    <div id="mobileMenu" class="md:hidden hidden bg-slate-900/95 backdrop-blur-sm border-t border-slate-700/50">
+    <div id="mobileMenu" class="md:hidden hidden bg-slate-900/95 backdrop-blur-sm border-t border-slate-800">
       <div class="px-2 pt-2 pb-3 space-y-1">
         <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-white">Home</a>
         <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-white">About</a>
+        <a href="#experience" class="block px-3 py-2 text-gray-300 hover:text-white">Experience</a>
         <a href="#education" class="block px-3 py-2 text-gray-300 hover:text-white">Education</a>
         <a href="#skills" class="block px-3 py-2 text-gray-300 hover:text-white">Skills</a>
         <a href="#projects" class="block px-3 py-2 text-gray-300 hover:text-white">Projects</a>
@@ -110,57 +124,66 @@
     <div class="hero-pattern absolute inset-0"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
       <div class="text-center pt-24">
-        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Arth Raval</h1>
-        <p id="typingText" class="text-xl md:text-2xl text-blue-400 mb-8 typing-animation inline-block">
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">Arth Raval</h1>
+        <p id="typingText" class="text-xl md:text-2xl text-blue-300 mb-8 typing-animation inline-block">
           IT Support | Networking | Cloud | Cybersecurity
         </p>
         <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-          IT professional focused on system administration, cloud, and cybersecurity. I design, harden, and automate reliable infrastructure.
+          I build reliable infrastructure and keep it secure: Windows & Linux servers, AD/GPO, DNS/DHCP, VLANs, firewalls, AWS/Azure, and automation with Python/PowerShell/Bash.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">View My Work</a>
-          <a href="#contact" class="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition hover:scale-105">Get In Touch</a>
-        </div>
-
-        <!-- Social + Resume -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-4">
-          <a href="https://www.linkedin.com/in/arthraval" target="_blank" rel="noopener noreferrer" class="border-2 border-gray-400 text-gray-200 hover:bg-gray-200 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
-          <a href="mailto:rarth73@gmail.com" class="border-2 border-gray-400 text-gray-200 hover:bg-gray-200 hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition"><i class="fas fa-envelope mr-2"></i>Email</a>
-
-          <!-- NEW: Preview + Download -->
-          <button id="resumePreviewBtn" class="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition">
-            <i class="fa-regular fa-eye mr-2"></i>Preview Resume
+          <a href="#projects" class="btn btn-primary hover:shadow-lg hover:scale-[1.02] transition">View My Work</a>
+          <button id="resumePreviewBtn" class="btn btn-ghost hover:scale-[1.02] transition">
+            <i class="fa-regular fa-eye mr-2"></i> Preview Resume
           </button>
-          <a id="resumeDownloadBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition cursor-pointer">
-            <i class="fas fa-download mr-2"></i>Download Resume
+          <a href="#contact" class="btn btn-ghost hover:scale-[1.02] transition">
+            <i class="fa-solid fa-handshake mr-2"></i> Hire Me
           </a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- HIRE ME CALLOUT -->
+  <section class="py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="card card-hover rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between">
+        <p class="text-gray-200 text-center md:text-left text-lg">
+          If you want to hire me, <span class="font-semibold text-blue-300">contact me by email</span> — I’d love to help ship and secure your systems.
+        </p>
+        <a href="mailto:rarth73@gmail.com" class="mt-4 md:mt-0 btn btn-primary">
+          <i class="fa-solid fa-envelope mr-2"></i> rarth73@gmail.com
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
-  <section id="about" class="py-20 bg-white dark:bg-slate-900">
+  <section id="about" class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">About Me</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
       </div>
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6">
-          <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            Computer Engineering Technology grad with hands-on experience in Windows Server, Linux, AD/GPO, DNS/DHCP, VLANs, firewalls, AWS/Azure, virtualization, and scripting.
-          </p>
-          <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            I like building clear runbooks, monitoring, and secure-by-default environments—and I actually enjoy documenting what I build, so others can run it confidently.
-          </p>
+          <div class="card rounded-2xl p-6">
+            <p class="text-lg text-gray-200 leading-relaxed">
+              I’m an <span class="font-semibold text-blue-300">IT Support / Systems</span> guy who loves tidy networks and clean automation. 
+              Give me a broken DNS zone, a flaky GPO, or a server that needs hardening—I’ll fix it, document it, and make it repeatable.
+            </p>
+            <p class="text-lg text-gray-200 leading-relaxed mt-4">
+              My vibe: clear runbooks, strong monitoring, least-privilege by default, and small scripts that save big time. 
+              I learn fast, I test everything, and I leave things better than I found them.
+            </p>
+          </div>
         </div>
         <div class="space-y-8">
-          <div class="card-hover bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-800 dark:to-slate-700 p-6 rounded-xl">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-              <i class="fas fa-graduation-cap text-blue-600 mr-3"></i> Education Snapshot
+          <div class="card rounded-2xl p-6">
+            <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
+              <i class="fas fa-graduation-cap text-blue-400 mr-3"></i> Education Snapshot
             </h3>
-            <p class="text-gray-700 dark:text-gray-300">
+            <p class="text-gray-300">
               Ontario College Advanced Diploma (Honours) – Seneca Polytechnic • GPA 3.8/4.0<br />
               Diploma in Computer Engineering – GTU • CGPA 9.7/10.0
             </p>
@@ -170,67 +193,106 @@
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-20 bg-slate-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Experience</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Chipotle -->
+      <div class="card card-hover rounded-2xl p-6 md:p-8">
+        <div class="flex items-start md:items-center gap-5 md:gap-7 flex-col md:flex-row">
+          <div class="w-16 h-16 rounded-xl bg-white flex items-center justify-center p-2">
+            <img src="assets/img/chipotle.svg" alt="Chipotle logo" class="w-full h-full object-contain" />
+          </div>
+          <div class="flex-1">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <h3 class="text-2xl font-bold">Crew Member — Chipotle Mexican Grill</h3>
+              <span class="badge bg-emerald-900/40 text-emerald-200 border border-emerald-700/40" id="chipotleDuration">
+                Aug 2023 – Present • calculating…
+              </span>
+            </div>
+            <p class="text-gray-300 mt-2">Toronto, ON • Part-time</p>
+            <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-gray-200">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Fast, accurate service during rush hours; teamwork under pressure</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Cleanliness, food-safety standards, and communication</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> The burrito folding game is elite (seriously)</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Customer-first mindset that I carry into IT support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick nudge -->
+      <p class="text-center text-gray-300 mt-6">
+        Want that energy on your team? <a class="text-blue-300 underline hover:text-blue-200" href="mailto:rarth73@gmail.com">Email me.</a>
+      </p>
+    </div>
+  </section>
+
   <!-- EDUCATION -->
-  <section id="education" class="py-20 bg-gray-50 dark:bg-slate-800">
+  <section id="education" class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Education</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Education</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-8">
         <!-- Seneca -->
-        <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
+        <div class="card card-hover rounded-2xl p-6">
           <div class="flex items-center gap-4 mb-4">
             <img src="https://www.senecapolytechnic.ca/content/dam/projects/seneca/seneca-logo.svg"
                  alt="Seneca Polytechnic logo" class="h-10 w-auto" />
-            <span class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-200 text-xs font-semibold">
+            <span class="badge bg-emerald-900/40 text-emerald-200 border border-emerald-700/40">
               <i class="fa-solid fa-award"></i> Graduated with Honours
             </span>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Ontario College Advanced Diploma</h3>
-          <p class="text-gray-700 dark:text-gray-300">Computer Engineering Technology (ECT) • Seneca Polytechnic</p>
-          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 flex items-center gap-2">
+          <h3 class="text-xl font-bold text-white">Ontario College Advanced Diploma</h3>
+          <p class="text-gray-300">Computer Engineering Technology (ECT) • Seneca Polytechnic</p>
+          <p class="mt-2 text-sm text-gray-400 flex items-center gap-2">
             <i class="fa-regular fa-calendar"></i> Issued August 2025
           </p>
-          <p class="mt-3 text-blue-600 dark:text-blue-400 font-semibold">GPA 3.8 / 4.0</p>
+          <p class="mt-3 text-blue-300 font-semibold">GPA 3.8 / 4.0</p>
 
-          <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Windows/Linux admin, AD/GPO, DHCP/DNS</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> VLANs, trunking, inter-VLAN routing, ACLs</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Cloud (AWS/Azure), virtualization, containers</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Security hardening, logs/SIEM, scripting</li>
+          <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-gray-200">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Windows/Linux admin, AD/GPO, DHCP/DNS</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> VLANs, trunking, inter-VLAN routing, ACLs</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Cloud (AWS/Azure), virtualization, containers</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Security hardening, logs/SIEM, scripting</li>
           </ul>
 
           <!-- Certificate controls -->
           <div class="mt-6 flex flex-wrap gap-3">
             <button id="previewPdfBtn"
-               class="inline-flex items-center gap-2 border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-4 py-2 rounded-lg font-semibold">
+               class="btn btn-ghost">
               <i class="fa-regular fa-eye"></i> Preview Certificate
             </button>
             <a href="https://drive.google.com/file/d/1hBOrEkdPLFP2JvmKe6nsSqfcogP_1urX/view?usp=sharing" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold">
+               class="btn btn-primary">
               <i class="fa-solid fa-file-pdf"></i> Open PDF
             </a>
           </div>
         </div>
 
         <!-- GTU -->
-        <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 p-6">
+        <div class="card card-hover rounded-2xl p-6">
           <div class="flex items-center gap-4 mb-4">
             <img src="assets/img/gtu.png" alt="Gujarat Technological University logo" class="h-12 w-auto" />
           </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Diploma in Computer Engineering</h3>
-          <p class="text-gray-700 dark:text-gray-300">Gujarat Technological University (GTU)</p>
-          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 flex items-center gap-2">
+          <h3 class="text-xl font-bold text-white">Diploma in Computer Engineering</h3>
+          <p class="text-gray-300">Gujarat Technological University (GTU)</p>
+          <p class="mt-2 text-sm text-gray-400 flex items-center gap-2">
             <i class="fa-regular fa-calendar"></i> Passed June 2022
           </p>
-          <p class="mt-3 text-blue-600 dark:text-blue-400 font-semibold">CGPA 9.7 / 10.0</p>
-          <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Built full-stack basics: HTML/CSS/JS + PHP/MySQL</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Data structures, OOP, database design</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Networking fundamentals, subnets & routing</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> Hands-on labs and mini-projects each semester</li>
+          <p class="mt-3 text-blue-300 font-semibold">CGPA 9.7 / 10.0</p>
+          <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-gray-200">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Full-stack basics: HTML/CSS/JS + PHP/MySQL</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Data structures, OOP, database design</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Networking fundamentals, subnets & routing</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Hands-on labs and mini-projects each semester</li>
           </ul>
         </div>
       </div>
@@ -238,26 +300,26 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="py-20 bg-white dark:bg-slate-900">
+  <section id="skills" class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Technical Skills</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Technical Skills</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
       </div>
       <div id="skillsContent" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="py-20 bg-gray-50 dark:bg-slate-800">
+  <section id="projects" class="py-20 bg-slate-900/40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Featured Projects</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
       </div>
       <div id="projectsContent" class="grid lg:grid-cols-2 gap-8 mb-12"></div>
       <div class="text-center">
-        <a href="https://github.com/arth-7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition hover:scale-105 hover:shadow-lg">
+        <a href="https://github.com/arth-7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
           <i class="fab fa-github mr-3 text-xl"></i> View All Projects on GitHub
         </a>
       </div>
@@ -265,40 +327,40 @@
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section id="certifications" class="py-20 bg-white dark:bg-slate-900">
+  <section id="certifications" class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Certifications & Badges</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Certifications & Badges</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
       </div>
 
       <!-- CCNA FEATURE HERO -->
-      <div class="shine glow-border rounded-2xl bg-white/70 dark:bg-slate-900/60 p-6 md:p-10 mb-14 border border-blue-500/40">
+      <div class="shine rounded-2xl p-6 md:p-10 mb-14 border border-blue-500/40 bg-gradient-to-br from-slate-800/70 to-slate-900/50">
         <div class="grid md:grid-cols-[240px,1fr] gap-8 items-center">
-          <div class="bg-slate-100 dark:bg-slate-800 rounded-xl p-4">
+          <div class="bg-slate-900/70 rounded-xl p-4 border border-slate-700">
             <img src="https://raw.githubusercontent.com/arth-7/arth-portfolio/refs/heads/main/assets/badges/CCNA.png"
                  alt="Cisco CCNA badge" class="w-full h-full object-contain" />
           </div>
           <div>
-            <div class="inline-flex items-center gap-2 text-blue-400 uppercase tracking-wide text-xs font-semibold mb-2">
+            <div class="inline-flex items-center gap-2 text-blue-300 uppercase tracking-wide text-xs font-semibold mb-2">
               <i class="fas fa-star"></i> Featured Certification
             </div>
-            <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-3">Cisco Certified Network Associate (CCNA)</h3>
-            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-5">
-              Validated skills across networking fundamentals, routing & switching, IP services, security, wireless, and basic automation.
+            <h3 class="text-3xl font-bold text-white mb-3">Cisco Certified Network Associate (CCNA)</h3>
+            <p class="text-gray-300 leading-relaxed mb-5">
+              Networking fundamentals, routing & switching, IP services, security, wireless, and intro automation.
             </p>
-            <ul class="grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300 mb-6">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Network Access, VLANs & STP</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> IP Connectivity & Services (DHCP, NAT)</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Security Fundamentals (ACLs, hardening)</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Automation & Programmability basics</li>
+            <ul class="grid sm:grid-cols-2 gap-2 text-sm text-gray-200 mb-6">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Network Access, VLANs & STP</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> IP Connectivity & Services (DHCP, NAT)</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Security Fundamentals (ACLs, hardening)</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Automation & Programmability basics</li>
             </ul>
             <div class="flex flex-wrap gap-3">
               <a href="https://www.credly.com/badges/cfa79679-fb9c-46cf-a580-fae56eed975a/public_url" target="_blank" rel="noopener noreferrer"
-                 class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-3 rounded-lg transition">
+                 class="btn btn-primary">
                 <i class="fas fa-external-link-alt"></i> View on Credly
               </a>
-              <a href="#badgesGrid" class="inline-flex items-center gap-2 border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold px-5 py-3 rounded-lg transition">
+              <a href="#badgesGrid" class="btn btn-ghost">
                 <i class="fas fa-grid-2"></i> See all badges
               </a>
             </div>
@@ -309,7 +371,7 @@
       <!-- Badges grid -->
       <div id="badgesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"></div>
       <div class="text-center mt-12">
-        <a href="https://www.credly.com/users/arth-raval" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
+        <a href="https://www.credly.com/users/arth-raval" target="_blank" rel="noopener noreferrer" class="inline-flex items-center btn btn-primary">
           <i class="fas fa-award mr-3"></i> View All Badges on Credly
         </a>
       </div>
@@ -317,32 +379,32 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-20 bg-gray-50 dark:bg-slate-800">
+  <section id="contact" class="py-20 bg-slate-900/40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
-        <p class="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
-          No forms — just reach me directly by email or socials below.
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Get In Touch</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
+        <p class="text-lg text-gray-300 mt-6 max-w-2xl mx-auto">
+          No forms—just reach me directly by email or socials below.
         </p>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12">
         <!-- Left: email card -->
-        <div class="card-hover bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-700">
-          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Email me</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-6">I usually respond quickly.</p>
+        <div class="card card-hover p-8 rounded-2xl">
+          <h3 class="text-2xl font-bold text-white mb-3">Email me</h3>
+          <p class="text-gray-300 mb-6">I usually respond quickly.</p>
           <div class="flex flex-col sm:flex-row gap-3">
             <a href="mailto:rarth73@gmail.com"
-               class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+               class="btn btn-primary inline-flex items-center justify-center gap-2">
               <i class="fas fa-envelope"></i> rarth73@gmail.com
             </a>
             <button id="copyEmailBtn"
-               class="inline-flex items-center justify-center gap-2 border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition">
+               class="btn btn-ghost inline-flex items-center justify-center gap-2">
               <i class="fas fa-copy"></i> Copy email
             </button>
           </div>
-          <p id="copyToast" class="hidden mt-4 text-green-500"><i class="fas fa-check-circle mr-1"></i> Email copied!</p>
+          <p id="copyToast" class="hidden mt-4 text-emerald-400"><i class="fas fa-check-circle mr-1"></i> Email copied!</p>
         </div>
 
         <!-- Right: social links -->
@@ -352,7 +414,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-slate-900 text-white py-12">
+  <footer class="bg-slate-950 text-white py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <p class="text-gray-400">© <span id="currentYear"></span> Arth Raval. All rights reserved.</p>
       <div class="flex justify-center space-x-6 mt-6">
@@ -408,7 +470,7 @@
         {
           category: "Systems & Networking",
           icon: "fas fa-server",
-          color: "text-blue-600",
+          color: "text-blue-400",
           items: [
             "Windows Server, Linux (Ubuntu/CentOS)",
             "Active Directory, GPO, DHCP/DNS",
@@ -420,7 +482,7 @@
         {
           category: "Security",
           icon: "fas fa-shield-alt",
-          color: "text-red-600",
+          color: "text-red-400",
           items: [
             "Hardening & patching",
             "ACLs, least-privilege, SSH keys",
@@ -432,7 +494,7 @@
         {
           category: "Cloud & Virtualization",
           icon: "fas fa-cloud",
-          color: "text-green-600",
+          color: "text-green-400",
           items: [
             "AWS & Azure fundamentals",
             "VMware & VirtualBox",
@@ -444,7 +506,7 @@
         {
           category: "Programming & Scripting",
           icon: "fas fa-code",
-          color: "text-purple-600",
+          color: "text-purple-400",
           items: [
             "Python & Bash",
             "PowerShell for admin tasks",
@@ -455,10 +517,10 @@
         }
       ],
       projects: [
-        { title:"GestroDrive", icon:"fas fa-car", color:"text-blue-600", desc:"Gesture-controlled vehicle using ESP32/ESP-NOW, ESP32-CAM stream, and ultrasonic crash-stop.", tech:["ESP32 / ESP-NOW","MPU6050 (I²C)","ESP32-CAM (MJPEG)","Ultrasonic"], link:"https://github.com/arth-7/GestroDrive" },
-        { title:"Enterprise Network Design", icon:"fas fa-network-wired", color:"text-green-600", desc:"Cisco Packet Tracer design with VLANs, ACLs, inter-VLAN routing, and security policies.", tech:["Cisco","VLANs","Security"] },
-        { title:"Linux Server Configuration", icon:"fab fa-linux", color:"text-purple-600", desc:"Linux server: DNS, DHCP, Samba, Firewalld with backups and secure client/server setup.", tech:["Linux","DNS/DHCP","Samba"] },
-        { title:"IoT Monitoring Systems", icon:"fas fa-microchip", color:"text-yellow-600", desc:"Distance and temperature monitoring with embedded code and real-time data.", tech:["IoT","Sensors","Embedded"] }
+        { title:"GestroDrive", icon:"fas fa-car", color:"text-blue-400", desc:"Gesture-controlled vehicle using ESP32/ESP-NOW, ESP32-CAM stream, and ultrasonic crash-stop.", tech:["ESP32 / ESP-NOW","MPU6050 (I²C)","ESP32-CAM (MJPEG)","Ultrasonic"], link:"https://github.com/arth-7/GestroDrive" },
+        { title:"Enterprise Network Design", icon:"fas fa-network-wired", color:"text-green-400", desc:"Cisco Packet Tracer design with VLANs, ACLs, inter-VLAN routing, and security policies.", tech:["Cisco","VLANs","Security"] },
+        { title:"Linux Server Configuration", icon:"fab fa-linux", color:"text-purple-400", desc:"Linux server: DNS, DHCP, Samba, Firewalld with backups and secure client/server setup.", tech:["Linux","DNS/DHCP","Samba"] },
+        { title:"IoT Monitoring Systems", icon:"fas fa-microchip", color:"text-yellow-400", desc:"Distance and temperature monitoring with embedded code and real-time data.", tech:["IoT","Sensors","Embedded"] }
       ],
       badges: [
         { title:"Cisco CCNA", img:"https://raw.githubusercontent.com/arth-7/arth-portfolio/refs/heads/main/assets/badges/CCNA.png", href:"https://www.credly.com/badges/cfa79679-fb9c-46cf-a580-fae56eed975a/public_url" },
@@ -474,11 +536,11 @@
     function renderSkills(){
       document.getElementById('skillsContent').innerHTML =
         portfolioData.skills.map(s=>`
-          <div class="card-hover bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg">
+          <div class="card card-hover p-6 rounded-2xl shadow-lg">
             <div class="text-center">
               <div class="text-4xl ${s.color} mb-4"><i class="${s.icon}"></i></div>
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">${s.category}</h3>
-              <ul class="text-gray-600 dark:text-gray-300 space-y-2 text-sm">
+              <h3 class="text-xl font-semibold text-white mb-4">${s.category}</h3>
+              <ul class="text-gray-300 space-y-2 text-sm">
                 ${s.items.map(i=>`<li>${i}</li>`).join('')}
               </ul>
             </div>
@@ -487,17 +549,17 @@
     function renderProjects(){
       document.getElementById('projectsContent').innerHTML =
         portfolioData.projects.map(p=>`
-          <div class="card-hover bg-white/60 dark:bg-slate-800/80 rounded-xl overflow-hidden shadow-lg">
+          <div class="card card-hover rounded-2xl overflow-hidden">
             <div class="p-8">
               <div class="flex items-center mb-4">
                 <i class="${p.icon} text-3xl ${p.color} mr-4"></i>
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">${p.title}</h3>
+                <h3 class="text-2xl font-bold text-white">${p.title}</h3>
               </div>
-              <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">${p.desc}</p>
+              <p class="text-gray-300 mb-6 leading-relaxed">${p.desc}</p>
               <div class="flex flex-wrap gap-2 mb-6">
-                ${p.tech.map(t=>`<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">${t}</span>`).join('')}
+                ${p.tech.map(t=>`<span class="px-3 py-1 bg-white/10 text-blue-100 rounded-full text-sm">${t}</span>`).join('')}
               </div>
-              ${p.link?`<a href="${p.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"><i class="fab fa-github mr-2"></i>View on GitHub</a>`:''}
+              ${p.link?`<a href="${p.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-300 hover:text-blue-200 font-semibold"><i class="fab fa-github mr-2"></i>View on GitHub</a>`:''}
             </div>
           </div>`).join('');
     }
@@ -505,11 +567,11 @@
       const g = document.getElementById('badgesGrid');
       g.innerHTML =
         portfolioData.badges.map(b=>`
-          <a href="${b.href}" target="_blank" rel="noopener noreferrer" class="group block bg-white dark:bg-slate-700 p-6 rounded-xl shadow-lg card-hover text-center">
-            <div class="w-full aspect-square overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-600">
+          <a href="${b.href}" target="_blank" rel="noopener noreferrer" class="group block card p-6 rounded-2xl card-hover text-center">
+            <div class="w-full aspect-square overflow-hidden rounded-lg bg-slate-900/60 border border-slate-700">
               <img src="${b.img}" alt="${b.title}" loading="lazy" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
             </div>
-            <h3 class="text-lg font-semibold mt-4 text-gray-900 dark:text-white">${b.title}</h3>
+            <h3 class="text-lg font-semibold mt-4 text-white">${b.title}</h3>
           </a>`).join('');
     }
     function renderContactItems(){
@@ -521,29 +583,20 @@
         { icon:'fas fa-award', label:'Credly', href:'https://www.credly.com/users/arth-raval', text:'credly.com/users/arth-raval' }
       ];
       wrapper.innerHTML = items.map(p=>`
-        <div class="flex items-center space-x-4">
-          <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
-            <i class="${p.icon} text-blue-600 text-xl"></i>
+        <div class="flex items-center space-x-4 card p-5 rounded-xl">
+          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+            <i class="${p.icon} text-blue-300 text-xl"></i>
           </div>
           <div>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">${p.label}</h3>
-            <a href="${p.href}" target="${p.href.startsWith('http') ? '_blank' : ''}" ${p.href.startsWith('http') ? 'rel="noopener noreferrer"' : ''} class="text-blue-600 hover:text-blue-700">${p.text}</a>
+            <h3 class="text-lg font-semibold text-white">${p.label}</h3>
+            <a href="${p.href}" target="${p.href.startsWith('http') ? '_blank' : ''}" ${p.href.startsWith('http') ? 'rel="noopener noreferrer"' : ''} class="text-blue-300 hover:text-blue-200">${p.text}</a>
           </div>
         </div>`).join('');
     }
 
     // ---- Utilities ----
-    function bindResumeButtons(){
-      const dl = document.getElementById('resumeDownloadBtn');
+    function bindResumePreview(){
       const pv = document.getElementById('resumePreviewBtn');
-
-      if (USE_GOOGLE_DRIVE && GOOGLE_DRIVE_FILE_ID) {
-        dl.href = driveDownload(GOOGLE_DRIVE_FILE_ID);
-      } else {
-        dl.href = LOCAL_RESUME_URL;
-      }
-      dl.setAttribute('download','Arth_Raval_Resume.pdf');
-
       pv.addEventListener('click', () => {
         const modal = document.getElementById('resumeModal');
         const frame = document.getElementById('resumeFrame');
@@ -596,10 +649,29 @@
       document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!modal.classList.contains('hidden')) hide(); });
     }
 
+    // --- Chipotle live duration ---
+    function formatYM(from, to){
+      let years = to.getFullYear() - from.getFullYear();
+      let months = to.getMonth() - from.getMonth();
+      if (months < 0) { years -= 1; months += 12; }
+      const y = years > 0 ? `${years} ${years===1?'year':'years'}` : '';
+      const m = months > 0 ? `${months} ${months===1?'month':'months'}` : (years===0 ? '0 months' : '');
+      return (y && m) ? `${y} ${m}` : (y || m);
+    }
+    function updateChipotleDuration(){
+      const el = document.getElementById('chipotleDuration');
+      if(!el) return;
+      const start = new Date(2023, 7, 1); // Aug is month 7 (0-indexed)
+      const now = new Date();
+      el.textContent = `Aug 2023 – Present • ${formatYM(start, now)}`;
+    }
+
     // ---- Init ----
     document.getElementById('currentYear').textContent=new Date().getFullYear();
     renderSkills(); renderProjects(); renderBadges(); renderContactItems();
-    bindResumeButtons(); typingEffect(); initMenu(); wireCopyEmail(); wirePdfModal(); wireResumeModal();
+    bindResumePreview(); typingEffect(); initMenu(); wireCopyEmail(); wirePdfModal(); wireResumeModal();
+    updateChipotleDuration();
+    setInterval(updateChipotleDuration, 60*1000); // refresh every minute
   </script>
 </body>
 </html>
