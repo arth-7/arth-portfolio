@@ -1,677 +1,326 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arth Raval – IT Professional | Networking | Cloud | Cybersecurity</title>
-
-  <!-- SEO -->
-  <meta name="description" content="IT Support Specialist with strengths in Networking, Cloud, and Cybersecurity. AWS/Azure, Windows/Linux, AD/GPO, DNS/DHCP." />
-  <meta name="keywords" content="IT Support, Networking, Cloud, Cybersecurity, AWS, Azure, Linux, Windows Server, System Administration" />
-  <meta name="author" content="Arth Raval" />
-  <link rel="canonical" href="https://arthraval.com/" />
-
-  <!-- Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://arthraval.com/" />
-  <meta property="og:title" content="Arth Raval – IT Professional" />
-  <meta property="og:description" content="IT Support | Networking | Cloud | Cybersecurity" />
-  <meta property="og:image" content="assets/og-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="assets/og-image.jpg" />
-
-  <!-- Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="icons/favicon-192.png" />
-  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
-  <meta name="theme-color" content="#0b1220" />
-
-  <!-- Fonts + UI -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-  <!-- Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Arth Raval",
-    "jobTitle":"IT Support Specialist",
-    "url":"https://arthraval.com",
-    "email":"rarth73@gmail.com",
-    "sameAs":["https://www.linkedin.com/in/arthraval","https://github.com/arth-7","https://www.credly.com/users/arth-raval"]
-  }
-  </script>
-
-  <!-- Subtle custom styling to elevate the visuals -->
+  <title>Arth — Portfolio</title>
+  <meta name="description" content="Application Support Specialist — projects, experience, and certifications." />
+  <link rel="icon" href="assets/image/linux-logo.svg">
   <style>
-    *{font-family:'Inter',sans-serif}
-    .gradient-bg{
-      background: radial-gradient(1200px 600px at 10% -10%, rgba(59,130,246,.25), transparent 60%),
-                  radial-gradient(1200px 600px at 110% 10%, rgba(34,197,94,.18), transparent 60%),
-                  linear-gradient(135deg,#0b1220 0%,#0f172a 40%,#111827 100%);
+    :root{
+      --bg:#0b0c10; --card:#0f1117; --ink:#e6e8ee; --muted:#aab2c0; --line:#1d2230; --accent:#4ea8ff; --good:#00b894;
     }
-    .hero-pattern{background-image:
-      radial-gradient(circle at 25% 25%, #60a5fa 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, #22d3ee 0%, transparent 50%);
-      background-size:110px 110px;opacity:.08}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border:1px solid rgba(148,163,184,.15); backdrop-filter:blur(8px)}
-    .card-hover{transition:transform .25s ease, box-shadow .25s ease}
-    .card-hover:hover{transform:translateY(-6px);box-shadow:0 25px 50px -12px rgb(0 0 0/.35)}
-    .nav-link{position:relative;overflow:hidden}
-    .nav-link::after{content:'';position:absolute;bottom:0;left:-100%;width:100%;height:2px;background:linear-gradient(90deg,#3b82f6,#06b6d4);transition:left .25s ease}
-    .nav-link:hover::after{left:0}
-    .btn{border-radius:.75rem;padding:.85rem 1.35rem;font-weight:600}
-    .btn-primary{background:#2563eb;color:#fff}
-    .btn-primary:hover{background:#1d4ed8}
-    .btn-ghost{border:2px solid #60a5fa;color:#93c5fd}
-    .btn-ghost:hover{background:#60a5fa;color:#0b1220}
-    .typing-animation{border-right:2px solid #60a5fa;animation:blink 1s infinite}
-    @keyframes blink{0%,50%{border-color:#60a5fa}51%,100%{border-color:transparent}}
-    .shine{position:relative;overflow:hidden}
-    .shine::after{content:""; position:absolute; inset:-150% -150% auto auto;
-      width:200%; height:200%; background:conic-gradient(from 0deg, transparent, rgba(255,255,255,.18), transparent 30%);
-      animation:spin 7s linear infinite; pointer-events:none}
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .badge{display:inline-flex; align-items:center; gap:.5rem; font-size:.75rem;
-      padding:.35rem .6rem; border-radius:999px}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:1080px;margin:0 auto;padding:24px}
+    header.site{display:flex;gap:18px;align-items:center;justify-content:space-between;margin:10px 0 24px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:42px;height:42px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(78,168,255,.15))}
+    .brand h1{font-size:1.25rem;letter-spacing:.2px;margin:0}
+    nav a{margin-left:14px;color:var(--muted)}
+    nav a:hover{color:var(--ink)}
+    .hero{border:1px solid var(--line);background:linear-gradient(180deg,rgba(78,168,255,.06),rgba(78,168,255,0) 40%),var(--card);border-radius:18px;padding:24px;display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
+    .hero h2{font-size:1.8rem;margin:.25rem 0}
+    .hero p{color:var(--muted);margin:.25rem 0 1rem}
+    .cta{display:inline-flex;gap:10px}
+    .btn{border:1px solid var(--line);background:#111524;color:var(--ink);padding:10px 14px;border-radius:12px}
+    .btn:hover{border-color:#2a3250;transform:translateY(-1px)}
+    .grid{display:grid;gap:18px}
+    .two{grid-template-columns:1fr 1fr}
+    .section{margin:28px 0}
+    .section h3{margin:0 0 10px;font-size:1.5rem}
+    .card{border:1px solid var(--line);background:var(--card);border-radius:16px;padding:16px}
+    .muted{color:var(--muted)}
+    .list{margin:0;padding-left:18px}
+    .list li{margin:.35rem 0}
+    /* Experience cards */
+    .xp .head{display:flex;gap:12px;align-items:center;margin-bottom:8px}
+    .xp .logo{width:44px;height:44px;object-fit:contain}
+    .xp .title{margin:0;font-size:1.1rem}
+    .xp .meta{color:var(--muted);font-weight:500}
+    .xp .dates{color:#cfd3d8}
+    .xp .tenure{color:var(--good);font-weight:700;margin-left:.35rem}
+    .xp.faded{opacity:.8;filter:grayscale(.05)}
+    /* Badges */
+    .badgebar{display:flex;flex-wrap:wrap;gap:10px}
+    .badge{height:64px;width:auto;filter:drop-shadow(0 0 0 rgba(0,0,0,0));transition:transform 300ms ease, filter 600ms ease}
+    .badge:hover{transform:translateY(-2px)}
+    /* AZ-900 subtle animation */
+    .badge.az900{animation:azPulse 6s ease-in-out infinite}
+    .badge.az900:hover{
+      transform:translateY(-2px);
+      mask-image:linear-gradient(120deg,transparent 0%,black 40%,black 60%,transparent 100%);
+      -webkit-mask-image:linear-gradient(120deg,transparent 0%,black 40%,black 60%,transparent 100%);
+      animation:azPulse 4s ease-in-out infinite, azShimmer 1.8s linear infinite;
+    }
+    @keyframes azPulse{0%,100%{filter:drop-shadow(0 0 0px rgba(78,168,255,0))}50%{filter:drop-shadow(0 0 6px rgba(78,168,255,.25))}}
+    @keyframes azShimmer{0%{mask-position:0% 0%;-webkit-mask-position:0% 0%}100%{mask-position:120% 0%;-webkit-mask-position:120% 0%}}
+    /* Project video */
+    .yt-wrap{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#0b0c10;box-shadow:0 6px 24px rgba(0,0,0,.08);isolation:isolate}
+    .yt-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .yt-overlay{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(0deg,rgba(0,0,0,.25),rgba(0,0,0,.15));border:0;cursor:pointer;transition:background .25s ease, opacity .25s ease}
+    .yt-overlay:hover{background:linear-gradient(0deg,rgba(0,0,0,.35),rgba(0,0,0,.2))}
+    .yt-overlay[hidden]{opacity:0;pointer-events:none}
+    .yt-pulse{width:54px;height:54px;border-radius:999px;background:rgba(255,255,255,.85);mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><polygon points="22,15 22,45 45,30" fill="black"/></svg>') center/52% no-repeat;animation:pulse 2.4s ease-in-out infinite}
+    @keyframes pulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(255,255,255,.35)}50%{transform:scale(1.05);box-shadow:0 0 0 10px rgba(255,255,255,0)}}
+    /* Contact */
+    form.contact{display:grid;gap:10px}
+    input,textarea{background:#0e1220;border:1px solid var(--line);color:var(--ink);padding:10px 12px;border-radius:12px}
+    textarea{min-height:120px}
+    .small{font-size:.9rem}
+    footer{color:var(--muted);text-align:center;margin:28px 0 10px}
+    /* Layout tweaks */
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+    @media (prefers-reduced-motion:reduce){.badge.az900{animation:none}.yt-pulse{animation:none}}
   </style>
 </head>
-
-<body class="dark bg-slate-950 text-white">
-  <!-- NAV -->
-  <nav class="fixed top-0 w-full z-50 bg-slate-900/90 backdrop-blur-sm border-b border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <a href="#" class="text-xl font-bold text-white tracking-tight">Arth Raval</a>
-        <div class="hidden md:block">
-          <div class="ml-10 flex items-baseline space-x-8">
-            <a href="#home" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Home</a>
-            <a href="#about" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">About</a>
-            <a href="#experience" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Experience</a>
-            <a href="#education" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Education</a>
-            <a href="#skills" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Skills</a>
-            <a href="#projects" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Projects</a>
-            <a href="#certifications" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Certifications</a>
-            <a href="#contact" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm">Contact</a>
-          </div>
-        </div>
-        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-300" aria-expanded="false" aria-controls="mobileMenu">
-          <i class="fas fa-bars"></i>
-        </button>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <div class="brand">
+        <img src="assets/image/microsoft.png" alt="">
+        <h1>Arth • Application Support</h1>
       </div>
-    </div>
-    <div id="mobileMenu" class="md:hidden hidden bg-slate-900/95 backdrop-blur-sm border-t border-slate-800">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-white">Home</a>
-        <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-white">About</a>
-        <a href="#experience" class="block px-3 py-2 text-gray-300 hover:text-white">Experience</a>
-        <a href="#education" class="block px-3 py-2 text-gray-300 hover:text-white">Education</a>
-        <a href="#skills" class="block px-3 py-2 text-gray-300 hover:text-white">Skills</a>
-        <a href="#projects" class="block px-3 py-2 text-gray-300 hover:text-white">Projects</a>
-        <a href="#certifications" class="block px-3 py-2 text-gray-300 hover:text-white">Certifications</a>
-        <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-white">Contact</a>
-      </div>
-    </div>
-  </nav>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <!-- HERO -->
-  <section id="home" class="min-h-screen gradient-bg relative overflow-hidden flex items-center">
-    <div class="hero-pattern absolute inset-0"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-      <div class="text-center pt-24">
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">Arth Raval</h1>
-        <p id="typingText" class="text-xl md:text-2xl text-blue-300 mb-8 typing-animation inline-block">
-          IT Support | Networking | Cloud | Cybersecurity
-        </p>
-        <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-          I build reliable infrastructure and keep it secure: Windows & Linux servers, AD/GPO, DNS/DHCP, VLANs, firewalls, AWS/Azure, and automation with Python/PowerShell/Bash.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#projects" class="btn btn-primary hover:shadow-lg hover:scale-[1.02] transition">View My Work</a>
-          <button id="resumePreviewBtn" class="btn btn-ghost hover:scale-[1.02] transition">
-            <i class="fa-regular fa-eye mr-2"></i> Preview Resume
-          </button>
-          <a href="#contact" class="btn btn-ghost hover:scale-[1.02] transition">
-            <i class="fa-solid fa-handshake mr-2"></i> Hire Me
-          </a>
+    <section class="hero card">
+      <div>
+        <h2>Keeping production calm, fast, and compliant.</h2>
+        <p class="muted">Application Support Specialist focused on web/app servers, job schedulers, MFT, observability, and secure operations. I like owning incidents end-to-end and leaving teams with crisp runbooks.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">See projects</a>
+          <a class="btn" href="#experience">My experience</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- HIRE ME CALLOUT -->
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="card card-hover rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between">
-        <p class="text-gray-200 text-center md:text-left text-lg">
-          If you want to hire me, <span class="font-semibold text-blue-300">contact me by email</span> — I’d love to help ship and secure your systems.
-        </p>
-        <a href="mailto:rarth73@gmail.com" class="mt-4 md:mt-0 btn btn-primary">
-          <i class="fa-solid fa-envelope mr-2"></i> rarth73@gmail.com
-        </a>
+      <div class="badgebar">
+        <img src="assets/badges/AZ900.svg" class="badge az900" alt="Microsoft AZ-900" />
+        <img src="assets/badges/CCNA.png" class="badge" alt="CCNA" />
+        <img src="assets/badges/big-data-foundations.png" class="badge" alt="Big Data Foundations" />
+        <img src="assets/badges/ml-python.png" class="badge" alt="ML with Python" />
+        <img src="assets/badges/networking-basics.png" class="badge" alt="Networking Basics" />
+        <img src="assets/badges/network-addressing.png" class="badge" alt="Network Addressing" />
+        <img src="assets/badges/aws-educate.png" class="badge" alt="AWS Educate" />
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">About Me</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
-      </div>
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-          <div class="card rounded-2xl p-6">
-            <p class="text-lg text-gray-200 leading-relaxed">
-              I’m an <span class="font-semibold text-blue-300">IT Support / Systems</span> guy who loves tidy networks and clean automation. 
-              Give me a broken DNS zone, a flaky GPO, or a server that needs hardening—I’ll fix it, document it, and make it repeatable.
-            </p>
-            <p class="text-lg text-gray-200 leading-relaxed mt-4">
-              My vibe: clear runbooks, strong monitoring, least-privilege by default, and small scripts that save big time. 
-              I learn fast, I test everything, and I leave things better than I found them.
-            </p>
-          </div>
-        </div>
-        <div class="space-y-8">
-          <div class="card rounded-2xl p-6">
-            <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
-              <i class="fas fa-graduation-cap text-blue-400 mr-3"></i> Education Snapshot
-            </h3>
-            <p class="text-gray-300">
-              Ontario College Advanced Diploma (Honours) – Seneca Polytechnic • GPA 3.8/4.0<br />
-              Diploma in Computer Engineering – GTU • CGPA 9.7/10.0
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience" class="py-20 bg-slate-900/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Experience</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
-      </div>
-
-      <!-- Chipotle -->
-      <div class="card card-hover rounded-2xl p-6 md:p-8">
-        <div class="flex items-start md:items-center gap-5 md:gap-7 flex-col md:flex-row">
-          <div class="w-16 h-16 rounded-xl bg-white flex items-center justify-center p-2">
-            <img src="assets/img/chipotle.svg" alt="Chipotle logo" class="w-full h-full object-contain" />
-          </div>
-          <div class="flex-1">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-              <h3 class="text-2xl font-bold">Crew Member — Chipotle Mexican Grill</h3>
-              <span class="badge bg-emerald-900/40 text-emerald-200 border border-emerald-700/40" id="chipotleDuration">
-                Aug 2023 – Present • calculating…
-              </span>
+    <section id="projects" class="section">
+      <h3>Projects</h3>
+      <div class="grid two">
+        <article class="card">
+          <div class="head" style="display:flex;gap:12px;align-items:center;margin-bottom:10px">
+            <img src="assets/image/aws.png" alt="" class="logo" style="width:42px;height:42px;object-fit:contain">
+            <div>
+              <h4 style="margin:0">GestroDrive — Mechatronic Demo</h4>
+              <div class="muted small">Short silent loop in-card. Click to unmute & show controls.</div>
             </div>
-            <p class="text-gray-300 mt-2">Toronto, ON • Part-time</p>
-            <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-gray-200">
-              <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Fast, accurate service during rush hours; teamwork under pressure</li>
-              <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Cleanliness, food-safety standards, and communication</li>
-              <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> The burrito folding game is elite (seriously)</li>
-              <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Customer-first mindset that I carry into IT support</li>
-            </ul>
           </div>
-        </div>
-      </div>
 
-      <!-- Quick nudge -->
-      <p class="text-center text-gray-300 mt-6">
-        Want that energy on your team? <a class="text-blue-300 underline hover:text-blue-200" href="mailto:rarth73@gmail.com">Email me.</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Education</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
-      </div>
-
-      <div class="grid lg:grid-cols-2 gap-8">
-        <!-- Seneca -->
-        <div class="card card-hover rounded-2xl p-6">
-          <div class="flex items-center gap-4 mb-4">
-            <img src="https://www.senecapolytechnic.ca/content/dam/projects/seneca/seneca-logo.svg"
-                 alt="Seneca Polytechnic logo" class="h-10 w-auto" />
-            <span class="badge bg-emerald-900/40 text-emerald-200 border border-emerald-700/40">
-              <i class="fa-solid fa-award"></i> Graduated with Honours
-            </span>
+          <!-- Unlisted YouTube video embed (autoplay muted when in view) -->
+          <div class="yt-wrap" data-video-url="https://youtu.be/yabmje5PNzs?si=nboNImCvwOoTPBNa">
+            <button class="yt-overlay" aria-label="Play demo video"><span class="yt-pulse"></span></button>
+            <!-- iframe injected by JS -->
           </div>
-          <h3 class="text-xl font-bold text-white">Ontario College Advanced Diploma</h3>
-          <p class="text-gray-300">Computer Engineering Technology (ECT) • Seneca Polytechnic</p>
-          <p class="mt-2 text-sm text-gray-400 flex items-center gap-2">
-            <i class="fa-regular fa-calendar"></i> Issued August 2025
-          </p>
-          <p class="mt-3 text-blue-300 font-semibold">GPA 3.8 / 4.0</p>
 
-          <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-gray-200">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Windows/Linux admin, AD/GPO, DHCP/DNS</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> VLANs, trunking, inter-VLAN routing, ACLs</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Cloud (AWS/Azure), virtualization, containers</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Security hardening, logs/SIEM, scripting</li>
+          <ul class="list small" style="margin-top:10px">
+            <li>Hardware control + real-time feedback demo video.</li>
+            <li>Lightweight embed: privacy-enhanced, lazy, viewport-aware.</li>
           </ul>
+        </article>
 
-          <!-- Certificate controls -->
-          <div class="mt-6 flex flex-wrap gap-3">
-            <button id="previewPdfBtn"
-               class="btn btn-ghost">
-              <i class="fa-regular fa-eye"></i> Preview Certificate
-            </button>
-            <a href="https://drive.google.com/file/d/1hBOrEkdPLFP2JvmKe6nsSqfcogP_1urX/view?usp=sharing" target="_blank" rel="noopener noreferrer"
-               class="btn btn-primary">
-              <i class="fa-solid fa-file-pdf"></i> Open PDF
-            </a>
+        <article class="card">
+          <div class="head" style="display:flex;gap:12px;align-items:center;margin-bottom:10px">
+            <img src="assets/image/microsoft.png" alt="" class="logo" style="width:42px;height:42px;object-fit:contain">
+            <div>
+              <h4 style="margin:0">MFT Client Migration (Portfolio Sample)</h4>
+              <div class="muted small">Design doc notes, checklists, and test plan excerpts.</div>
+            </div>
           </div>
-        </div>
-
-        <!-- GTU -->
-        <div class="card card-hover rounded-2xl p-6">
-          <div class="flex items-center gap-4 mb-4">
-            <img src="assets/img/gtu.png" alt="Gujarat Technological University logo" class="h-12 w-auto" />
-          </div>
-          <h3 class="text-xl font-bold text-white">Diploma in Computer Engineering</h3>
-          <p class="text-gray-300">Gujarat Technological University (GTU)</p>
-          <p class="mt-2 text-sm text-gray-400 flex items-center gap-2">
-            <i class="fa-regular fa-calendar"></i> Passed June 2022
-          </p>
-          <p class="mt-3 text-blue-300 font-semibold">CGPA 9.7 / 10.0</p>
-          <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-gray-200">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Full-stack basics: HTML/CSS/JS + PHP/MySQL</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Data structures, OOP, database design</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Networking fundamentals, subnets & routing</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Hands-on labs and mini-projects each semester</li>
+          <ul class="list">
+            <li>Staged client migration to Managed File Transfer (MFT) with SFTP/PGP profiles.</li>
+            <li>Cutover windows + job scheduler dependencies mapped; rollback paths documented.</li>
+            <li>Health checks added to runbooks; post-cutover monitoring dashboards tuned.</li>
           </ul>
-        </div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Technical Skills</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
-      </div>
-      <div id="skillsContent" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-    </div>
-  </section>
+    <section id="experience" class="section">
+      <h3>Experience</h3>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="py-20 bg-slate-900/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Featured Projects</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
-      </div>
-      <div id="projectsContent" class="grid lg:grid-cols-2 gap-8 mb-12"></div>
-      <div class="text-center">
-        <a href="https://github.com/arth-7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold transition hover:scale-105 hover:shadow-lg">
-          <i class="fab fa-github mr-3 text-xl"></i> View All Projects on GitHub
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Certifications & Badges</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
-      </div>
-
-      <!-- CCNA FEATURE HERO -->
-      <div class="shine rounded-2xl p-6 md:p-10 mb-14 border border-blue-500/40 bg-gradient-to-br from-slate-800/70 to-slate-900/50">
-        <div class="grid md:grid-cols-[240px,1fr] gap-8 items-center">
-          <div class="bg-slate-900/70 rounded-xl p-4 border border-slate-700">
-            <img src="https://raw.githubusercontent.com/arth-7/arth-portfolio/refs/heads/main/assets/badges/CCNA.png"
-                 alt="Cisco CCNA badge" class="w-full h-full object-contain" />
-          </div>
+      <!-- Fundserv (Present) -->
+      <article class="card xp">
+        <div class="head">
+          <img src="assets/image/fundserv-logo.svg" alt="Fundserv Inc." class="logo">
           <div>
-            <div class="inline-flex items-center gap-2 text-blue-300 uppercase tracking-wide text-xs font-semibold mb-2">
-              <i class="fas fa-star"></i> Featured Certification
-            </div>
-            <h3 class="text-3xl font-bold text-white mb-3">Cisco Certified Network Associate (CCNA)</h3>
-            <p class="text-gray-300 leading-relaxed mb-5">
-              Networking fundamentals, routing & switching, IP services, security, wireless, and intro automation.
-            </p>
-            <ul class="grid sm:grid-cols-2 gap-2 text-sm text-gray-200 mb-6">
-              <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Network Access, VLANs & STP</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> IP Connectivity & Services (DHCP, NAT)</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Security Fundamentals (ACLs, hardening)</li>
-              <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Automation & Programmability basics</li>
-            </ul>
-            <div class="flex flex-wrap gap-3">
-              <a href="https://www.credly.com/badges/cfa79679-fb9c-46cf-a580-fae56eed975a/public_url" target="_blank" rel="noopener noreferrer"
-                 class="btn btn-primary">
-                <i class="fas fa-external-link-alt"></i> View on Credly
-              </a>
-              <a href="#badgesGrid" class="btn btn-ghost">
-                <i class="fas fa-grid-2"></i> See all badges
-              </a>
+            <p class="title">Application Support Specialist</p>
+            <div class="meta">Fundserv Inc.</div>
+            <div class="dates">Oct 14, 2025 – <span aria-live="polite">Present</span>
+              <span class="tenure" id="fundservTenure">• calculating…</span>
             </div>
           </div>
         </div>
-      </div>
+        <ul class="list">
+          <li>2nd-level support for production web/app servers and middleware; own incidents end-to-end.</li>
+          <li>Administer scheduled jobs and workflows via enterprise job scheduler.</li>
+          <li>Partner with Infrastructure; uphold ops, security, and audit procedures.</li>
+          <li>Create/maintain runbooks and support docs; contribute in project meetings and go-lives.</li>
+          <li>Monitor Fundserv proprietary systems for successful client file delivery & receipt.</li>
+          <li><strong>Projects:</strong> Migration of all clients to Managed File Transfer (MFT) platform.</li>
+          <li>On-call rotation; high-quality service delivery with crisp handoffs.</li>
+        </ul>
+      </article>
 
-      <!-- Badges grid -->
-      <div id="badgesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"></div>
-      <div class="text-center mt-12">
-        <a href="https://www.credly.com/users/arth-raval" target="_blank" rel="noopener noreferrer" class="inline-flex items-center btn btn-primary">
-          <i class="fas fa-award mr-3"></i> View All Badges on Credly
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-20 bg-slate-900/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Get In Touch</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto rounded-full"></div>
-        <p class="text-lg text-gray-300 mt-6 max-w-2xl mx-auto">
-          No forms—just reach me directly by email or socials below.
-        </p>
-      </div>
-
-      <div class="grid lg:grid-cols-2 gap-12">
-        <!-- Left: email card -->
-        <div class="card card-hover p-8 rounded-2xl">
-          <h3 class="text-2xl font-bold text-white mb-3">Email me</h3>
-          <p class="text-gray-300 mb-6">I usually respond quickly.</p>
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href="mailto:rarth73@gmail.com"
-               class="btn btn-primary inline-flex items-center justify-center gap-2">
-              <i class="fas fa-envelope"></i> rarth73@gmail.com
-            </a>
-            <button id="copyEmailBtn"
-               class="btn btn-ghost inline-flex items-center justify-center gap-2">
-              <i class="fas fa-copy"></i> Copy email
-            </button>
+      <!-- Chipotle (ended) -->
+      <article class="card xp faded">
+        <div class="head">
+          <img src="assets/img/chipotle.svg" alt="Chipotle" class="logo">
+          <div>
+            <p class="title">Service Crew Member</p>
+            <div class="meta">Chipotle Mexican Grill</div>
+            <div class="dates">Aug 2023 – Oct 13, 2025</div>
           </div>
-          <p id="copyToast" class="hidden mt-4 text-emerald-400"><i class="fas fa-check-circle mr-1"></i> Email copied!</p>
         </div>
+        <ul class="list">
+          <li>High-volume service; teamwork, multitasking, and clear communication.</li>
+        </ul>
+      </article>
+    </section>
 
-        <!-- Right: social links -->
-        <div id="contactItems" class="space-y-8"></div>
+    <section id="skills" class="section">
+      <h3>Skills</h3>
+      <div class="grid two">
+        <div class="card">
+          <strong>Ops & Support</strong>
+          <ul class="list">
+            <li>Web/app servers • middleware • log analysis • observability</li>
+            <li>Job schedulers (dependencies, SLAs, calendars, retries)</li>
+            <li>MFT/SFTP/PGP • certificates • secrets hygiene • runbooks</li>
+            <li>Change/Incident/Problem management • on-call</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>Tools</strong>
+          <ul class="list">
+            <li>Linux • shell • Git • REST/HTTP</li>
+            <li>Azure basics (AZ-900) • AWS Educate</li>
+            <li>Networking (CCNA basics, addressing, routing)</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-slate-950 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-gray-400">© <span id="currentYear"></span> Arth Raval. All rights reserved.</p>
-      <div class="flex justify-center space-x-6 mt-6">
-        <a href="https://www.linkedin.com/in/arthraval" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
-        <a href="https://github.com/arth-7" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white"><i class="fab fa-github text-xl"></i></a>
-        <a href="https://www.credly.com/users/arth-raval" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white"><i class="fas fa-award text-xl"></i></a>
-        <a href="mailto:rarth73@gmail.com" class="text-gray-400 hover:text-white"><i class="fas fa-envelope text-xl"></i></a>
+    <section id="contact" class="section">
+      <h3>Contact</h3>
+      <div class="grid two">
+        <form class="card contact" id="contactForm">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button class="btn" type="submit">Send</button>
+          <div class="muted small" id="contactStatus" role="status"></div>
+        </form>
+        <div class="card">
+          <p class="muted">Prefer email?</p>
+          <a class="btn" href="mailto:hello@example.com?subject=Portfolio%20Contact">hello@example.com</a>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- CERTIFICATE PREVIEW MODAL -->
-  <div id="pdfModal" class="fixed inset-0 z-50 hidden">
-    <div id="pdfBackdrop" class="absolute inset-0 bg-black/70"></div>
-    <div class="relative max-w-6xl mx-auto my-8 bg-slate-900 rounded-xl shadow-2xl overflow-hidden">
-      <div class="flex items-center justify-between p-4 border-b border-slate-700">
-        <h4 class="text-white font-semibold">Graduation Certificate — Preview</h4>
-        <button id="closePdfBtn" class="text-slate-300 hover:text-white text-xl px-2" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <div class="w-[90vw] max-w-6xl h-[75vh]">
-        <iframe id="pdfFrame" class="w-full h-full" allow="autoplay"></iframe>
-      </div>
-    </div>
+    <footer>© <span id="year"></span> Arth</footer>
   </div>
 
-  <!-- RESUME PREVIEW MODAL -->
-  <div id="resumeModal" class="fixed inset-0 z-50 hidden">
-    <div id="resumeBackdrop" class="absolute inset-0 bg-black/70"></div>
-    <div class="relative max-w-6xl mx-auto my-8 bg-slate-900 rounded-xl shadow-2xl overflow-hidden">
-      <div class="flex items-center justify-between p-4 border-b border-slate-700">
-        <h4 class="text-white font-semibold">Resume — Preview</h4>
-        <button id="resumeCloseBtn" class="text-slate-300 hover:text-white text-xl px-2" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <div class="w-[90vw] max-w-6xl h-[75vh]">
-        <iframe id="resumeFrame" class="w-full h-full" allow="autoplay"></iframe>
-      </div>
-    </div>
-  </div>
-
-  <!-- DATA + SCRIPTS -->
+  <!-- Scripts -->
   <script>
-    // ---- Config ----
-    const USE_GOOGLE_DRIVE = true;
-    const GOOGLE_DRIVE_FILE_ID = "15xywE2IM7-GrSORGssMmWhGIfB2gQBjP"; // resume
-    const LOCAL_RESUME_URL = "assets/Arth_Raval_Resume.pdf";
-    const CERT_PDF_ID = "1hBOrEkdPLFP2JvmKe6nsSqfcogP_1urX"; // Seneca certificate
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    const drivePreview = id => `https://drive.google.com/file/d/${id}/preview`;
-    const driveDownload = id => `https://drive.google.com/uc?export=download&id=${id}`;
+    // Fundserv tenure (live "Present" timer)
+    (function tenureTimer(){
+      const start = new Date('2025-10-14T00:00:00');
+      const el = document.getElementById('fundservTenure'); if(!el) return;
+      function plural(n,w){return n+' '+w+(n===1?'':'s')}
+      function render(){
+        const now = new Date();
+        let months = (now.getFullYear()-start.getFullYear())*12 + (now.getMonth()-start.getMonth());
+        let days = now.getDate()-start.getDate();
+        if (days < 0){ months -= 1; const prevDays = new Date(now.getFullYear(), now.getMonth(), 0).getDate(); days += prevDays; }
+        const years = Math.floor(months/12), rem = months%12;
+        let t='• '; if(years>0) t+=plural(years,'yr')+(rem>0?' ':''); if(rem>0) t+=plural(rem,'mo'); if(years===0&&rem===0) t+=plural(days,'day'); el.textContent=t;
+      }
+      render(); setInterval(render, 1000*60*60);
+    })();
 
-    const portfolioData = {
-      skills: [
-        {
-          category: "Systems & Networking",
-          icon: "fas fa-server",
-          color: "text-blue-400",
-          items: [
-            "Windows Server, Linux (Ubuntu/CentOS)",
-            "Active Directory, GPO, DHCP/DNS",
-            "VLANs, trunking, inter-VLAN routing",
-            "Basic firewalling & NAT",
-            "Backups, monitoring, runbooks"
-          ]
-        },
-        {
-          category: "Security",
-          icon: "fas fa-shield-alt",
-          color: "text-red-400",
-          items: [
-            "Hardening & patching",
-            "ACLs, least-privilege, SSH keys",
-            "Log analysis & basic SIEM",
-            "Baseline scanning & auditing",
-            "Incident triage & docs"
-          ]
-        },
-        {
-          category: "Cloud & Virtualization",
-          icon: "fas fa-cloud",
-          color: "text-green-400",
-          items: [
-            "AWS & Azure fundamentals",
-            "VMware & VirtualBox",
-            "Docker containers",
-            "CI/CD basics & Git",
-            "Infrastructure as Code (intro)"
-          ]
-        },
-        {
-          category: "Programming & Scripting",
-          icon: "fas fa-code",
-          color: "text-purple-400",
-          items: [
-            "Python & Bash",
-            "PowerShell for admin tasks",
-            "C programming (embedded basics)",
-            "SQL & MySQL",
-            "Automation & APIs (intro)"
-          ]
-        }
-      ],
-      projects: [
-        { title:"GestroDrive", icon:"fas fa-car", color:"text-blue-400", desc:"Gesture-controlled vehicle using ESP32/ESP-NOW, ESP32-CAM stream, and ultrasonic crash-stop.", tech:["ESP32 / ESP-NOW","MPU6050 (I²C)","ESP32-CAM (MJPEG)","Ultrasonic"], link:"https://github.com/arth-7/GestroDrive" },
-        { title:"Enterprise Network Design", icon:"fas fa-network-wired", color:"text-green-400", desc:"Cisco Packet Tracer design with VLANs, ACLs, inter-VLAN routing, and security policies.", tech:["Cisco","VLANs","Security"] },
-        { title:"Linux Server Configuration", icon:"fab fa-linux", color:"text-purple-400", desc:"Linux server: DNS, DHCP, Samba, Firewalld with backups and secure client/server setup.", tech:["Linux","DNS/DHCP","Samba"] },
-        { title:"IoT Monitoring Systems", icon:"fas fa-microchip", color:"text-yellow-400", desc:"Distance and temperature monitoring with embedded code and real-time data.", tech:["IoT","Sensors","Embedded"] }
-      ],
-      badges: [
-        { title:"Cisco CCNA", img:"https://raw.githubusercontent.com/arth-7/arth-portfolio/refs/heads/main/assets/badges/CCNA.png", href:"https://www.credly.com/badges/cfa79679-fb9c-46cf-a580-fae56eed975a/public_url" },
-        { title:"AWS Educate – Getting Started with Compute", img:"assets/badges/aws-educate.png", href:"https://www.credly.com/badges/cf182339-43e3-4c0c-97c8-cb1ee7ecdade/public_url" },
-        { title:"Big Data Foundations – Level 1", img:"assets/badges/big-data-foundations.png", href:"https://www.credly.com/badges/4809e129-4e8b-4f52-8006-3a3f2cdcaf71/public_url" },
-        { title:"Networking Basics", img:"assets/badges/networking-basics.png", href:"https://www.credly.com/badges/49e1db37-b679-4b66-9256-8abb07da2c6a/public_url" },
-        { title:"Network Addressing & Basic Troubleshooting", img:"assets/badges/network-addressing.png", href:"https://www.credly.com/badges/219cf011-b967-4994-9238-7292788f658b/public_url" },
-        { title:"Machine Learning with Python – Level 1", img:"assets/badges/ml-python.png", href:"https://www.credly.com/badges/49a4554a-0968-4fa7-92dd-174e78f48ee0/public_url" }
-      ]
-    };
+    // Lightweight YouTube embed (privacy-enhanced, in-view autoplay)
+    (function(){
+      const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function getYouTubeId(url){
+        try{const u=new URL(url); if(u.hostname.includes('youtu.be')) return u.pathname.slice(1);
+          if(u.searchParams.get('v')) return u.searchParams.get('v');
+          const p=u.pathname.split('/'); return p.pop()||p.pop();
+        }catch{ return url }
+      }
+      // Load API once
+      let ytApiLoading=null;
+      function loadYTAPI(){
+        if (window.YT?.Player) return Promise.resolve();
+        if (ytApiLoading) return ytApiLoading;
+        ytApiLoading=new Promise(res=>{ const s=document.createElement('script'); s.src="https://www.youtube.com/iframe_api"; s.async=true; window.onYouTubeIframeAPIReady=()=>res(); document.head.appendChild(s); });
+        return ytApiLoading;
+      }
 
-    // ---- Renderers ----
-    function renderSkills(){
-      document.getElementById('skillsContent').innerHTML =
-        portfolioData.skills.map(s=>`
-          <div class="card card-hover p-6 rounded-2xl shadow-lg">
-            <div class="text-center">
-              <div class="text-4xl ${s.color} mb-4"><i class="${s.icon}"></i></div>
-              <h3 class="text-xl font-semibold text-white mb-4">${s.category}</h3>
-              <ul class="text-gray-300 space-y-2 text-sm">
-                ${s.items.map(i=>`<li>${i}</li>`).join('')}
-              </ul>
-            </div>
-          </div>`).join('');
-    }
-    function renderProjects(){
-      document.getElementById('projectsContent').innerHTML =
-        portfolioData.projects.map(p=>`
-          <div class="card card-hover rounded-2xl overflow-hidden">
-            <div class="p-8">
-              <div class="flex items-center mb-4">
-                <i class="${p.icon} text-3xl ${p.color} mr-4"></i>
-                <h3 class="text-2xl font-bold text-white">${p.title}</h3>
-              </div>
-              <p class="text-gray-300 mb-6 leading-relaxed">${p.desc}</p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                ${p.tech.map(t=>`<span class="px-3 py-1 bg-white/10 text-blue-100 rounded-full text-sm">${t}</span>`).join('')}
-              </div>
-              ${p.link?`<a href="${p.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-300 hover:text-blue-200 font-semibold"><i class="fab fa-github mr-2"></i>View on GitHub</a>`:''}
-            </div>
-          </div>`).join('');
-    }
-    function renderBadges(){
-      const g = document.getElementById('badgesGrid');
-      g.innerHTML =
-        portfolioData.badges.map(b=>`
-          <a href="${b.href}" target="_blank" rel="noopener noreferrer" class="group block card p-6 rounded-2xl card-hover text-center">
-            <div class="w-full aspect-square overflow-hidden rounded-lg bg-slate-900/60 border border-slate-700">
-              <img src="${b.img}" alt="${b.title}" loading="lazy" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" />
-            </div>
-            <h3 class="text-lg font-semibold mt-4 text-white">${b.title}</h3>
-          </a>`).join('');
-    }
-    function renderContactItems(){
-      const wrapper = document.getElementById('contactItems');
-      const items = [
-        { icon:'fas fa-envelope', label:'Email', href:'mailto:rarth73@gmail.com', text:'rarth73@gmail.com' },
-        { icon:'fab fa-linkedin', label:'LinkedIn', href:'https://www.linkedin.com/in/arthraval', text:'linkedin.com/in/arthraval' },
-        { icon:'fab fa-github', label:'GitHub', href:'https://github.com/arth-7', text:'github.com/arth-7' },
-        { icon:'fas fa-award', label:'Credly', href:'https://www.credly.com/users/arth-raval', text:'credly.com/users/arth-raval' }
-      ];
-      wrapper.innerHTML = items.map(p=>`
-        <div class="flex items-center space-x-4 card p-5 rounded-xl">
-          <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-            <i class="${p.icon} text-blue-300 text-xl"></i>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-white">${p.label}</h3>
-            <a href="${p.href}" target="${p.href.startsWith('http') ? '_blank' : ''}" ${p.href.startsWith('http') ? 'rel="noopener noreferrer"' : ''} class="text-blue-300 hover:text-blue-200">${p.text}</a>
-          </div>
-        </div>`).join('');
-    }
+      document.querySelectorAll('.yt-wrap[data-video-url]').forEach(async wrap=>{
+        const id = getYouTubeId(wrap.getAttribute('data-video-url'));
+        const overlay = wrap.querySelector('.yt-overlay');
+        const iframe = document.createElement('iframe');
+        iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+        iframe.loading = 'lazy';
+        wrap.appendChild(iframe);
 
-    // ---- Utilities ----
-    function bindResumePreview(){
-      const pv = document.getElementById('resumePreviewBtn');
-      pv.addEventListener('click', () => {
-        const modal = document.getElementById('resumeModal');
-        const frame = document.getElementById('resumeFrame');
-        frame.src = (USE_GOOGLE_DRIVE && GOOGLE_DRIVE_FILE_ID) ? drivePreview(GOOGLE_DRIVE_FILE_ID) : LOCAL_RESUME_URL;
-        modal.classList.remove('hidden');
-        document.body.style.overflow='hidden';
+        await loadYTAPI();
+        const player = new YT.Player(iframe, {
+          videoId:id,
+          playerVars:{controls:0,autoplay:0,mute:1,rel:0,modestbranding:1,loop:1,playlist:id,playsinline:1},
+          events:{ onReady: e=>{ if(!prefersReduced) observer.observe(wrap); } }
+        });
+
+        const observer = new IntersectionObserver(entries=>{
+          entries.forEach(en=>{
+            if(en.isIntersecting){ try{player.mute();player.playVideo();}catch{} }
+            else{ try{player.pauseVideo();}catch{} }
+          });
+        }, {threshold:0.6});
+
+        overlay?.addEventListener('click', ()=>{
+          try{ player.unMute(); player.playVideo(); player.setOption('playerVars',{controls:1}); }catch{}
+          overlay.hidden = true;
+        });
       });
-    }
-    function typingEffect(){
-      const el=document.getElementById('typingText');
-      const text='IT Support | Networking | Cloud | Cybersecurity';
-      let i=0;(function type(){ if(i<text.length){ el.textContent=text.slice(0,++i); setTimeout(type,100);}
-        else{ setTimeout(()=>{i=0; el.textContent=''; type();},2000);} })();
-    }
-    function initMenu(){
-      const menuBtn=document.getElementById('mobileMenuBtn');
-      const menu=document.getElementById('mobileMenu');
-      menuBtn.addEventListener('click',()=>{ const ex=menuBtn.getAttribute('aria-expanded')==='true'; menuBtn.setAttribute('aria-expanded',String(!ex)); menu.classList.toggle('hidden');});
-      document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{ const t=document.querySelector(a.getAttribute('href')); if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); menu.classList.add('hidden'); }}));
-    }
-    function wireCopyEmail(){
-      const btn=document.getElementById('copyEmailBtn'); if(!btn) return;
-      const toast=document.getElementById('copyToast');
-      btn.addEventListener('click', async ()=>{
-        try{ await navigator.clipboard.writeText('rarth73@gmail.com'); toast.classList.remove('hidden'); setTimeout(()=>toast.classList.add('hidden'), 1600); }
-        catch{}
+    })();
+
+    // Contact form – no backend needed (opens mail client, copies message)
+    (function(){
+      const f=document.getElementById('contactForm'); if(!f) return;
+      const status=document.getElementById('contactStatus');
+      f.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(f).entries());
+        const mailto = `mailto:hello@example.com?subject=${encodeURIComponent('Portfolio Contact from '+data.name)}&body=${encodeURIComponent(data.message+'\n\nFrom: '+data.name+' <'+data.email+'>')}`;
+        try{
+          await navigator.clipboard.writeText(`${data.name} <${data.email}>\n\n${data.message}`);
+          status.textContent = 'Message copied to clipboard. Opening your mail app…';
+        }catch{ status.textContent = 'Opening your mail app…'; }
+        window.location.href = mailto;
+        f.reset();
       });
-    }
-    function wirePdfModal(){
-      const btn=document.getElementById('previewPdfBtn');
-      if(!btn) return;
-      const modal=document.getElementById('pdfModal');
-      const frame=document.getElementById('pdfFrame');
-      const close=document.getElementById('closePdfBtn');
-      const back=document.getElementById('pdfBackdrop');
-      const open=()=>{ frame.src=`https://drive.google.com/file/d/${CERT_PDF_ID}/preview`; modal.classList.remove('hidden'); document.body.style.overflow='hidden'; };
-      const hide=()=>{ modal.classList.add('hidden'); frame.src=''; document.body.style.overflow=''; };
-      btn.addEventListener('click',open);
-      close.addEventListener('click',hide);
-      back.addEventListener('click',hide);
-      document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!modal.classList.contains('hidden')) hide(); });
-    }
-    function wireResumeModal(){
-      const modal=document.getElementById('resumeModal');
-      const close=document.getElementById('resumeCloseBtn');
-      const back=document.getElementById('resumeBackdrop');
-      const hide=()=>{ modal.classList.add('hidden'); document.getElementById('resumeFrame').src=''; document.body.style.overflow=''; };
-      close.addEventListener('click',hide);
-      back.addEventListener('click',hide);
-      document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!modal.classList.contains('hidden')) hide(); });
-    }
-
-    // --- Chipotle live duration ---
-    function formatYM(from, to){
-      let years = to.getFullYear() - from.getFullYear();
-      let months = to.getMonth() - from.getMonth();
-      if (months < 0) { years -= 1; months += 12; }
-      const y = years > 0 ? `${years} ${years===1?'year':'years'}` : '';
-      const m = months > 0 ? `${months} ${months===1?'month':'months'}` : (years===0 ? '0 months' : '');
-      return (y && m) ? `${y} ${m}` : (y || m);
-    }
-    function updateChipotleDuration(){
-      const el = document.getElementById('chipotleDuration');
-      if(!el) return;
-      const start = new Date(2023, 7, 1); // Aug is month 7 (0-indexed)
-      const now = new Date();
-      el.textContent = `Aug 2023 – Present • ${formatYM(start, now)}`;
-    }
-
-    // ---- Init ----
-    document.getElementById('currentYear').textContent=new Date().getFullYear();
-    renderSkills(); renderProjects(); renderBadges(); renderContactItems();
-    bindResumePreview(); typingEffect(); initMenu(); wireCopyEmail(); wirePdfModal(); wireResumeModal();
-    updateChipotleDuration();
-    setInterval(updateChipotleDuration, 60*1000); // refresh every minute
+    })();
   </script>
 </body>
 </html>
